@@ -1,10 +1,26 @@
 ﻿buildverbrow = 2
 
+MyIniRead(OutputVar, "setting_spravq.ini", "Section", "Key", "MyError")
+MyIniRead(ByRef OutputVar, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+         OutputVar := value 
+      else
+         OutputVar .= "`n" value
+    }
+}
+
 ES_NOHIDESEL := 256  ; показывает выделение текста в Edit при неактивном окне
 EM_SETSEL := 0x00B1  ; установка выделения
 EM_SCROLLCARET := 0xB7  ; сделать видимым выделенный текст
 EM_GETSEL := 0xB0  ; извлечь позицию каретки ввода
 VarSetCapacity(start, 4), VarSetCapacity(end, 4)
+
 
 Loop, 202
 {
@@ -39,7 +55,7 @@ SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit4%
 SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit5%
 Gosub, Sebi
 
-Gui, g: Add, Tab3, x0 y0 w620 h430, Правила проекта| Сервера| Гос| Банд| Мафий|Карта особ| TP особы
+Gui, g: Add, Tab3, x0 y0 w620 h430, Правила проекта| Сервера| Гос| Банд| Мафий|Карта особ| TP особы|Для справок
 
 Gui, g: Tab, 1
 Gui, g: Add, Button, x310 y407 w50 h20 gFin1, Поиск
@@ -220,7 +236,12 @@ Gui, g: Add, Button, x463 y357 w48 h23 gcopy30, MARK
 
 Gui, g: Add, Text, x48 y387 w480 h24 +0x200, MARK - Вставляет форму для передачи метки, нужно указать ID вместо "i" (set_gps id coord)
 Gui, g: Add, Text, x48 y405 w338 h24 +0x200, GOTO - Телепортирует по координатам (tpc coord)
-Gui, g: Show, w620 h430, Браузер Admin-Binder by Notoriuz
+
+Gui, g: Tab, 8
+Gui, g: Add, Button, x310 y407 w60 h20 gSaveSprab, Сохранить
+Gui, g: Add, Edit, x3 y24 w614 h383 +Multi vOutputVar, %OutputVar%
+
+Gui, g: Show, w620 h430, Браузер Admin-Tools by Notoriuz
 return
 gGuiEscape:
 gGuiClose:
@@ -270,7 +291,9 @@ GoSearch1:
         f := (f := InStr(MainEdit1, Find, Sens, NumGet(end)+1)) ? f : (Loop ? InStr(MainEdit1, Find, Sens, 1) : 0)
     If !f
     {
-Gosub, GoSearch1
+Gui, 2bg: Destroy
+SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit1%
+Gosub, Fin1
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find)-1, , ahk_id %hMainEdit1%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit1%
@@ -1314,8 +1337,7 @@ return
 going1:
 flick = 0
 Counter3 = 0
-;Loop
-;{
+
 GetKeyState, state, Enter
 
 if state = D
@@ -1323,8 +1345,6 @@ if state = D
     flick = 1
 Counter3 = 6
 Gosub, hudinfo
-
-;}
 
 }
 
@@ -1339,19 +1359,23 @@ if Check81 > 0
 			{
 		if flick = 1
 			{
+if (Counter3 > 0)
+
+{
 				 GuiControlGet, %Counter3%
 				Counter3 := Counter3 - 1
 				GuiControl, , Counter3, %Counter3%
 				sleep 800
 				Gui, 3bb: Destroy
 				Gosub, hudinfo1
+}
 			}
 		else
 		{
 	Gui, 3bb: Destroy
+Break
 		}
-			
-		
+
 }
 else
 {
@@ -1365,9 +1389,8 @@ Gui, 3bb: Font, Intro
 Gui, 3bb: Font, s%My3Slider2% ; Set a large font size (32-point).
 Gui, 3bb: Font, q1
 Gui, 3bb: Font, w%My3Slider3%
-Gui, 3bb: Add, Text, x8 y10 c%3Set1Color%, Нажмите %HotLogin2% чтобы
-Gui, 3bb: Add, Text, x8 y25 c%3Set1Color%, ответ был засчитан как первый.
-Gui, 3bb: Add, Text, x8 y40 c%3Set1Color%,      Таймер: %Counter3%
+Gui, 3bb: Add, Text, x8 y10 c%3Set1Color% +Center, Нажмите %HotLogin2% чтобы`nответ был засчитан в счетчик.`nТаймер: %Counter3%
+
 Gui, 3bb: Show, x%xpos2% y%ypos2% NoActivate
 WinSet, TransColor, %CustomColor%  %My3Slider1%
 if Counter3 = 0
@@ -1378,3 +1401,18 @@ flick = 0
 return
 
 ;-------------------------------------------------------------------------------------
+
+
+SaveSprab:
+FileDelete, setting_spravq.ini
+GuiControlGet, OutputVar
+MyIniWrite(OutputVar, "setting_spravq.ini", "Section", "Key")
+Return
+
+MyIniWrite(Value, Filename, Section, Key)
+{
+   Loop, Parse, value, `r`n
+      IniWrite, %A_LoopField%, %Filename%, %Section%, %A_Index%|%Key%
+}
+
+Return
