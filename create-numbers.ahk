@@ -1150,14 +1150,14 @@ Gui, 53: Add, CheckBox, x8 y41 w169 h28 vCheck41 Checked%Check41%, Исполь�
 Gui, 53: Add, GroupBox, x6 y2 w172 h37
 Gui, 53: Add, GroupBox, x6 y34 w172 h37
 Gui, 53: Add, Edit, hWndhEdtValue x31 y78 w120 h21 vEditValue1, %EditValue1%
-SendMessage 0x1501, 1, "Примечание",, ahk_id %hEdtValue% ; EM_SETCUEBANNER
+SendMessage 0x1501, 1, "text",, ahk_id %hEdtValue% ; EM_SETCUEBANNER
 Gui, 53: Add, GroupBox, x6 y67 w172 h37
 Gui, 53: Add, Button, x7 y106 w171 h23 g2TabBox1, Сохранить
 Gui, 53: Show, w184 h134, Admin-Tools by Notoriuz
 return
 53GuiEscape:
 53GuiClose:
-    Gui Destroy
+Gui, 53: Destroy
 return
 
 2Tab2:
@@ -1173,7 +1173,7 @@ Gui, 54: Show, w184 h134, Admin-Tools by Notoriuz
 return
 54GuiEscape:
 54GuiClose:
-    Gui Destroy
+Gui, 54: Destroy
 return
 
 2Tab3:
@@ -1189,7 +1189,7 @@ Gui, 55: Show, w184 h134, Admin-Tools by Notoriuz
 return
 55GuiEscape:
 55GuiClose:
-    Gui Destroy
+Gui, 55: Destroy
 return
 
 2Tab4:
@@ -1205,7 +1205,7 @@ Gui, 56: Show, w184 h134, Admin-Tools by Notoriuz
 return
 56GuiEscape:
 56GuiClose:
-    Gui Destroy
+Gui, 56: Destroy
 return
 
 2Tab5:
@@ -1221,7 +1221,7 @@ Gui, 57: Show, w184 h134, Admin-Tools by Notoriuz
 return
 57GuiEscape:
 57GuiClose:
-    Gui Destroy
+Gui, 57: Destroy
 return
 
 2Tab6:
@@ -1237,7 +1237,7 @@ Gui, 58: Show, w184 h134, Admin-Tools by Notoriuz
 return
 58GuiEscape:
 58GuiClose:
-    Gui Destroy
+Gui, 58: Destroy
 return
 
 2Tab7:
@@ -1253,7 +1253,7 @@ Gui, 59: Show, w184 h134, Admin-Tools by Notoriuz
 return
 59GuiEscape:
 59GuiClose:
-    Gui Destroy
+Gui, 59: Destroy
 return
 
 2Tab8:
@@ -1269,7 +1269,7 @@ Gui, 60: Show, w184 h134, Admin-Tools by Notoriuz
 return
 60GuiEscape:
 60GuiClose:
-    Gui Destroy
+Gui, 60: Destroy
 return
 
 2Tab9:
@@ -1285,7 +1285,7 @@ Gui, 61: Show, w184 h134, Admin-Tools by Notoriuz
 return
 61GuiEscape:
 61GuiClose:
-    Gui Destroy
+Gui, 61: Destroy
 return
 
 2Tab10:
@@ -1301,7 +1301,7 @@ Gui, 62: Show, w184 h134, Admin-Tools by Notoriuz
 return
 62GuiEscape:
 62GuiClose:
-    Gui Destroy
+Gui, 62: Destroy
 return
 
 ;---------------------------3GUI CHECKUP------------------------------
