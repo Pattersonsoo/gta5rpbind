@@ -1817,3 +1817,1415 @@ Gosub, Prok10
 Gosub, Galka10
 Gui Destroy
  return
+
+
+
+
+
+
+
+
+~sc29::
+    KeyWait, sc29
+    if Check83 > 0
+    {
+    MouseGetPos, xbop1, ybop1
+    if openrub > 0
+        {
+        Gosub, sBindriText
+        MouseClick, left, 0, 0
+	Sleep, 50
+	MouseMove, %xbop1%, %ybop1%
+        openrub = 0
+        }
+    else
+        {
+        WinGetPos, xbop2, ybop2, , , %A_Space%
+        Gui, b123: Destroy
+            IniWrite, %xbop2%, %A_WorkingDir%\setting_console.ini, Setup, xbop2
+            IniWrite, %ybop2%, %A_WorkingDir%\setting_console.ini, Setup, ybop2
+        openrub = 1
+	;Send {F2}
+        }
+    }
+return
+
+sBindriText:
+    IniRead, xbop2, %A_WorkingDir%\setting_console.ini , Setup, xbop2, 759
+    IniRead, ybop2, %A_WorkingDir%\setting_console.ini , Setup, ybop2, 462
+
+    Gui, b123: -MinimizeBox -MaximizeBox -SysMenu +AlwaysOnTop -DPIScale +LastFound +E0x20
+    Gui, b123: Add, Button, x8 y8 w92 h34 gBindClick1, %BindText1%
+    Gui, b123: Add, Button, x104 y8 w92 h34 gBindClick2, %BindText2%
+    Gui, b123: Add, Button, x200 y8 w92 h34 gBindClick3, %BindText3%
+    Gui, b123: Add, Button, x296 y8 w92 h34 gBindClick4, %BindText4%
+    Gui, b123: Add, Button, x8 y48 w92 h34 gBindClick5, %BindText5%
+    Gui, b123: Add, Button, x104 y48 w92 h34 gBindClick6, %BindText6%
+    Gui, b123: Add, Button, x200 y48 w92 h34 gBindClick7, %BindText7%
+    Gui, b123: Add, Button, x296 y48 w92 h34 gBindClick8, %BindText8%
+    Gui, b123: Add, Button, x8 y88 w92 h34 gBindClick9, %BindText9%
+    Gui, b123: Add, Button, x104 y88 w92 h34 gBindClick10, %BindText10%
+    Gui, b123: Add, Button, x200 y88 w92 h34 gBindClick11, %BindText11%
+    Gui, b123: Add, Button, x296 y88 w92 h34 gBindClick12, %BindText12%
+    Gui, b123: Show, x%xbop2% y%ybop2% w395 h130, %A_Space%
+Return
+
+b123GuiEscape:
+b123GuiClose:
+    Gui, b123: Destroy
+
+Return
+
+
+BindClick1:
+    if PressN1 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN1%
+        }
+Return
+
+BindClick2:
+    if PressN2 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN2%
+        }
+Return
+
+BindClick3:
+    if PressN3 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN3%
+        }
+Return
+
+BindClick4:
+    if PressN4 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN4%
+        }
+Return
+
+BindClick5:
+    if PressN5 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN5%
+        }
+Return
+
+BindClick6:
+    if PressN6 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN6%
+        }
+Return
+
+BindClick7:
+    if PressN7 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN7%
+        }
+Return
+
+BindClick8:
+    if PressN8 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN8%
+        }
+Return
+
+BindClick9:
+    if PressN9 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN9%
+        }
+Return
+
+BindClick10:
+    if PressN10 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN10%
+        }
+Return
+
+BindClick11:
+    if PressN11 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN11%
+        }
+Return
+
+BindClick12:
+    if PressN12 !> 0
+    {
+    }
+    else
+        {
+        MouseClick, left, 22, 330
+        Sleep 30
+        Gosub, Key%PressN11%
+        }
+Return
+;-----------------------------------------------------------------------------------------------------------------------------------------
+
+sett:
+Gui, sett: Add, Button, x8 y8 w87 h32 gHUD1, 1. %BindText1%
+Gui, sett: Add, Button, x96 y8 w87 h32 gHUD2, 2. %BindText2%
+Gui, sett: Add, Button, x184 y8 w87 h32 gHUD3, 3. %BindText3%
+Gui, sett: Add, Button, x272 y8 w87 h32 gHUD4, 4. %BindText4%
+Gui, sett: Add, Button, x8 y40 w87 h32 gHUD5, 5. %BindText5%
+Gui, sett: Add, Button, x96 y40 w87 h32 gHUD6, 6. %BindText6%
+Gui, sett: Add, Button, x184 y40 w87 h32 gHUD7, 7. %BindText7%
+Gui, sett: Add, Button, x272 y40 w87 h32 gHUD8, 8. %BindText8%
+Gui, sett: Add, Button, x8 y72 w87 h32 gHUD9, 9. %BindText9%
+Gui, sett: Add, Button, x96 y72 w87 h32 gHUD10, 10. %BindText10%
+Gui, sett: Add, Button, x184 y72 w87 h32 gHUD11, 11. %BindText11%
+Gui, sett: Add, Button, x272 y72 w87 h32 gHUD12, 12. %BindText12%
+Gui, sett: Add, Button, x144 y112 w80 h23 gHUDSave, Сохранить
+
+Gui, sett: Show, w365 h140, Нажмите на ячейку, которую хотите изменить
+Return
+settGuiEscape:
+settGuiClose:
+    Gui, sett: Destroy
+Return
+
+HUDSave:
+Loop, 12
+    {
+    IniWrite, % BindText%A_Index%, %A_WorkingDir%\setting_console.ini, Setup, BindText%A_Index%
+    IniWrite, % PressN%A_Index%, %A_WorkingDir%\setting_console.ini, Setup, PressN%A_Index%
+    }
+Gui, sett: Destroy
+Return
+
+
+HUD1:
+Gosub, hudsett1
+return
+
+HUD2:
+Gosub, hudsett2
+return
+
+HUD3:
+Gosub, hudsett3
+return
+
+HUD4:
+Gosub, hudsett4
+return
+
+HUD5:
+Gosub, hudsett5
+return
+
+HUD6:
+Gosub, hudsett6
+return
+
+HUD7:
+Gosub, hudsett7
+return
+
+HUD8:
+Gosub, hudsett8
+return
+
+HUD9:
+Gosub, hudsett9
+return
+
+HUD10:
+Gosub, hudsett10
+return
+
+HUD11:
+Gosub, hudsett11
+return
+
+HUD12:
+Gosub, hudsett12
+return
+
+;----------------------------------------------------------------------------------------------------------------------------------------------------
+
+hudsett1:
+Gui, hudsett1: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett1: Add, Button, x16 y24 w104 h23 gDopGui11, %MyText1%
+Gui, hudsett1: Add, Button, x16 y48 w104 h23 gDopGui12, %MyText2%
+Gui, hudsett1: Add, Button, x16 y72 w104 h23 gDopGui13, %MyText3%
+Gui, hudsett1: Add, Button, x16 y96 w104 h23 gDopGui14, %MyText4%
+Gui, hudsett1: Add, Button, x16 y120 w104 h23 gDopGui15, %MyText5%
+Gui, hudsett1: Add, Button, x128 y24 w104 h23 gDopGui16, %MyText6%
+Gui, hudsett1: Add, Button, x128 y48 w104 h23 gDopGui17, %MyText7%
+Gui, hudsett1: Add, Button, x128 y72 w104 h23 gDopGui18, %MyText8%
+Gui, hudsett1: Add, Button, x128 y96 w104 h23 gDopGui19, %MyText9%
+Gui, hudsett1: Add, Button, x128 y120 w104 h23 gDopGui20, %MyText10%
+Gui, hudsett1: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett1: Add, Button, x264 y24 w104 h23, %2TabValue1%
+Gui, hudsett1: Add, Button, x376 y24 w104 h23, %2TabValue2%
+Gui, hudsett1: Add, Button, x264 y48 w104 h23, %2TabValue3%
+Gui, hudsett1: Add, Button, x376 y48 w104 h23, %2TabValue4%
+Gui, hudsett1: Add, Button, x264 y72 w104 h23, %2TabValue5%
+Gui, hudsett1: Add, Button, x376 y72 w104 h23, %2TabValue6%
+Gui, hudsett1: Add, Button, x264 y96 w104 h23, %2TabValue7%
+Gui, hudsett1: Add, Button, x376 y96 w104 h23, %2TabValue8%
+Gui, hudsett1: Add, Button, x264 y120 w104 h23, %2TabValue9%
+Gui, hudsett1: Add, Button, x376 y120 w104 h23, %2TabValue10%
+
+Gui, hudsett1: Show, w498 h158, %A_Space%
+Return
+
+hudsett1GuiEscape:
+hudsett1GuiClose:
+    Gui, hudsett1: Destroy
+Return
+
+;-------------------------------------------------------------------------------------------------------------------------------
+
+hudsett2:
+Gui, hudsett2: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett2: Add, Button, x16 y24 w104 h23 gDopGui21, %MyText1%
+Gui, hudsett2: Add, Button, x16 y48 w104 h23 gDopGui22, %MyText2%
+Gui, hudsett2: Add, Button, x16 y72 w104 h23 gDopGui23, %MyText3%
+Gui, hudsett2: Add, Button, x16 y96 w104 h23 gDopGui24, %MyText4%
+Gui, hudsett2: Add, Button, x16 y120 w104 h23 gDopGui25, %MyText5%
+Gui, hudsett2: Add, Button, x128 y24 w104 h23 gDopGui26, %MyText6%
+Gui, hudsett2: Add, Button, x128 y48 w104 h23 gDopGui27, %MyText7%
+Gui, hudsett2: Add, Button, x128 y72 w104 h23 gDopGui28, %MyText8%
+Gui, hudsett2: Add, Button, x128 y96 w104 h23 gDopGui29, %MyText9%
+Gui, hudsett2: Add, Button, x128 y120 w104 h23 gDopGui30, %MyText10%
+Gui, hudsett2: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett2: Add, Button, x264 y24 w104 h23, &OK
+Gui, hudsett2: Add, Button, x376 y24 w104 h23, &OK
+Gui, hudsett2: Add, Button, x264 y48 w104 h23, &OK
+Gui, hudsett2: Add, Button, x376 y48 w104 h23, &OK
+Gui, hudsett2: Add, Button, x264 y72 w104 h23, &OK
+Gui, hudsett2: Add, Button, x376 y72 w104 h23, &OK
+Gui, hudsett2: Add, Button, x264 y96 w104 h23, &OK
+Gui, hudsett2: Add, Button, x376 y96 w104 h23, &OK
+Gui, hudsett2: Add, Button, x264 y120 w104 h23, &OK
+Gui, hudsett2: Add, Button, x376 y120 w104 h23, &OK
+
+Gui, hudsett2: Show, w498 h158, Window
+Return
+
+hudsett2GuiEscape:
+hudsett2GuiClose:
+    Gui, hudsett2: Destroy
+Return
+;-------------------------------------------------------------------------------------------------------------------------------
+
+hudsett3:
+Gui, hudsett3: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett3: Add, Button, x16 y24 w104 h23 gDopGui31, %MyText1%
+Gui, hudsett3: Add, Button, x16 y48 w104 h23 gDopGui32, %MyText2%
+Gui, hudsett3: Add, Button, x16 y72 w104 h23 gDopGui33, %MyText3%
+Gui, hudsett3: Add, Button, x16 y96 w104 h23 gDopGui34, %MyText4%
+Gui, hudsett3: Add, Button, x16 y120 w104 h23 gDopGui35, %MyText5%
+Gui, hudsett3: Add, Button, x128 y24 w104 h23 gDopGui36, %MyText6%
+Gui, hudsett3: Add, Button, x128 y48 w104 h23 gDopGui37, %MyText7%
+Gui, hudsett3: Add, Button, x128 y72 w104 h23 gDopGui38, %MyText8%
+Gui, hudsett3: Add, Button, x128 y96 w104 h23 gDopGui39, %MyText9%
+Gui, hudsett3: Add, Button, x128 y120 w104 h23 gDopGui40, %MyText10%
+Gui, hudsett3: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett3: Add, Button, x264 y24 w104 h23, &OK
+Gui, hudsett3: Add, Button, x376 y24 w104 h23, &OK
+Gui, hudsett3: Add, Button, x264 y48 w104 h23, &OK
+Gui, hudsett3: Add, Button, x376 y48 w104 h23, &OK
+Gui, hudsett3: Add, Button, x264 y72 w104 h23, &OK
+Gui, hudsett3: Add, Button, x376 y72 w104 h23, &OK
+Gui, hudsett3: Add, Button, x264 y96 w104 h23, &OK
+Gui, hudsett3: Add, Button, x376 y96 w104 h23, &OK
+Gui, hudsett3: Add, Button, x264 y120 w104 h23, &OK
+Gui, hudsett3: Add, Button, x376 y120 w104 h23, &OK
+
+Gui, hudsett3: Show, w498 h158, Window
+Return
+
+hudsett3GuiEscape:
+hudsett3GuiClose:
+    Gui, hudsett3: Destroy
+Return
+;-------------------------------------------------------------------------------------------------------------------------------
+
+hudsett4:
+Gui, hudsett4: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett4: Add, Button, x16 y24 w104 h23 gDopGui41, %MyText1%
+Gui, hudsett4: Add, Button, x16 y48 w104 h23 gDopGui42, %MyText2%
+Gui, hudsett4: Add, Button, x16 y72 w104 h23 gDopGui43, %MyText3%
+Gui, hudsett4: Add, Button, x16 y96 w104 h23 gDopGui44, %MyText4%
+Gui, hudsett4: Add, Button, x16 y120 w104 h23 gDopGui45, %MyText5%
+Gui, hudsett4: Add, Button, x128 y24 w104 h23 gDopGui46, %MyText6%
+Gui, hudsett4: Add, Button, x128 y48 w104 h23 gDopGui47, %MyText7%
+Gui, hudsett4: Add, Button, x128 y72 w104 h23 gDopGui48, %MyText8%
+Gui, hudsett4: Add, Button, x128 y96 w104 h23 gDopGui49, %MyText9%
+Gui, hudsett4: Add, Button, x128 y120 w104 h23 gDopGui50, %MyText10%
+Gui, hudsett4: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett4: Add, Button, x264 y24 w104 h23, &OK
+Gui, hudsett4: Add, Button, x376 y24 w104 h23, &OK
+Gui, hudsett4: Add, Button, x264 y48 w104 h23, &OK
+Gui, hudsett4: Add, Button, x376 y48 w104 h23, &OK
+Gui, hudsett4: Add, Button, x264 y72 w104 h23, &OK
+Gui, hudsett4: Add, Button, x376 y72 w104 h23, &OK
+Gui, hudsett4: Add, Button, x264 y96 w104 h23, &OK
+Gui, hudsett4: Add, Button, x376 y96 w104 h23, &OK
+Gui, hudsett4: Add, Button, x264 y120 w104 h23, &OK
+Gui, hudsett4: Add, Button, x376 y120 w104 h23, &OK
+
+Gui, hudsett4: Show, w498 h158, Window
+Return
+
+hudsett4GuiEscape:
+hudsett4GuiClose:
+    Gui, hudsett4: Destroy
+Return
+
+hudsett5:
+Gui, hudsett5: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett5: Add, Button, x16 y24 w104 h23 gDopGui51, %MyText1%
+Gui, hudsett5: Add, Button, x16 y48 w104 h23 gDopGui52, %MyText2%
+Gui, hudsett5: Add, Button, x16 y72 w104 h23 gDopGui53, %MyText3%
+Gui, hudsett5: Add, Button, x16 y96 w104 h23 gDopGui54, %MyText4%
+Gui, hudsett5: Add, Button, x16 y120 w104 h23 gDopGui55, %MyText5%
+Gui, hudsett5: Add, Button, x128 y24 w104 h23 gDopGui56, %MyText6%
+Gui, hudsett5: Add, Button, x128 y48 w104 h23 gDopGui57, %MyText7%
+Gui, hudsett5: Add, Button, x128 y72 w104 h23 gDopGui58, %MyText8%
+Gui, hudsett5: Add, Button, x128 y96 w104 h23 gDopGui59, %MyText9%
+Gui, hudsett5: Add, Button, x128 y120 w104 h23 gDopGui60, %MyText10%
+Gui, hudsett5: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett5: Add, Button, x264 y24 w104 h23, &OK
+Gui, hudsett5: Add, Button, x376 y24 w104 h23, &OK
+Gui, hudsett5: Add, Button, x264 y48 w104 h23, &OK
+Gui, hudsett5: Add, Button, x376 y48 w104 h23, &OK
+Gui, hudsett5: Add, Button, x264 y72 w104 h23, &OK
+Gui, hudsett5: Add, Button, x376 y72 w104 h23, &OK
+Gui, hudsett5: Add, Button, x264 y96 w104 h23, &OK
+Gui, hudsett5: Add, Button, x376 y96 w104 h23, &OK
+Gui, hudsett5: Add, Button, x264 y120 w104 h23, &OK
+Gui, hudsett5: Add, Button, x376 y120 w104 h23, &OK
+
+Gui, hudsett5: Show, w498 h158, Window
+Return
+
+hudsett5GuiEscape:
+hudsett5GuiClose:
+    Gui, hudsett5: Destroy
+Return
+
+hudsett6:
+Gui, hudsett6: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett6: Add, Button, x16 y24 w104 h23 gDopGui61, %MyText1%
+Gui, hudsett6: Add, Button, x16 y48 w104 h23 gDopGui62, %MyText2%
+Gui, hudsett6: Add, Button, x16 y72 w104 h23 gDopGui63, %MyText3%
+Gui, hudsett6: Add, Button, x16 y96 w104 h23 gDopGui64, %MyText4%
+Gui, hudsett6: Add, Button, x16 y120 w104 h23 gDopGui65, %MyText5%
+Gui, hudsett6: Add, Button, x128 y24 w104 h23 gDopGui66, %MyText6%
+Gui, hudsett6: Add, Button, x128 y48 w104 h23 gDopGui67, %MyText7%
+Gui, hudsett6: Add, Button, x128 y72 w104 h23 gDopGui68, %MyText8%
+Gui, hudsett6: Add, Button, x128 y96 w104 h23 gDopGui69, %MyText9%
+Gui, hudsett6: Add, Button, x128 y120 w104 h23 gDopGui70, %MyText10%
+Gui, hudsett6: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett6: Add, Button, x264 y24 w104 h23, &OK
+Gui, hudsett6: Add, Button, x376 y24 w104 h23, &OK
+Gui, hudsett6: Add, Button, x264 y48 w104 h23, &OK
+Gui, hudsett6: Add, Button, x376 y48 w104 h23, &OK
+Gui, hudsett6: Add, Button, x264 y72 w104 h23, &OK
+Gui, hudsett6: Add, Button, x376 y72 w104 h23, &OK
+Gui, hudsett6: Add, Button, x264 y96 w104 h23, &OK
+Gui, hudsett6: Add, Button, x376 y96 w104 h23, &OK
+Gui, hudsett6: Add, Button, x264 y120 w104 h23, &OK
+Gui, hudsett6: Add, Button, x376 y120 w104 h23, &OK
+
+Gui, hudsett6: Show, w498 h158, Window
+Return
+
+hudsett6GuiEscape:
+hudsett6GuiClose:
+    Gui, hudsett6: Destroy
+Return
+
+hudsett7:
+Gui, hudsett7: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett7: Add, Button, x16 y24 w104 h23 gDopGui71, %MyText1%
+Gui, hudsett7: Add, Button, x16 y48 w104 h23 gDopGui72, %MyText2%
+Gui, hudsett7: Add, Button, x16 y72 w104 h23 gDopGui73, %MyText3%
+Gui, hudsett7: Add, Button, x16 y96 w104 h23 gDopGui74, %MyText4%
+Gui, hudsett7: Add, Button, x16 y120 w104 h23 gDopGui75, %MyText5%
+Gui, hudsett7: Add, Button, x128 y24 w104 h23 gDopGui76, %MyText6%
+Gui, hudsett7: Add, Button, x128 y48 w104 h23 gDopGui77, %MyText7%
+Gui, hudsett7: Add, Button, x128 y72 w104 h23 gDopGui78, %MyText8%
+Gui, hudsett7: Add, Button, x128 y96 w104 h23 gDopGui79, %MyText9%
+Gui, hudsett7: Add, Button, x128 y120 w104 h23 gDopGui80, %MyText10%
+Gui, hudsett7: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett7: Add, Button, x264 y24 w104 h23, &OK
+Gui, hudsett7: Add, Button, x376 y24 w104 h23, &OK
+Gui, hudsett7: Add, Button, x264 y48 w104 h23, &OK
+Gui, hudsett7: Add, Button, x376 y48 w104 h23, &OK
+Gui, hudsett7: Add, Button, x264 y72 w104 h23, &OK
+Gui, hudsett7: Add, Button, x376 y72 w104 h23, &OK
+Gui, hudsett7: Add, Button, x264 y96 w104 h23, &OK
+Gui, hudsett7: Add, Button, x376 y96 w104 h23, &OK
+Gui, hudsett7: Add, Button, x264 y120 w104 h23, &OK
+Gui, hudsett7: Add, Button, x376 y120 w104 h23, &OK
+
+Gui, hudsett7: Show, w498 h158, Window
+Return
+
+hudsett7GuiEscape:
+hudsett7GuiClose:
+    Gui, hudsett7: Destroy
+Return
+
+hudsett8:
+Gui, hudsett8: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett8: Add, Button, x16 y24 w104 h23 gDopGui81, %MyText1%
+Gui, hudsett8: Add, Button, x16 y48 w104 h23 gDopGui82, %MyText2%
+Gui, hudsett8: Add, Button, x16 y72 w104 h23 gDopGui83, %MyText3%
+Gui, hudsett8: Add, Button, x16 y96 w104 h23 gDopGui84, %MyText4%
+Gui, hudsett8: Add, Button, x16 y120 w104 h23 gDopGui85, %MyText5%
+Gui, hudsett8: Add, Button, x128 y24 w104 h23 gDopGui86, %MyText6%
+Gui, hudsett8: Add, Button, x128 y48 w104 h23 gDopGui87, %MyText7%
+Gui, hudsett8: Add, Button, x128 y72 w104 h23 gDopGui88, %MyText8%
+Gui, hudsett8: Add, Button, x128 y96 w104 h23 gDopGui89, %MyText9%
+Gui, hudsett8: Add, Button, x128 y120 w104 h23 gDopGui90, %MyText10%
+Gui, hudsett8: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett8: Add, Button, x264 y24 w104 h23, &OK
+Gui, hudsett8: Add, Button, x376 y24 w104 h23, &OK
+Gui, hudsett8: Add, Button, x264 y48 w104 h23, &OK
+Gui, hudsett8: Add, Button, x376 y48 w104 h23, &OK
+Gui, hudsett8: Add, Button, x264 y72 w104 h23, &OK
+Gui, hudsett8: Add, Button, x376 y72 w104 h23, &OK
+Gui, hudsett8: Add, Button, x264 y96 w104 h23, &OK
+Gui, hudsett8: Add, Button, x376 y96 w104 h23, &OK
+Gui, hudsett8: Add, Button, x264 y120 w104 h23, &OK
+Gui, hudsett8: Add, Button, x376 y120 w104 h23, &OK
+
+Gui, hudsett8: Show, w498 h158, Window
+Return
+
+hudsett8GuiEscape:
+hudsett8GuiClose:
+    Gui, hudsett8: Destroy
+Return
+
+hudsett9:
+Gui, hudsett9: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett9: Add, Button, x16 y24 w104 h23 gDopGui91, %MyText1%
+Gui, hudsett9: Add, Button, x16 y48 w104 h23 gDopGui92, %MyText2%
+Gui, hudsett9: Add, Button, x16 y72 w104 h23 gDopGui93, %MyText3%
+Gui, hudsett9: Add, Button, x16 y96 w104 h23 gDopGui94, %MyText4%
+Gui, hudsett9: Add, Button, x16 y120 w104 h23 gDopGui95, %MyText5%
+Gui, hudsett9: Add, Button, x128 y24 w104 h23 gDopGui96, %MyText6%
+Gui, hudsett9: Add, Button, x128 y48 w104 h23 gDopGui97, %MyText7%
+Gui, hudsett9: Add, Button, x128 y72 w104 h23 gDopGui98, %MyText8%
+Gui, hudsett9: Add, Button, x128 y96 w104 h23 gDopGui99, %MyText9%
+Gui, hudsett9: Add, Button, x128 y120 w104 h23 gDopGui100, %MyText10%
+Gui, hudsett9: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett9: Add, Button, x264 y24 w104 h23, &OK
+Gui, hudsett9: Add, Button, x376 y24 w104 h23, &OK
+Gui, hudsett9: Add, Button, x264 y48 w104 h23, &OK
+Gui, hudsett9: Add, Button, x376 y48 w104 h23, &OK
+Gui, hudsett9: Add, Button, x264 y72 w104 h23, &OK
+Gui, hudsett9: Add, Button, x376 y72 w104 h23, &OK
+Gui, hudsett9: Add, Button, x264 y96 w104 h23, &OK
+Gui, hudsett9: Add, Button, x376 y96 w104 h23, &OK
+Gui, hudsett9: Add, Button, x264 y120 w104 h23, &OK
+Gui, hudsett9: Add, Button, x376 y120 w104 h23, &OK
+
+Gui, hudsett9: Show, w498 h158, Window
+Return
+
+hudsett9GuiEscape:
+hudsett9GuiClose:
+    Gui, hudsett9: Destroy
+Return
+
+hudsett10:
+Gui, hudsett10: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett10: Add, Button, x16 y24 w104 h23 gDopGui101, %MyText1%
+Gui, hudsett10: Add, Button, x16 y48 w104 h23 gDopGui102, %MyText2%
+Gui, hudsett10: Add, Button, x16 y72 w104 h23 gDopGui103, %MyText3%
+Gui, hudsett10: Add, Button, x16 y96 w104 h23 gDopGui104, %MyText4%
+Gui, hudsett10: Add, Button, x16 y120 w104 h23 gDopGui105, %MyText5%
+Gui, hudsett10: Add, Button, x128 y24 w104 h23 gDopGui106, %MyText6%
+Gui, hudsett10: Add, Button, x128 y48 w104 h23 gDopGui107, %MyText7%
+Gui, hudsett10: Add, Button, x128 y72 w104 h23 gDopGui108, %MyText8%
+Gui, hudsett10: Add, Button, x128 y96 w104 h23 gDopGui109, %MyText9%
+Gui, hudsett10: Add, Button, x128 y120 w104 h23 gDopGui110, %MyText10%
+Gui, hudsett10: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett10: Add, Button, x264 y24 w104 h23, &OK
+Gui, hudsett10: Add, Button, x376 y24 w104 h23, &OK
+Gui, hudsett10: Add, Button, x264 y48 w104 h23, &OK
+Gui, hudsett10: Add, Button, x376 y48 w104 h23, &OK
+Gui, hudsett10: Add, Button, x264 y72 w104 h23, &OK
+Gui, hudsett10: Add, Button, x376 y72 w104 h23, &OK
+Gui, hudsett10: Add, Button, x264 y96 w104 h23, &OK
+Gui, hudsett10: Add, Button, x376 y96 w104 h23, &OK
+Gui, hudsett10: Add, Button, x264 y120 w104 h23, &OK
+Gui, hudsett10: Add, Button, x376 y120 w104 h23, &OK
+
+Gui, hudsett10: Show, w498 h158, Window
+Return
+
+hudsett10GuiEscape:
+hudsett10GuiClose:
+    Gui, hudsett10: Destroy
+Return
+
+hudsett11:
+Gui, hudsett11: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett11: Add, Button, x16 y24 w104 h23 gDopGui111, %MyText1%
+Gui, hudsett11: Add, Button, x16 y48 w104 h23 gDopGui112, %MyText2%
+Gui, hudsett11: Add, Button, x16 y72 w104 h23 gDopGui113, %MyText3%
+Gui, hudsett11: Add, Button, x16 y96 w104 h23 gDopGui114, %MyText4%
+Gui, hudsett11: Add, Button, x16 y120 w104 h23 gDopGui115, %MyText5%
+Gui, hudsett11: Add, Button, x128 y24 w104 h23 gDopGui116, %MyText6%
+Gui, hudsett11: Add, Button, x128 y48 w104 h23 gDopGui117, %MyText7%
+Gui, hudsett11: Add, Button, x128 y72 w104 h23 gDopGui118, %MyText8%
+Gui, hudsett11: Add, Button, x128 y96 w104 h23 gDopGui119, %MyText9%
+Gui, hudsett11: Add, Button, x128 y120 w104 h23 gDopGui120, %MyText10%
+Gui, hudsett11: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett11: Add, Button, x264 y24 w104 h23, &OK
+Gui, hudsett11: Add, Button, x376 y24 w104 h23, &OK
+Gui, hudsett11: Add, Button, x264 y48 w104 h23, &OK
+Gui, hudsett11: Add, Button, x376 y48 w104 h23, &OK
+Gui, hudsett11: Add, Button, x264 y72 w104 h23, &OK
+Gui, hudsett11: Add, Button, x376 y72 w104 h23, &OK
+Gui, hudsett11: Add, Button, x264 y96 w104 h23, &OK
+Gui, hudsett11: Add, Button, x376 y96 w104 h23, &OK
+Gui, hudsett11: Add, Button, x264 y120 w104 h23, &OK
+Gui, hudsett11: Add, Button, x376 y120 w104 h23, &OK
+
+Gui, hudsett11: Show, w498 h158, Window
+Return
+
+hudsett11GuiEscape:
+hudsett11GuiClose:
+    Gui, hudsett11: Destroy
+Return
+
+hudsett12:
+Gui, hudsett12: Add, GroupBox, x8 y8 w235 h144 +Center, Основные бинды
+Gui, hudsett12: Add, Button, x16 y24 w104 h23 gDopGui121, %MyText1%
+Gui, hudsett12: Add, Button, x16 y48 w104 h23 gDopGui122, %MyText2%
+Gui, hudsett12: Add, Button, x16 y72 w104 h23 gDopGui123, %MyText3%
+Gui, hudsett12: Add, Button, x16 y96 w104 h23 gDopGui124, %MyText4%
+Gui, hudsett12: Add, Button, x16 y120 w104 h23 gDopGui125, %MyText5%
+Gui, hudsett12: Add, Button, x128 y24 w104 h23 gDopGui126, %MyText6%
+Gui, hudsett12: Add, Button, x128 y48 w104 h23 gDopGui127, %MyText7%
+Gui, hudsett12: Add, Button, x128 y72 w104 h23 gDopGui128, %MyText8%
+Gui, hudsett12: Add, Button, x128 y96 w104 h23 gDopGui129, %MyText9%
+Gui, hudsett12: Add, Button, x128 y120 w104 h23 gDopGui130, %MyText10%
+Gui, hudsett12: Add, GroupBox, x256 y8 w235 h144 +Center, Свой бинд
+Gui, hudsett12: Add, Button, x264 y24 w104 h23, &OK
+Gui, hudsett12: Add, Button, x376 y24 w104 h23, &OK
+Gui, hudsett12: Add, Button, x264 y48 w104 h23, &OK
+Gui, hudsett12: Add, Button, x376 y48 w104 h23, &OK
+Gui, hudsett12: Add, Button, x264 y72 w104 h23, &OK
+Gui, hudsett12: Add, Button, x376 y72 w104 h23, &OK
+Gui, hudsett12: Add, Button, x264 y96 w104 h23, &OK
+Gui, hudsett12: Add, Button, x376 y96 w104 h23, &OK
+Gui, hudsett12: Add, Button, x264 y120 w104 h23, &OK
+Gui, hudsett12: Add, Button, x376 y120 w104 h23, &OK
+
+Gui, hudsett12: Show, w498 h158, Window
+Return
+
+hudsett12GuiEscape:
+hudsett12GuiClose:
+    Gui, hudsett12: Destroy
+Return
+
+
+;-------------------------------------------------------------------------------------------------------------------------------
+
+DopGui11:
+BindText1 = %MyText1%
+PressN1 := 1
+Gui, hudsett1: Destroy
+Return
+
+DopGui12:
+BindText1 = %MyText2%
+PressN1 := 2
+Gui, hudsett1: Destroy
+Return
+
+DopGui13:
+BindText1 = %MyText3%
+PressN1 := 3
+Gui, hudsett1: Destroy
+Return
+
+DopGui14:
+BindText1 = %MyText4%
+PressN1 := 4
+Gui, hudsett1: Destroy
+Return
+
+DopGui15:
+BindText1 = %MyText5%
+PressN1 := 5
+Gui, hudsett1: Destroy
+Return
+
+DopGui16:
+BindText1 = %MyText6%
+PressN1 := 6
+Gui, hudsett1: Destroy
+Return
+
+DopGui17:
+BindText1 = %MyText7%
+PressN1 := 7
+Gui, hudsett1: Destroy
+Return
+
+DopGui18:
+BindText1 = %MyText8%
+PressN1 := 8
+Gui, hudsett1: Destroy
+Return
+
+DopGui19:
+BindText1 = %MyText9%
+PressN1 := 9
+Gui, hudsett1: Destroy
+Return
+
+DopGui20:
+BindText1 = %MyText10%
+PressN1 := 10
+Gui, hudsett1: Destroy
+Return
+;-------------------------------------------------------------------------------------------------------------------------------
+
+DopGui21:
+BindText2 = %MyText1%
+PressN2 := 1
+Gui, hudsett2: Destroy
+Return
+
+DopGui22:
+BindText2 = %MyText2%
+PressN2 := 2
+Gui, hudsett2: Destroy
+Return
+
+DopGui23:
+BindText2 = %MyText3%
+PressN2 := 3
+Gui, hudsett2: Destroy
+Return
+
+DopGui24:
+BindText2 = %MyText4%
+PressN2 := 4
+Gui, hudsett2: Destroy
+Return
+
+DopGui25:
+BindText2 = %MyText5%
+PressN2 := 5
+Gui, hudsett2: Destroy
+Return
+
+DopGui26:
+BindText2 = %MyText6%
+PressN2 := 6
+Gui, hudsett2: Destroy
+Return
+
+DopGui27:
+BindText2 = %MyText7%
+PressN2 := 7
+Gui, hudsett2: Destroy
+Return
+
+DopGui28:
+BindText2 = %MyText8%
+PressN2 := 8
+Gui, hudsett2: Destroy
+Return
+
+DopGui29:
+BindText2 = %MyText9%
+PressN2 := 9
+Gui, hudsett2: Destroy
+Return
+
+DopGui30:
+BindText2 = %MyText10%
+PressN2 := 10
+Gui, hudsett2: Destroy
+Return
+;-------------------------------------------------------------------------------------------------------------------------------
+
+
+DopGui31:
+BindText3 = %MyText1%
+PressN3 := 1
+Gui, hudsett3: Destroy
+Return
+
+DopGui32:
+BindText3 = %MyText2%
+PressN3 := 2
+Gui, hudsett3: Destroy
+Return
+
+DopGui33:
+BindText3 = %MyText3%
+PressN3 := 3
+Gui, hudsett3: Destroy
+Return
+
+DopGui34:
+BindText3 = %MyText4%
+PressN3 := 4
+Gui, hudsett3: Destroy
+Return
+
+DopGui35:
+BindText3 = %MyText5%
+PressN3 := 5
+Gui, hudsett3: Destroy
+Return
+
+DopGui36:
+BindText3 = %MyText6%
+PressN3 := 6
+Gui, hudsett3: Destroy
+Return
+
+DopGui37:
+BindText3 = %MyText7%
+PressN3 := 7
+Gui, hudsett3: Destroy
+Return
+
+DopGui38:
+BindText3 = %MyText8%
+PressN3 := 8
+Gui, hudsett3: Destroy
+Return
+
+DopGui39:
+BindText3 = %MyText9%
+PressN3 := 9
+Gui, hudsett3: Destroy
+Return
+
+DopGui40:
+BindText3 = %MyText10%
+PressN3 := 10
+Gui, hudsett3: Destroy
+Return
+;-------------------------------------------------------------------------------------------------------------------------------
+
+DopGui41:
+BindText4 = %MyText1%
+PressN4 := 1
+Gui, hudsett4: Destroy
+Return
+
+DopGui42:
+BindText4 = %MyText2%
+PressN4 := 2
+Gui, hudsett4: Destroy
+Return
+
+DopGui43:
+BindText4 = %MyText3%
+PressN4 := 3
+Gui, hudsett4: Destroy
+Return
+
+DopGui44:
+BindText4 = %MyText4%
+PressN4 := 4
+Gui, hudsett4: Destroy
+Return
+
+DopGui45:
+BindText4 = %MyText5%
+PressN4 := 5
+Gui, hudsett4: Destroy
+Return
+
+DopGui46:
+BindText4 = %MyText6%
+PressN4 := 6
+Gui, hudsett4: Destroy
+Return
+
+DopGui47:
+BindText4 = %MyText7%
+PressN4 := 7
+Gui, hudsett4: Destroy
+Return
+
+DopGui48:
+BindText4 = %MyText8%
+PressN4 := 8
+Gui, hudsett4: Destroy
+Return
+
+DopGui49:
+BindText4 = %MyText9%
+PressN4 := 9
+Gui, hudsett4: Destroy
+Return
+
+DopGui50:
+BindText4 = %MyText10%
+PressN4 := 10
+Gui, hudsett4: Destroy
+Return
+;-------------------------------------------------------------------------------------------------------------------------------
+
+DopGui51:
+BindText5 = %MyText1%
+PressN5 := 1
+Gui, hudsett5: Destroy
+Return
+
+DopGui52:
+BindText5 = %MyText2%
+PressN5 := 2
+Gui, hudsett5: Destroy
+Return
+
+DopGui53:
+BindText5 = %MyText3%
+PressN5 := 3
+Gui, hudsett5: Destroy
+Return
+
+DopGui54:
+BindText5 = %MyText4%
+PressN5 := 4
+Gui, hudsett5: Destroy
+Return
+
+DopGui55:
+BindText5 = %MyText5%
+PressN5 := 5
+Gui, hudsett5: Destroy
+Return
+
+DopGui56:
+BindText5 = %MyText6%
+PressN5 := 6
+Gui, hudsett5: Destroy
+Return
+
+DopGui57:
+BindText5 = %MyText7%
+PressN5 := 7
+Gui, hudsett5: Destroy
+Return
+
+DopGui58:
+BindText5 = %MyText8%
+PressN5 := 8
+Gui, hudsett5: Destroy
+Return
+
+DopGui59:
+BindText5 = %MyText9%
+PressN5 := 9
+Gui, hudsett5: Destroy
+Return
+
+DopGui60:
+BindText5 = %MyText10%
+PressN5 := 10
+Gui, hudsett5: Destroy
+Return
+;-------------------------------------------------------------------------------------------------------------------------------
+
+DopGui61:
+BindText6 = %MyText1%
+PressN6 := 1
+Gui, hudsett6: Destroy
+Return
+
+DopGui62:
+BindText6 = %MyText2%
+PressN6 := 2
+Gui, hudsett6: Destroy
+Return
+
+DopGui63:
+BindText6 = %MyText3%
+PressN6 := 3
+Gui, hudsett6: Destroy
+Return
+
+DopGui64:
+BindText6 = %MyText4%
+PressN6 := 4
+Gui, hudsett6: Destroy
+Return
+
+DopGui65:
+BindText6 = %MyText5%
+PressN6 := 5
+Gui, hudsett6: Destroy
+Return
+
+DopGui66:
+BindText6 = %MyText6%
+PressN6 := 6
+Gui, hudsett6: Destroy
+Return
+
+DopGui67:
+BindText6 = %MyText7%
+PressN6 := 7
+Gui, hudsett6: Destroy
+Return
+
+DopGui68:
+BindText6 = %MyText8%
+PressN6 := 8
+Gui, hudsett6: Destroy
+Return
+
+DopGui69:
+BindText6 = %MyText9%
+PressN6 := 9
+Gui, hudsett6: Destroy
+Return
+
+DopGui70:
+BindText6 = %MyText10%
+PressN6 := 10
+Gui, hudsett6: Destroy
+Return
+;-------------------------------------------------------------------------------------------------------------------------------
+
+DopGui71:
+BindText7 = %MyText1%
+PressN7 := 1
+Gui, hudsett7: Destroy
+Return
+
+DopGui72:
+BindText7 = %MyText2%
+PressN7 := 2
+Gui, hudsett7: Destroy
+Return
+
+DopGui73:
+BindText7 = %MyText3%
+PressN7 := 3
+Gui, hudsett7: Destroy
+Return
+
+DopGui74:
+BindText7 = %MyText4%
+PressN7 := 4
+Gui, hudsett7: Destroy
+Return
+
+DopGui75:
+BindText7 = %MyText5%
+PressN7 := 5
+Gui, hudsett7: Destroy
+Return
+
+DopGui76:
+BindText7 = %MyText6%
+PressN7 := 6
+Gui, hudsett7: Destroy
+Return
+
+DopGui77:
+BindText7 = %MyText7%
+PressN7 := 7
+Gui, hudsett7: Destroy
+Return
+
+DopGui78:
+BindText7 = %MyText8%
+PressN7 := 8
+Gui, hudsett7: Destroy
+Return
+
+DopGui79:
+BindText7 = %MyText9%
+PressN7 := 9
+Gui, hudsett7: Destroy
+Return
+
+DopGui80:
+BindText7 = %MyText10%
+PressN7 := 10
+Gui, hudsett7: Destroy
+Return
+
+;-------------------------------------------------------------------------------------------------------------------------------
+
+DopGui81:
+BindText8 = %MyText1%
+PressN8 := 1
+Gui, hudsett8: Destroy
+Return
+
+DopGui82:
+BindText8 = %MyText2%
+PressN8 := 2
+Gui, hudsett8: Destroy
+Return
+
+DopGui83:
+BindText8 = %MyText3%
+PressN8 := 3
+Gui, hudsett8: Destroy
+Return
+
+DopGui84:
+BindText8 = %MyText4%
+PressN8 := 4
+Gui, hudsett8: Destroy
+Return
+
+DopGui85:
+BindText4 = %MyText5%
+PressN8 := 5
+Gui, hudsett8: Destroy
+Return
+
+DopGui86:
+BindText8 = %MyText6%
+PressN8 := 6
+Gui, hudsett8: Destroy
+Return
+
+DopGui87:
+BindText8 = %MyText7%
+PressN8 := 7
+Gui, hudsett8: Destroy
+Return
+
+DopGui88:
+BindText8 = %MyText8%
+PressN8 := 8
+Gui, hudsett8: Destroy
+Return
+
+DopGui89:
+BindText8 = %MyText9%
+PressN8 := 9
+Gui, hudsett8: Destroy
+Return
+
+DopGui90:
+BindText8 = %MyText10%
+PressN8 := 10
+Gui, hudsett8: Destroy
+Return
+
+;-------------------------------------------------------------------------------------------------------------------------------
+
+DopGui91:
+BindText9 = %MyText1%
+PressN9 := 1
+Gui, hudsett9: Destroy
+Return
+
+DopGui92:
+BindText9 = %MyText2%
+PressN9 := 2
+Gui, hudsett9: Destroy
+Return
+
+DopGui93:
+BindText9 = %MyText3%
+PressN9 := 3
+Gui, hudsett9: Destroy
+Return
+
+DopGui94:
+BindText9 = %MyText4%
+PressN9 := 4
+Gui, hudsett9: Destroy
+Return
+
+DopGui95:
+BindText9 = %MyText5%
+PressN9 := 5
+Gui, hudsett9: Destroy
+Return
+
+DopGui96:
+BindText9 = %MyText6%
+PressN9 := 6
+Gui, hudsett9: Destroy
+Return
+
+DopGui97:
+BindText9 = %MyText7%
+PressN9 := 7
+Gui, hudsett9: Destroy
+Return
+
+DopGui98:
+BindText9 = %MyText8%
+PressN9 := 8
+Gui, hudsett9: Destroy
+Return
+
+DopGui99:
+BindText9 = %MyText9%
+PressN9 := 9
+Gui, hudsett9: Destroy
+Return
+
+DopGui100:
+BindText9 = %MyText10%
+PressN9 := 10
+Gui, hudsett9: Destroy
+Return
+;-------------------------------------------------------------------------------------------------------------------------------
+
+DopGui101:
+BindText10 = %MyText1%
+PressN10 := 1
+Gui, hudsett10: Destroy
+Return
+
+DopGui102:
+BindText10 = %MyText2%
+PressN10 := 2
+Gui, hudsett10: Destroy
+Return
+
+DopGui103:
+BindText10 = %MyText3%
+PressN10 := 3
+Gui, hudsett10: Destroy
+Return
+
+DopGui104:
+BindText10 = %MyText4%
+PressN10 := 4
+Gui, hudsett10: Destroy
+Return
+
+DopGui105:
+BindText10 = %MyText5%
+PressN10 := 5
+Gui, hudsett10: Destroy
+Return
+
+DopGui106:
+BindText10 = %MyText6%
+PressN10 := 6
+Gui, hudsett10: Destroy
+Return
+
+DopGui107:
+BindText10 = %MyText7%
+PressN10 := 7
+Gui, hudsett10: Destroy
+Return
+
+DopGui108:
+BindText10 = %MyText8%
+PressN10 := 8
+Gui, hudsett10: Destroy
+Return
+
+DopGui109:
+BindText10 = %MyText9%
+PressN10 := 9
+Gui, hudsett10: Destroy
+Return
+
+DopGui110:
+BindText10 = %MyText10%
+PressN10 := 10
+Gui, hudsett10: Destroy
+Return
+;-------------------------------------------------------------------------------------------------------------------------------
+
+DopGui111:
+BindText11 = %MyText1%
+PressN11 := 1
+Gui, hudsett11: Destroy
+Return
+
+DopGui112:
+BindText11 = %MyText2%
+PressN11 := 2
+Gui, hudsett11: Destroy
+Return
+
+DopGui113:
+BindText11 = %MyText3%
+PressN11 := 3
+Gui, hudsett11: Destroy
+Return
+
+DopGui114:
+BindText11 = %MyText4%
+PressN11 := 4
+Gui, hudsett11: Destroy
+Return
+
+DopGui115:
+BindText11 = %MyText5%
+PressN11 := 5
+Gui, hudsett11: Destroy
+Return
+
+DopGui116:
+BindText11 = %MyText6%
+PressN11 := 6
+Gui, hudsett11: Destroy
+Return
+
+DopGui117:
+BindText11 = %MyText7%
+PressN11 := 7
+Gui, hudsett11: Destroy
+Return
+
+DopGui118:
+BindText11 = %MyText8%
+PressN11 := 8
+Gui, hudsett11: Destroy
+Return
+
+DopGui119:
+BindText11 = %MyText9%
+PressN11 := 9
+Gui, hudsett11: Destroy
+Return
+
+DopGui120:
+BindText11 = %MyText10%
+PressN11 := 10
+Gui, hudsett11: Destroy
+Return
+;-------------------------------------------------------------------------------------------------------------------------------
+
+DopGui121:
+BindText12 = %MyText1%
+PressN12 := 1
+Gui, hudsett12: Destroy
+Return
+
+DopGui122:
+BindText12 = %MyText2%
+PressN12 := 2
+Gui, hudsett12: Destroy
+Return
+
+DopGui123:
+BindText12 = %MyText3%
+PressN12 := 3
+Gui, hudsett12: Destroy
+Return
+
+DopGui124:
+BindText12 = %MyText4%
+PressN12 := 4
+Gui, hudsett12: Destroy
+Return
+
+DopGui125:
+BindText12 = %MyText5%
+PressN12 := 5
+Gui, hudsett12: Destroy
+Return
+
+DopGui126:
+BindText12 = %MyText6%
+PressN12 := 6
+Gui, hudsett12: Destroy
+Return
+
+DopGui127:
+BindText12 = %MyText7%
+PressN12 := 7
+Gui, hudsett12: Destroy
+Return
+
+DopGui128:
+BindText12 = %MyText8%
+PressN12 := 8
+Gui, hudsett12: Destroy
+Return
+
+DopGui129:
+BindText12 = %MyText9%
+PressN12 := 9
+Gui, hudsett12: Destroy
+Return
+
+DopGui130:
+BindText12 = %MyText10%
+PressN12 := 10
+Gui, hudsett12: Destroy
+Return
+;-------------------------------------------------------------------

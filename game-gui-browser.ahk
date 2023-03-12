@@ -1,4 +1,175 @@
-﻿buildverbrow = 2
+﻿#SingleInstance Force
+#NoEnv
+StringCaseSense Locale
+
+buildverbrow = 3
+
+;-----------------------------------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------------------------------
+
+
+osoba1 = tpc -1135.29, 375.56, 70.11
+osoba2 = tpc -1806.19, 439.39, 127.93
+osoba3 = tpc -834.32, 114.14, 56.21
+osoba4 = tpc 228.25, 765.94, 204.56
+osoba5 = tpc -1188.68, 289.34, 70.50
+osoba6 = tpc -1549.18, -87.88, 55.72
+osoba7 = tpc -1579.00, -33.85, 56.94
+osoba8 = tpc -1462.32, -32.05, 55.54
+osoba9 = tpc -2584.95, 1913.73, 166.90
+osoba10 = tpc -1516.86, 852.00, 181.20
+osoba11 = tpc 3313.22, 5175.29, 18.81
+osoba12 = tpc -712.52, -1298.13, 5.01
+osoba13 = tpc -1274.98, 496.90, 97.04
+osoba14 = tpc -1025.39, 360.01, 71.31
+osoba15 = tpc -882.32, 365.56, 84.64
+osoba16 = tpc -877.60, 306.26, 82.09
+osoba17 = tpc -701.00, 647.72, 154.53
+osoba18 = tpc -1040.43, 222.49, 63.27
+osoba19 = tpc -997.97, 156.94, 60.83
+osoba20 = tpc -951.94, 195.32, 67.43
+osoba21 = tpc -903.10, 191.32, 69.17
+osoba22 = tpc -837.51, -25.94, 40.20
+osoba23 = tpc -969.00, 124.09, 55.95
+osoba24 = tpc -883.74, 39.66, 49.47
+osoba25 = tpc -1732.53, 380.27, 88.98
+osoba26 = tpc -1863.78, 309.64, 88.94
+osoba27 = tpc -1874.37, 201.60, 85.13
+osoba28 = tpc -1344.88, 481.11, 101.58
+osoba29 = tpc -1897.34, 132.56, 80.94
+osoba30 = tpc -2797.85, 1431.46, 99.35
+;-----------------------------------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------------------------------
+
+
+;-----------------------------------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------------------------------
+
+My1GIniRead(pravila_dall, "gos-pravila\pravila_dall.ini", "Section", "Key", "MyError")
+My1GIniRead(ByRef pravila_dall, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+        pravila_dall := value 
+      else
+        pravila_dall .= "`n" value
+    }
+}
+
+My2GIniRead(pravila_dfib, "gos-pravila\pravila_dfib.ini", "Section", "Key", "MyError")
+My2GIniRead(ByRef pravila_dfib, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+        pravila_dfib := value 
+      else
+        pravila_dfib .= "`n" value
+    }
+}
+
+My3GIniRead(pravila_gos, "gos-pravila\pravila_gos.ini", "Section", "Key", "MyError")
+My3GIniRead(ByRef pravila_gos, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+        pravila_gos := value 
+      else
+        pravila_gos .= "`n" value
+    }
+}
+
+My4GIniRead(pravila_pems, "gos-pravila\pravila_pems.ini", "Section", "Key", "MyError")
+My4GIniRead(ByRef pravila_pems, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+        pravila_pems := value 
+      else
+        pravila_pems .= "`n" value
+    }
+}
+
+My5GIniRead(pravila_png, "gos-pravila\pravila_png.ini", "Section", "Key", "MyError")
+My5GIniRead(ByRef pravila_png, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+        pravila_png := value 
+      else
+        pravila_png .= "`n" value
+    }
+}
+
+My6GIniRead(pravila_reid, "gos-pravila\pravila_reid.ini", "Section", "Key", "MyError")
+My6GIniRead(ByRef pravila_reid, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+        pravila_reid := value 
+      else
+        pravila_reid .= "`n" value
+    }
+}
+
+My7GIniRead(pravila_shturm, "gos-pravila\pravila_shturm.ini", "Section", "Key", "MyError")
+My7GIniRead(ByRef pravila_shturm, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+        pravila_shturm := value 
+      else
+        pravila_shturm .= "`n" value
+    }
+}
+
+My8GIniRead(pravila_vid, "gos-pravila\pravila_vid.ini", "Section", "Key", "MyError")
+My8GIniRead(ByRef pravila_vid, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+        pravila_vid := value 
+      else
+        pravila_vid .= "`n" value
+    }
+}
+;-----------------------------------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------------------------------
+;-----------------------------------------------------------------------------------------------------------------
 
 MyIniRead(OutputVar, "setting_spravq.ini", "Section", "Key", "MyError")
 MyIniRead(ByRef OutputVar, Filename, Section, Key, ByRef Default)
@@ -15,1323 +186,1210 @@ MyIniRead(ByRef OutputVar, Filename, Section, Key, ByRef Default)
     }
 }
 
+My11IniRead(Pravila_Pohit, "crime-pravila\pravila_pohit.ini", "Section", "Key", "MyError")
+My11IniRead(ByRef Pravila_Pohit, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+         Pravila_Pohit := value 
+      else
+         Pravila_Pohit .= "`n" value
+    }
+}
+
+My21IniRead(Pravila_gw, "crime-pravila\pravila_gw.ini", "Section", "Key", "MyError")
+My21IniRead(ByRef Pravila_gw, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+         Pravila_gw := value 
+      else
+         Pravila_gw .= "`n" value
+    }
+}
+
+My31IniRead(Pravila_band, "crime-pravila\pravila_band.ini", "Section", "Key", "MyError")
+My31IniRead(ByRef Pravila_band, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+         Pravila_band := value 
+      else
+         Pravila_band .= "`n" value
+    }
+}
+
+My41IniRead(Pravila_mafiy, "crime-pravila\pravila_mafiy.ini", "Section", "Key", "MyError")
+My41IniRead(ByRef Pravila_mafiy, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+         Pravila_mafiy := value 
+      else
+         Pravila_mafiy .= "`n" value
+    }
+}
+
+My51IniRead(Pravila_recket, "crime-pravila\pravila_recket.ini", "Section", "Key", "MyError")
+My51IniRead(ByRef Pravila_recket, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+         Pravila_recket := value 
+      else
+         Pravila_recket .= "`n" value
+    }
+}
+
+My61IniRead(Pravila_wargh, "crime-pravila\pravila_wargh.ini", "Section", "Key", "MyError")
+My61IniRead(ByRef Pravila_wargh, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+         Pravila_wargh := value 
+      else
+         Pravila_wargh .= "`n" value
+    }
+}
+
+My71IniRead(Pravila_analget, "crime-pravila\pravila_analget.ini", "Section", "Key", "MyError")
+My71IniRead(ByRef Pravila_analget, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+         Pravila_analget := value 
+      else
+         Pravila_analget .= "`n" value
+    }
+}
+
+My81IniRead(Pravila_armysaspa, "crime-pravila\pravila_armysaspa.ini", "Section", "Key", "MyError")
+My81IniRead(ByRef Pravila_armysaspa, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+         Pravila_armysaspa := value 
+      else
+         Pravila_armysaspa .= "`n" value
+    }
+}
+
+My91IniRead(Pravila_pushgos, "crime-pravila\pravila_pushgos.ini", "Section", "Key", "MyError")
+My91IniRead(ByRef Pravila_pushgos, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+         Pravila_pushgos := value 
+      else
+         Pravila_pushgos .= "`n" value
+    }
+}
+
+My101IniRead(Pravila_vzh, "crime-pravila\pravila_vzh.ini", "Section", "Key", "MyError")
+My101IniRead(ByRef Pravila_vzh, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+         Pravila_vzh := value 
+      else
+         Pravila_vzh .= "`n" value
+    }
+}
+;-----------------------------------------------------------------------------------------------------------------
+
 ES_NOHIDESEL := 256  ; показывает выделение текста в Edit при неактивном окне
 EM_SETSEL := 0x00B1  ; установка выделения
 EM_SCROLLCARET := 0xB7  ; сделать видимым выделенный текст
 EM_GETSEL := 0xB0  ; извлечь позицию каретки ввода
 VarSetCapacity(start, 4), VarSetCapacity(end, 4)
 
-
-Loop, 202
+ViborStart:
+IniRead, Vibor, %a_temp%\AuLib\vibor.ini, Setup, Vibor
+If Vibor = Правила гос.организаций
+	{
+		Vibor := "Правила гос.организаций"
+	}
+If Vibor = Общие правила
+	{
+		Vibor := "Общие правила"
+	}
+If Vibor = Правила крим.организаций
+	{
+		Vibor := "Правила крим.организаций"
+	}
+If Vibor = Дополнительно
 {
-FileReadLine, Text%A_Index%, %A_WorkingDir%\app\gui\pravilap.ini, %A_Index%
-}
+		Vibor := "Дополнительно"
+	}
+Goto, Vibor1
+Return
 
-Loop, 28
+Vibor1:
+GuiControlGet, Vibor,, Vibor
+	if Vibor = Общие правила
 {
-FileReadLine, AText%A_Index%, %A_WorkingDir%\app\gui\pravilas.ini, %A_Index%
+	Gui, Browser: Destroy
+	Gui, Browser: +HWNDhGUIMain +AlwaysOnTop
+	Gui, Browser: Add, DropDownList, x0 y0 w621 vVibor gVibor1, Общие правила||Правила гос.организаций|Правила крим.организаций|Дополнительно
+	Gui, Browser: Add, Tab3, x-1 y21 w623 h420, Правила проекта|Правила сервера|Правила зеленых зон
+	Gui, Browser: Tab, 1
+	Gui, Browser: Add, Edit, x1 y43 w618 h349 +Multi +ReadOnly vMainEdit1 hwndhMainEdit1 %ES_NOHIDESEL%, %pravila_proekta%
+	Gui, Browser: Add, Button, x264 y396 w80 h23 gFin1, Поиск
+	Gui, Browser: Tab, 2
+	Gui, Browser: Add, Edit, x1 y43 w618 h349 +Multi +ReadOnly vMainEdit2 hwndhMainEdit2 %ES_NOHIDESEL%, %pravila_servera%
+	Gui, Browser: Add, Button, x264 y396 w80 h23 gFin2, Поиск
+	Gui, Browser: Tab, 3
+	Gui, Browser: Add, Edit, x1 y43 w618 h349 +Multi +ReadOnly vMainEdit3 hwndhMainEdit3 %ES_NOHIDESEL%, %pravila_greenzone%
+	Gui, Browser: Add, Button, x264 y396 w80 h23 gFin3, Поиск
+	Gui, Browser: Tab
+	Gui, Browser: Show, w621 h420, Window
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit1%
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit2%
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit3%
 }
+	if Vibor = Правила гос.организаций
+	{
+		Gui, Browser: Destroy
+		Gui, Browser: +HWNDhGUIMain +AlwaysOnTop
+		Gui, Browser: Add, DropDownList, x0 y0 w621 vVibor gVibor1, Общие правила|Правила гос.организаций||Правила крим.организаций|Дополнительно
+		Gui, Browser: Add, Tab3, x-1 y21 w623 h420, Правила гос.структур|Положение о внешнем виде|Штурма титула|Рейдов|Допросов FIB|Допросов ALL|Поставки EMS| Поставки NG
+		Gui, Browser: Tab, 1
+		Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit4 hwndhMainEdit4 %ES_NOHIDESEL%, %pravila_gos%
+		Gui, Browser: Add, Button, x264 y396 w80 h23 gFin4, Поиск
+		Gui, Browser: Tab, 2
+		Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit5 hwndhMainEdit5 %ES_NOHIDESEL%, %pravila_vid%
+		Gui, Browser: Add, Button, x264 y396 w80 h23 gFin5, Поиск
+		Gui, Browser: Tab, 3
+		Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit6 hwndhMainEdit6 %ES_NOHIDESEL%, %pravila_shturm%
+		Gui, Browser: Add, Button, x264 y396 w80 h23 gFin6, Поиск
+		Gui, Browser: Tab, 4
+		Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit7 hwndhMainEdit7 %ES_NOHIDESEL%, %pravila_reid%
+		Gui, Browser: Add, Button, x264 y396 w80 h23 gFin7, Поиск
+		Gui, Browser: Tab, 5
+		Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit8 hwndhMainEdit8 %ES_NOHIDESEL%, %pravila_dfib%
+		Gui, Browser: Add, Button, x264 y396 w80 h23 gFin8, Поиск
+		Gui, Browser: Tab, 6
+		Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit9 hwndhMainEdit9 %ES_NOHIDESEL%, %pravila_dall%
+		Gui, Browser: Add, Button, x264 y396 w80 h23 gFin9, Поиск
+		Gui, Browser: Tab, 7
+		Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit10 hwndhMainEdit10 %ES_NOHIDESEL%, %pravila_pems%
+		Gui, Browser: Add, Button, x264 y396 w80 h23 gFin10, Поиск
+		Gui, Browser: Tab, 8
+		Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit11 hwndhMainEdit11 %ES_NOHIDESEL%, %pravila_png%
+		Gui, Browser: Add, Button, x264 y396 w80 h23 gFin11, Поиск
+		Gui, Browser: Tab
+		Gui, Browser: Show, w621 h420, Window
+		SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit4%
+		SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit5%
+		SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit6%
+		SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit7%
+		SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit8%
+		SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit9%
+		SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit10%
+		SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit11%
+	}
+	if Vibor = Правила крим.организаций
+		{
+			Gui, Browser: Destroy
+			Gui, Browser: +HWNDhGUIMain +AlwaysOnTop
+			Gui, Browser: Add, DropDownList, x0 y0 w623 h420 vVibor gVibor1, Общие правила|Правила гос.организаций|Правила крим.организаций||Дополнительно|
+			Gui, Browser: Add, Tab3, x-1 y21 w623 h420, Правила банд|Правила мафий|Рэкет клубов|Ограбления ГШ|Поставка анальгетика|Захвата гос.орг|ГВ|Ограблений/Похищений|Нападений на ФТ/ФЗ|ВЗХ
+			Gui, Browser: Tab, 1
+			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit12 hwndhMainEdit12 %ES_NOHIDESEL%, %Pravila_band%
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin12, Поиск
+			Gui, Browser: Tab, 2
+			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit13 hwndhMainEdit13 %ES_NOHIDESEL%, %Pravila_mafiy%
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin13, Поиск
+			Gui, Browser: Tab, 3
+			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit14 hwndhMainEdit14 %ES_NOHIDESEL%, %Pravila_recket%
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin14, Поиск
+			Gui, Browser: Tab, 4
+			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit15 hwndhMainEdit15 %ES_NOHIDESEL%, %Pravila_wargh%
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin15, Поиск
+			Gui, Browser: Tab, 5
+			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit16 hwndhMainEdit16 %ES_NOHIDESEL%, %Pravila_analget%
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin16, Поиск
+			Gui, Browser: Tab, 6
+			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit17 hwndhMainEdit17 %ES_NOHIDESEL%, %Pravila_pushgos%
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin17, Поиск
+			Gui, Browser: Tab, 7
+			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit18 hwndhMainEdit18 %ES_NOHIDESEL%, %Pravila_gw%
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin18, Поиск
+			Gui, Browser: Tab, 8
+			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit19 hwndhMainEdit19 %ES_NOHIDESEL%, %Pravila_Pohit%
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin19, Поиск
+			Gui, Browser: Tab, 9
+			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit20 hwndhMainEdit20 %ES_NOHIDESEL%, %Pravila_armysaspa%
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin20, Поиск
+			Gui, Browser: Tab, 10
+			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit21 hwndhMainEdit21 %ES_NOHIDESEL%, %Pravila_vzh%
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin21, Поиск
+			Gui, Browser: Tab
+			Gui, Browser: Show, w621 h420, Window
+
+			
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit12%
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit13%
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit14%
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit15%
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit16%
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit17%
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit18%
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit19%
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit20%
+	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit21%
+		}	
+if Vibor = Дополнительно
+		{
+			Gui, Browser: Destroy
+			Gui, Browser: +HWNDhGUIMain +AlwaysOnTop
+			Gui, Browser: Add, DropDownList, x0 y0 w623 h420 vVibor gVibor1, Общие правила|Правила гос.организаций|Правила крим.организаций|Дополнительно||
+			Gui, Browser: Add, Tab3, x-1 y21 w623 h420, Карта особняков|TP Особы|Для заметок
+			Gui, Browser: Tab, 1
+			Gui, Browser: Add, Picture, x-1 y21 w623 h374, %A_WorkingDir%\app\gui\browser-osob-%buildverbrow%.png
+			Gui, Browser: Tab, 2
+			Gui, Browser: Add, GroupBox, x6 y45 w88 h68 +Center, Особа №1
+			Gui, Browser: Add, GroupBox, x96 y45 w88 h68 +Center, Особа №2
+			Gui, Browser: Add, GroupBox, x186 y45 w88 h68 +Center, Особа №3
+			Gui, Browser: Add, GroupBox, x277 y45 w88 h68 +Center, Особа №4
+			Gui, Browser: Add, GroupBox, x368 y45 w88 h68 +Center, Особа №5
+			Gui, Browser: Add, GroupBox, x459 y45 w88 h68 +Center, Особа №6
+			Gui, Browser: Add, GroupBox, x6 y115 w88 h68 +Center, Особа №7
+			Gui, Browser: Add, GroupBox, x96 y115 w88 h68 +Center, Особа №8
+			Gui, Browser: Add, GroupBox, x186 y115 w88 h68 +Center, Особа №9
+			Gui, Browser: Add, GroupBox, x277 y115 w88 h68 +Center, Особа №10
+			Gui, Browser: Add, GroupBox, x368 y115 w88 h68 +Center, Особа №11
+			Gui, Browser: Add, GroupBox, x459 y115 w88 h68 +Center, Особа №12
+			Gui, Browser: Add, GroupBox, x6 y185 w88 h68 +Center, Особа №13
+			Gui, Browser: Add, GroupBox, x96 y185 w88 h68 +Center, Особа №14
+			Gui, Browser: Add, GroupBox, x186 y185 w88 h68 +Center, Особа №15
+			Gui, Browser: Add, GroupBox, x277 y185 w88 h68 +Center, Особа №16
+			Gui, Browser: Add, GroupBox, x368 y185 w88 h68 +Center, Особа №17
+			Gui, Browser: Add, GroupBox, x459 y185 w88 h68 +Center, Особа №18
+			Gui, Browser: Add, GroupBox, x6 y255 w88 h68 +Center, Особа №19
+			Gui, Browser: Add, GroupBox, x96 y255 w88 h68 +Center, Особа №20
+			Gui, Browser: Add, GroupBox, x187 y255 w88 h68 +Center, Особа №21
+			Gui, Browser: Add, GroupBox, x278 y255 w88 h68 +Center, Особа №22
+			Gui, Browser: Add, GroupBox, x368 y255 w88 h68 +Center, Особа №23
+			Gui, Browser: Add, GroupBox, x459 y255 w88 h68 +Center, Особа №24
+			Gui, Browser: Add, GroupBox, x5 y325 w88 h68 +Center, Особа №25
+			Gui, Browser: Add, GroupBox, x96 y325 w88 h68 +Center, Особа №26
+			Gui, Browser: Add, GroupBox, x186 y325 w88 h68 +Center, Особа №27
+			Gui, Browser: Add, GroupBox, x278 y325 w88 h68 +Center, Особа №28
+			Gui, Browser: Add, GroupBox, x369 y325 w88 h68 +Center, Особа №29
+			Gui, Browser: Add, GroupBox, x459 y325 w88 h68 +Center, Особа №30
+
+			Gui, Browser: Add, Button, x10 y60 w80 h23 ggoto1, GOTO
+			Gui, Browser: Add, Button, x100 y60 w80 h23  ggoto2, GOTO
+			Gui, Browser: Add, Button, x190 y60 w80 h23  ggoto3, GOTO
+			Gui, Browser: Add, Button, x280 y60 w80 h23  ggoto4, GOTO
+			Gui, Browser: Add, Button, x371 y60 w80 h23 ggoto5, GOTO
+			Gui, Browser: Add, Button, x462 y60 w80 h23 ggoto6, GOTO
+			Gui, Browser: Add, Button, x10 y131 w80 h23 ggoto7, GOTO
+			Gui, Browser: Add, Button, x100 y131 w80 h23 ggoto8, GOTO
+			Gui, Browser: Add, Button, x190 y131 w80 h23 ggoto9, GOTO
+			Gui, Browser: Add, Button, x281 y131 w80 h23 ggoto10, GOTO
+			Gui, Browser: Add, Button, x372 y131 w80 h23 ggoto11, GOTO
+			Gui, Browser: Add, Button, x463 y131 w80 h23 ggoto12, GOTO
+			Gui, Browser: Add, Button, x10 y200 w80 h23 ggoto13, GOTO
+			Gui, Browser: Add, Button, x99 y200 w80 h23 ggoto14, GOTO
+			Gui, Browser: Add, Button, x190 y200 w80 h23 ggoto15, GOTO
+			Gui, Browser: Add, Button, x281 y200 w80 h23 ggoto16, GOTO
+			Gui, Browser: Add, Button, x372 y200 w80 h23 ggoto17, GOTO
+			Gui, Browser: Add, Button, x463 y200 w80 h23 ggoto18, GOTO
+			Gui, Browser: Add, Button, x10 y271 w80 h23 ggoto19, GOTO
+			Gui, Browser: Add, Button, x101 y271 w80 h23 ggoto20, GOTO
+			Gui, Browser: Add, Button, x192 y271 w80 h23 ggoto21, GOTO
+			Gui, Browser: Add, Button, x282 y271 w80 h23 ggoto22, GOTO
+			Gui, Browser: Add, Button, x372 y271 w80 h23 ggoto23, GOTO
+			Gui, Browser: Add, Button, x463 y271 w80 h23 ggoto24, GOTO
+			Gui, Browser: Add, Button, x10 y340 w80 h23 ggoto25, GOTO
+			Gui, Browser: Add, Button, x100 y340 w80 h23 ggoto26, GOTO
+			Gui, Browser: Add, Button, x190 y340 w80 h23 ggoto27, GOTO
+			Gui, Browser: Add, Button, x283 y340 w80 h23 ggoto28, GOTO
+			Gui, Browser: Add, Button, x373 y340 w80 h23 ggoto29, GOTO
+			Gui, Browser: Add, Button, x463 y340 w80 h23 ggoto30, GOTO
+
+			Gui, Browser: Add, Button, x10 y83 w80 h23 gmark1, MARK
+			Gui, Browser: Add, Button, x100 y83 w80 h23 gmark2, MARK
+			Gui, Browser: Add, Button, x190 y83 w80 h23 gmark3, MARK
+			Gui, Browser: Add, Button, x280 y83 w80 h23 gmark4, MARK
+			Gui, Browser: Add, Button, x371 y83 w80 h23 gmark5, MARK
+			Gui, Browser: Add, Button, x462 y83 w80 h23 gmark6, MARK
+			Gui, Browser: Add, Button, x10 y155 w80 h23 gmark7, MARK
+			Gui, Browser: Add, Button, x100 y155 w80 h23 gmark8, MARK
+			Gui, Browser: Add, Button, x190 y155 w80 h23 gmark9, MARK
+			Gui, Browser: Add, Button, x281 y155 w80 h23 gmark10, MARK
+			Gui, Browser: Add, Button, x372 y155 w80 h23 gmark11, MARK
+			Gui, Browser: Add, Button, x463 y155 w80 h23 gmark12, MARK
+			Gui, Browser: Add, Button, x10 y223 w80 h23 gmark13, MARK
+			Gui, Browser: Add, Button, x99 y223 w80 h23 gmark14, MARK
+			Gui, Browser: Add, Button, x190 y223 w80 h23 gmark15, MARK
+			Gui, Browser: Add, Button, x281 y223 w80 h23 gmark16, MARK
+			Gui, Browser: Add, Button, x372 y223 w80 h23 gmark17, MARK
+			Gui, Browser: Add, Button, x463 y223 w80 h23 gmark18, MARK
+			Gui, Browser: Add, Button, x10 y295 w80 h23 gmark19, MARK
+			Gui, Browser: Add, Button, x101 y295 w80 h23 gmark20, MARK
+			Gui, Browser: Add, Button, x192 y295 w80 h23 gmark21, MARK
+			Gui, Browser: Add, Button, x282 y295 w80 h23 gmark22, MARK
+			Gui, Browser: Add, Button, x372 y295 w80 h23 gmark23, MARK
+			Gui, Browser: Add, Button, x463 y295 w80 h23 gmark24, MARK
+			Gui, Browser: Add, Button, x10 y364 w80 h23 gmark25, MARK
+			Gui, Browser: Add, Button, x100 y364 w80 h23 gmark26, MARK
+			Gui, Browser: Add, Button, x190 y364 w80 h23 gmark27, MARK
+			Gui, Browser: Add, Button, x283 y364 w80 h23 gmark28, MARK
+			Gui, Browser: Add, Button, x373 y364 w80 h23 gmark29, MARK
+			Gui, Browser: Add, Button, x463 y364 w80 h23 gmark30, MARK
+			Gui, Browser: Tab, 3
+			Gui, Browser: Add, Edit,  x1 y45 w616 h350 +Multi vOutputVar, %OutputVar%
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gSaveSprab, Сохранить
+			Gui, Browser: Tab
+			Gui, Browser: Show, w621 h420, Window
+		}
+	IniWrite, %Vibor%, %a_temp%\AuLib\vibor.ini, Setup, Vibor
+	Return
+
+    BrowserGuiEscape:
+    BrowserGuiClose:
+    Gui, Browser: Destroy
+Return
 
-Loop, 261
-{
-FileReadLine, BText%A_Index%, %A_WorkingDir%\app\gui\pravilagos.ini, %A_Index%
-}
-
-Loop, 250
-{
-FileReadLine, CText%A_Index%, %A_WorkingDir%\app\gui\pravilaband.ini, %A_Index%
-}
-
-Loop, 112
-{
-FileReadLine, DText%A_Index%, %A_WorkingDir%\app\gui\pravilamafiy.ini, %A_Index%
-}
-
-Gui, g: +HWNDhGUIMain  +AlwaysOnTop
-SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit1%
-SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit2%
-SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit3%
-SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit4%
-SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit5%
-Gosub, Sebi
-
-Gui, g: Add, Tab3, x0 y0 w620 h430, Правила проекта| Сервера| Гос| Банд| Мафий|Карта особ| TP особы|Для справок
-
-Gui, g: Tab, 1
-Gui, g: Add, Button, x310 y407 w50 h20 gFin1, Поиск
-Gui, g: Add, Edit, x3 y24 w614 h383 +Multi +ReadOnly vMainEdit1 hwndhMainEdit1 %ES_NOHIDESEL%, %Text%
-
-Gui, g: Tab, 2 
-Gui, g: Add, Button, x310 y407 w50 h20 gFin2, Поиск
-Gui, g: Add, Edit, x3 y24 w614 h383 +Multi +ReadOnly vMainEdit2 hwndhMainEdit2 %ES_NOHIDESEL%, %AText%
-
-Gui, g: Tab, 3 
-Gui, g: Add, Button, x310 y407 w50 h20 gFin3, Поиск
-Gui, g: Add, Edit, x3 y24 w614 h383 +Multi +ReadOnly vMainEdit3 hwndhMainEdit3 %ES_NOHIDESEL%, %BText%
-
-Gui, g: Tab, 4
-Gui, g: Add, Button, x310 y407 w50 h20 gFin4, Поиск
-Gui, g: Add, Edit, x3 y24 w614 h383 +Multi +ReadOnly vMainEdit4 hwndhMainEdit4 %ES_NOHIDESEL%, %CText%
-
-Gui, g: Tab, 5
-Gui, g: Add, Button, x310 y407 w50 h20 gFin5, Поиск
-Gui, g: Add, Edit, x3 y24 w614 h383 +Multi +ReadOnly vMainEdit5 hwndhMainEdit5 %ES_NOHIDESEL%, %DText%
-
-Gui, g: Tab, 6 
-Gui, g: Add, Picture, x0 y22 w620 h409, %A_WorkingDir%\app\gui\browser-osob-%buildverbrow%.png
-
-Gui, g: Tab, 7
-Gui, g: Add, GroupBox, x4 y23 w167 h38
-Gui, g: Add, GroupBox, x4 y60 w167 h38
-Gui, g: Add, GroupBox, x4 y96 w167 h38
-Gui, g: Add, GroupBox, x4 y132 w167 h38
-Gui, g: Add, GroupBox, x4 y168 w167 h38
-Gui, g: Add, GroupBox, x4 y203 w167 h38
-Gui, g: Add, GroupBox, x4 y238 w167 h38
-Gui, g: Add, GroupBox, x4 y274 w167 h38
-Gui, g: Add, GroupBox, x4 y311 w167 h38
-Gui, g: Add, GroupBox, x5 y347 w167 h38
-Gui, g: Add, GroupBox, x176 y23 w167 h38
-Gui, g: Add, GroupBox, x174 y60 w167 h38
-Gui, g: Add, GroupBox, x174 y96 w167 h38
-Gui, g: Add, GroupBox, x174 y132 w167 h38
-Gui, g: Add, GroupBox, x174 y168 w167 h38
-Gui, g: Add, GroupBox, x174 y203 w167 h38
-Gui, g: Add, GroupBox, x174 y238 w167 h38
-Gui, g: Add, GroupBox, x174 y274 w167 h38
-Gui, g: Add, GroupBox, x174 y311 w167 h38
-Gui, g: Add, GroupBox, x174 y347 w167 h38
-Gui, g: Add, GroupBox, x348 y23 w167 h38
-Gui, g: Add, GroupBox, x346 y60 w167 h38
-Gui, g: Add, GroupBox, x346 y96 w167 h38
-Gui, g: Add, GroupBox, x346 y132 w167 h38
-Gui, g: Add, GroupBox, x347 y168 w167 h38
-Gui, g: Add, GroupBox, x346 y203 w167 h38
-Gui, g: Add, GroupBox, x346 y238 w167 h38
-Gui, g: Add, GroupBox, x346 y274 w167 h38
-Gui, g: Add, GroupBox, x346 y311 w167 h38
-Gui, g: Add, GroupBox, x346 y347 w167 h38
-;-----------------------------------------------
-Gui, g: Add, Text, x7 y33 w56 h23 +0x200, Особа №1
-Gui, g: Add, Text, x7 y69 w56 h23 +0x200, Особа №2
-Gui, g: Add, Text, x7 y106 w56 h23 +0x200, Особа №3
-Gui, g: Add, Text, x7 y142 w56 h23 +0x200, Особа №4
-Gui, g: Add, Text, x7 y178 w56 h23 +0x200, Особа №5
-Gui, g: Add, Text, x7 y213 w56 h23 +0x200, Особа №6
-Gui, g: Add, Text, x8 y248 w56 h23 +0x200, Особа №7
-Gui, g: Add, Text, x7 y283 w56 h23 +0x200, Особа №8
-Gui, g: Add, Text, x7 y320 w56 h23 +0x200, Особа №9
-Gui, g: Add, Text, x8 y357 w61 h23 +0x200, Особа №10
-Gui, g: Add, Text, x179 y33 w66 h23 +0x200, Особа №11
-Gui, g: Add, Text, x179 y69 w61 h23 +0x200, Особа №12
-Gui, g: Add, Text, x179 y106 w69 h23 +0x200, Особа №13
-Gui, g: Add, Text, x179 y142 w63 h23 +0x200, Особа №14
-Gui, g: Add, Text, x179 y178 w62 h23 +0x200, Особа №15
-Gui, g: Add, Text, x179 y213 w63 h23 +0x200, Особа №16
-Gui, g: Add, Text, x179 y248 w59 h23 +0x200, Особа №17
-Gui, g: Add, Text, x179 y284 w62 h23 +0x200, Особа №18
-Gui, g: Add, Text, x179 y320 w59 h23 +0x200, Особа №19
-Gui, g: Add, Text, x179 y357 w61 h23 +0x200, Особа №20
-Gui, g: Add, Text, x353 y33 w60 h23 +0x200, Особа №21
-Gui, g: Add, Text, x353 y69 w59 h23 +0x200, Особа №22
-Gui, g: Add, Text, x353 y106 w58 h23 +0x200, Особа №23
-Gui, g: Add, Text, x353 y142 w60 h23 +0x200, Особа №24
-Gui, g: Add, Text, x353 y178 w62 h23 +0x200, Особа №25
-Gui, g: Add, Text, x353 y213 w59 h23 +0x200, Особа №26
-Gui, g: Add, Text, x353 y248 w61 h23 +0x200, Особа №27
-Gui, g: Add, Text, x353 y283 w60 h23 +0x200, Особа №28
-Gui, g: Add, Text, x353 y320 w59 h23 +0x200, Особа №29
-Gui, g: Add, Text, x353 y357 w61 h23 +0x200, Особа №30
 
-Gui, g: Add, Button, x68 y33 w48 h23 ggoto1, GOTO
-Gui, g: Add, Button, x120 y33 w48 h23 gcopy1, MARK
 
-Gui, g: Add, Button, x68 y70 w48 h23 ggoto2, GOTO
-Gui, g: Add, Button, x118 y70 w48 h23 gcopy2, MARK
 
-Gui, g: Add, Button, x68 y106 w48 h23 ggoto3, GOTO
-Gui, g: Add, Button, x118 y106 w48 h23 gcopy3, MARK
 
-Gui, g: Add, Button, x68 y142 w48 h23 ggoto4, GOTO
-Gui, g: Add, Button, x118 y142 w48 h23 gcopy4, MARK
 
-Gui, g: Add, Button, x68 y178 w48 h23 ggoto5, GOTO
-Gui, g: Add, Button, x118 y178 w48 h23 gcopy5, MARK
 
-Gui, g: Add, Button, x68 y213 w48 h23 ggoto6, GOTO
-Gui, g: Add, Button, x118 y213 w48 h23 gcopy6, MARK
 
-Gui, g: Add, Button, x68 y248 w48 h23 ggoto7, GOTO
-Gui, g: Add, Button, x118 y248 w48 h23 gcopy7, MARK
 
-Gui, g: Add, Button, x68 y283 w48 h23 ggoto8, GOTO
-Gui, g: Add, Button, x118 y283 w48 h23 gcopy8, MARK
 
-Gui, g: Add, Button, x68 y320 w48 h23 ggoto9, GOTO
-Gui, g: Add, Button, x118 y320 w48 h23 gcopy9, MARK
 
-Gui, g: Add, Button, x68 y357 w48 h23 ggoto10, GOTO
-Gui, g: Add, Button, x118 y357 w48 h23 gcopy10, MARK
-;-----------------------------------------------
-
-Gui, g: Add, Button, x242 y33 w48 h23 ggoto11, GOTO
-Gui, g: Add, Button, x292 y33 w48 h23 gcopy11, MARK
-
-Gui, g: Add, Button, x242 y70 w48 h23 ggoto12, GOTO
-Gui, g: Add, Button, x292 y70 w48 h23 gcopy12, MARK
-
-Gui, g: Add, Button, x242 y106 w48 h23 ggoto13, GOTO
-Gui, g: Add, Button, x292 y106 w48 h23 gcopy13, MARK
-
-Gui, g: Add, Button, x242 y142 w48 h23 ggoto14, GOTO
-Gui, g: Add, Button, x292 y142 w48 h23 gcopy14, MARK
-
-Gui, g: Add, Button, x242 y178 w48 h23 ggoto15, GOTO
-Gui, g: Add, Button, x292 y178 w48 h23 gcopy15, MARK
-
-Gui, g: Add, Button, x242 y213 w48 h23 ggoto16, GOTO
-Gui, g: Add, Button, x292 y213 w48 h23 gcopy16, MARK
-
-Gui, g: Add, Button, x242 y248 w48 h23 ggoto17, GOTO
-Gui, g: Add, Button, x292 y248 w48 h23 gcopy17, MARK
-
-Gui, g: Add, Button, x242 y283 w48 h23 ggoto18, GOTO
-Gui, g: Add, Button, x292 y283 w48 h23 gcopy18, MARK
-
-Gui, g: Add, Button, x242 y320 w48 h23 ggoto19, GOTO
-Gui, g: Add, Button, x292 y320 w48 h23 gcopy19, MARK
-
-Gui, g: Add, Button, x242 y357 w48 h23 ggoto20, GOTO
-Gui, g: Add, Button, x292 y357 w48 h23 gcopy20, MARK
-;-----------------------------------------
-Gui, g: Add, Button, x414 y33 w48 h23 ggoto21, GOTO
-Gui, g: Add, Button, x463 y33 w48 h23 gcopy21, MARK
-
-Gui, g: Add, Button, x414 y70 w48 h23 ggoto22, GOTO
-Gui, g: Add, Button, x463 y70 w48 h23 gcopy22, MARK
-
-Gui, g: Add, Button, x414 y106 w48 h23 ggoto23, GOTO
-Gui, g: Add, Button, x463 y106 w48 h23 gcopy23, MARK
-
-Gui, g: Add, Button, x414 y142 w48 h23 ggoto24, GOTO
-Gui, g: Add, Button, x463 y142 w48 h23 gcopy24, MARK
-
-Gui, g: Add, Button, x414 y178 w48 h23 ggoto25, GOTO
-Gui, g: Add, Button, x463 y178 w48 h23 gcopy25, MARK
-
-Gui, g: Add, Button, x414 y213 w48 h23 ggoto26, GOTO
-Gui, g: Add, Button, x463 y213 w48 h23 gcopy26, MARK
-
-Gui, g: Add, Button, x414 y248 w48 h23 ggoto27, GOTO
-Gui, g: Add, Button, x463 y248 w48 h23 gcopy27, MARK
-
-Gui, g: Add, Button, x414 y283 w48 h23 ggoto28, GOTO
-Gui, g: Add, Button, x463 y283 w48 h23 gcopy28, MARK
-
-Gui, g: Add, Button, x414 y320 w48 h23 ggoto29, GOTO
-Gui, g: Add, Button, x463 y320 w48 h23 gcopy29, MARK
-
-Gui, g: Add, Button, x414 y357 w48 h23 ggoto30, GOTO
-Gui, g: Add, Button, x463 y357 w48 h23 gcopy30, MARK
-
-Gui, g: Add, Text, x48 y387 w480 h24 +0x200, MARK - Вставляет форму для передачи метки, нужно указать ID вместо "i" (set_gps id coord)
-Gui, g: Add, Text, x48 y405 w338 h24 +0x200, GOTO - Телепортирует по координатам (tpc coord)
-
-Gui, g: Tab, 8
-Gui, g: Add, Button, x310 y407 w60 h20 gSaveSprab, Сохранить
-Gui, g: Add, Edit, x3 y24 w614 h383 +Multi vOutputVar, %OutputVar%
-
-Gui, g: Show, w620 h430, Браузер Admin-Tools by Notoriuz
-return
-gGuiEscape:
-gGuiClose:
-    Gui, g: Destroy
-return
-
-;-----------------------------------------------------------------------------------
-
-Fin1:
-Gui, 2bg: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind +AlwaysOnTop
-Gui, 2bg: Add, Text, ym+5, Что:
-Gui, 2bg: Add, Edit, x+25 yp-5 w284 vFind hwndhFind
-Gui, 2bg: Add, Button, x+10 yp gGoSearch1, Найти далее
-Gui, 2bg: Add, Button, xp y+5 wp gCancel1, Отмена
-Gui, 2bg: Add, Checkbox, vLoop y+0 xm Checked, Зациклить поиск
-Gui, 2bg: Add, Checkbox, vSens y+10 xp, С учетом регистра
-Gui, 2bg: Add, GroupBox, x+10 yp-35 h55, Направление
-Gui, 2bg: Add, Radio, xp+10 yp+25 vDirectUp, Вверх
-Gui, 2bg: Add, Radio, x+15 Checked, Вниз 
-Gui, 2bg: Show, , Найти в Правилах Проекта
-WinMove, Найти в Правилах Проекта, , 1021, 377
-return
-2bgGuiEscape:
-2bgGuiClose:
-	Gui, 2bg: Destroy
-return
-
-SearchEdit1: 
-Gosub, GoSearch1
-    Gui, 2bg: Show, , Найти 
-    Return
-    
-Cancel1:
-    Gui, 2bg: Hide
-    Return
-
-GoSearch1:
-    GuiControlGet, DirectUp, 2:
-    GuiControlGet, Sens, 2:
-    GuiControlGet, Loop, 2:
-    ControlGetText, MainEdit1,, ahk_id %hMainEdit1%
-    ControlGetText, Find,, ahk_id %hFind%
-    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit1%
-    If DirectUp
-        f := (f := InStr(SubStr(MainEdit1, 1, NumGet(start)), Find, Sens, 0)) ? f : (Loop ? InStr(MainEdit1, Find, Sens, 0) : 0)
-    Else
-        f := (f := InStr(MainEdit1, Find, Sens, NumGet(end)+1)) ? f : (Loop ? InStr(MainEdit1, Find, Sens, 1) : 0)
-    If !f
-    {
-Gui, 2bg: Destroy
-SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit1%
-Gosub, Fin1
-    }
-    SendMessage, EM_SETSEL, f-1, f+StrLen(Find)-1, , ahk_id %hMainEdit1%
-    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit1%
-    Return
-;-----------------------------------------------------------------------------------
-
-Fin2:
-Gui, 3bg: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind +AlwaysOnTop
-Gui, 3bg: Add, Text, ym+5, Что:
-Gui, 3bg: Add, Edit, x+25 yp-5 w284 vFind11 hwndhFind11
-Gui, 3bg: Add, Button, x+10 yp gGoSearch2, Найти далее
-Gui, 3bg: Add, Button, xp y+5 wp gCancel2, Отмена
-Gui, 3bg: Add, Checkbox, vLoop11 y+0 xm Checked, Зациклить поиск
-Gui, 3bg: Add, Checkbox, vSens11 y+10 xp, С учетом регистра
-Gui, 3bg: Add, GroupBox, x+10 yp-35 h55, Направление
-Gui, 3bg: Add, Radio, xp+10 yp+25 vDirectUp11, Вверх
-Gui, 3bg: Add, Radio, x+15 Checked, Вниз 
-Gui, 3bg: Show, , Найти в Правилах Сервера
-WinMove, Найти в Правилах Сервера, , 1021, 377
-return
-3bgGuiEscape:
-3bgGuiClose:
-    Gui, 3bg: Destroy
-return
-
-SearchEdit2: 
-Gosub, GoSearch2
-    Gui, 3bg: Show, , Найти 
-    Return
-    
-Cancel2:
-    Gui, 3bg: Hide
-    Return
-
-GoSearch2:
-     GuiControlGet, DirectUp11, 3:
-    GuiControlGet, Sens11, 3:
-    GuiControlGet, Loop11, 3:
-    ControlGetText, MainEdit2,, ahk_id %hMainEdit2%
-    ControlGetText, Find11,, ahk_id %hFind11%
-    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit2%
-    If DirectUp11
-        f := (f := InStr(SubStr(MainEdit2, 1, NumGet(start)), Find11, Sens11, 0)) ? f : (Loop11 ? InStr(MainEdit2, Find11, Sens11, 0) : 0)
-    Else
-        f := (f := InStr(MainEdit2, Find11, Sens11, NumGet(end)+1)) ? f : (Loop11 ? InStr(MainEdit2, Find11, Sens11, 1) : 0)
-    If !f
-    {
-Gui, 3bg: Destroy
-SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit2%
-Gosub, Fin2
-    }
-    SendMessage, EM_SETSEL, f-1, f+StrLen(Find11)-1, , ahk_id %hMainEdit2%
-    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit2%
-    Return
-
-;-----------------------------------------------------------------------------------
-
-Fin3:
-Gui, 4bg: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind +AlwaysOnTop
-Gui, 4bg: Add, Text, ym+5, Что:
-Gui, 4bg: Add, Edit, x+25 yp-5 w284 vbFind hwndhbFind
-Gui, 4bg: Add, Button, x+10 yp gGoSearch3, Найти далее
-Gui, 4bg: Add, Button, xp y+5 wp gCancel3, Отмена
-Gui, 4bg: Add, Checkbox, vbLoop y+0 xm Checked, Зациклить поиск
-Gui, 4bg: Add, Checkbox, vbSens y+10 xp, С учетом регистра
-Gui, 4bg: Add, GroupBox, x+10 yp-35 h55, Направление
-Gui, 4bg: Add, Radio, xp+10 yp+25 vbDirectUp, Вверх
-Gui, 4bg: Add, Radio, x+15 Checked, Вниз 
-Gui, 4bg: Show, , Найти в Правилах Гос
-WinMove, Найти в Правилах Гос, , 1021, 377
-return
-4bgGuiEscape:
-4bgGuiClose:
-    Gui, 4bg: Destroy
-return
-
-SearchEdit3: 
-Gosub, GoSearch3
-    Gui, 4bg: Show, , Найти 
-    Return
-    
-Cancel3:
-    Gui, 4bg: Hide
-    Return
-
-GoSearch3:
-     GuiControlGet, bDirectUp, 2:
-    GuiControlGet, bSens, 2:
-    GuiControlGet, bLoop, 2:
-    ControlGetText, MainEdit3,, ahk_id %hMainEdit3%
-    ControlGetText, bFind,, ahk_id %hbFind%
-    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit3%
-    If DirectUp11
-        f := (f := InStr(SubStr(MainEdit3, 1, NumGet(start)), bFind, bSens, 0)) ? f : (bLoop ? InStr(MainEdit3, bFind, bSens, 0) : 0)
-    Else
-        f := (f := InStr(MainEdit3, bFind, bSens, NumGet(end)+1)) ? f : (bLoop ? InStr(MainEdit3, bFind, bSens, 1) : 0)
-    If !f
-    {
-Gui, 4bg: Destroy
-SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit3%
-Gosub, Fin3
-    }
-    SendMessage, EM_SETSEL, f-1, f+StrLen(bFind)-1, , ahk_id %hMainEdit3%
-    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit3%
-    Return
-
-
-;----------------------------------------------------------------------------------------------------------
-
-Fin4:
-Gui, 5bg: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind +AlwaysOnTop
-Gui, 5bg: Add, Text, ym+5, Что:
-Gui, 5bg: Add, Edit, x+25 yp-5 w284 veFind hwndheFind
-Gui, 5bg: Add, Button, x+10 yp gGoSearch4, Найти далее
-Gui, 5bg: Add, Button, xp y+5 wp gCancel4, Отмена
-Gui, 5bg: Add, Checkbox, veLoop y+0 xm Checked, Зациклить поиск
-Gui, 5bg: Add, Checkbox, veSens y+10 xp, С учетом регистра
-Gui, 5bg: Add, GroupBox, x+10 yp-35 h55, Направление
-Gui, 5bg: Add, Radio, xp+10 yp+25 veDirectUp, Вверх
-Gui, 5bg: Add, Radio, x+15 Checked, Вниз 
-Gui, 5bg: Show, , Найти в Правилах Банд
-WinMove, Найти в Правилах Банд, , 1021, 377
-return
-5bgGuiEscape:
-5bgGuiClose:
-    Gui, 5bg: Destroy
-return
-
-SearchEdit4: 
-Gosub, GoSearch4
-    Gui, 5bg: Show, , Найти 
-    Return
-    
-GoSearch4:
-      GuiControlGet, eDirectUp, 3:
-    GuiControlGet, eSens, 3:
-    GuiControlGet, eLoop, 3:
-    ControlGetText, MainEdit4,, ahk_id %hMainEdit4%
-    ControlGetText, eFind,, ahk_id %heFind%
-    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit4%
-    If eDirectUp
-        f := (f := InStr(SubStr(MainEdit4, 1, NumGet(start)), eFind, eSens, 0)) ? f : (eLoop ? InStr(MainEdit4, eFind, eSens, 0) : 0)
-    Else
-        f := (f := InStr(MainEdit4, eFind, eSens, NumGet(end)+1)) ? f : (bLoop ? InStr(MainEdit4, eFind, eSens, 1) : 0)
-    If !f
-    {
-Gui, 5bg: Destroy
-SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit4%
-Gosub, Fin4
-    }
-    SendMessage, EM_SETSEL, f-1, f+StrLen(eFind)-1, , ahk_id %hMainEdit4%
-    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit4%
-    Return
-
-
-Cancel4:
-    Gui, 5bg: Hide
-    Return
-
-
-;----------------------------------------------------------------------------------------------------------
-
-Fin5:
-Gui, 6bg: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind +AlwaysOnTop
-Gui, 6bg: Add, Text, ym+5, Что:
-Gui, 6bg: Add, Edit, x+25 yp-5 w284 vqFind hwndhqFind
-Gui, 6bg: Add, Button, x+10 yp gGoSearch5, Найти далее
-Gui, 6bg: Add, Button, xp y+5 wp gCancel5, Отмена
-Gui, 6bg: Add, Checkbox, vqLoop y+0 xm Checked, Зациклить поиск
-Gui, 6bg: Add, Checkbox, vqSens y+10 xp, С учетом регистра
-Gui, 6bg: Add, GroupBox, x+10 yp-35 h55, Направление
-Gui, 6bg: Add, Radio, xp+10 yp+25 vqDirectUp, Вверх
-Gui, 6bg: Add, Radio, x+15 Checked, Вниз 
-Gui, 6bg: Show, , Найти в Правилах Мафий
-WinMove, Найти в Правилах Мафий, , 1021, 377 
-return
-6bgGuiEscape:
-6bgGuiClose:
-    Gui, 6bg: Destroy
-return
-
-SearchEdit5: 
-Gosub, GoSearch5
-    Gui, 6bg: Show, , Найти 
-    Return
-    
-GoSearch5:
-      GuiControlGet, qDirectUp, 3:
-    GuiControlGet, qSens, 3:
-    GuiControlGet, qLoop, 3:
-    ControlGetText, MainEdit5,, ahk_id %hMainEdit5%
-    ControlGetText, qFind,, ahk_id %hqFind%
-    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit5%
-    If qDirectUp
-        f := (f := InStr(SubStr(MainEdit5, 1, NumGet(start)), qFind, qSens, 0)) ? f : (qLoop ? InStr(MainEdit5, qFind, qSens, 0) : 0)
-    Else
-        f := (f := InStr(MainEdit5, qFind, qSens, NumGet(end)+1)) ? f : (qLoop ? InStr(MainEdit5, qFind, qSens, 1) : 0)
-    If !f
-    {
-Gui, 6bg: Destroy
-SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit5%
-Gosub, Fin5
-    }
-    SendMessage, EM_SETSEL, f-1, f+StrLen(qFind)-1, , ahk_id %hMainEdit5%
-    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit5%
-    Return
-
-
-Cancel5:
-    Gui, 6bg: Hide
-    Return
-
-;----------------------------------------------------------------------------------------------------------
-
-Sebi:
-Loop, 202
-{
-Text%A_Index%=% Text%A_Index%
-}
-
-Loop, 28
-{
-AText%A_Index%=% AText%A_Index%
-}
-
-Loop, 261
-{
-BText%A_Index%=% BText%A_Index%
-}
-
-Text = %Text1%`n%Text2%`n%Text3%`n%Text4%`n%Text5%`n%Text6%`n%Text7%`n%Text8%`n%Text9%`n%Text10%`n%Text11%`n%Text12%`n%Text13%`n%Text14%`n%Text15%`n%Text16%`n%Text17%`n%Text18%`n%Text19%`n%Text20%`n%Text21%`n%Text22%`n%Text23%`n%Text24%`n%Text25%`n%Text26%`n%Text27%`n%Text28%`n%Text29%`n%Text30%`n%Text31%`n%Text32%`n%Text33%`n%Text34%`n%Text35%`n%Text36%`n%Text37%`n%Text38%`n%Text39%`n%Text39%`n%Text40%`n%Text41%`n%Text42%`n%Text43%`n%Text44%`n%Text45%`n%Text46%`n%Text47%`n%Text48%`n%Text49%`n%Text50%`n%Text51%`n%Text52%`n%Text53%`n%Text54%`n%Text55%`n%Text56%`n%Text57%`n%Text58%`n%Text59%`n%Text60%`n%Text61%`n%Text62%`n%Text63%`n%Text64%`n%Text65%`n%Text66%`n%Text67%`n%Text68%`n%Text69%`n%Text70%`n%Text71%`n%Text72%`n%Text73%`n%Text74%`n%Text75%`n%Text76%`n%Text77%`n%Text78%`n%Text79%`n%Text80%`n%Text81%`n%Text82%`n%Text83%`n%Text84%`n%Text85%`n%Text86%`n%Text87%`n%Text88%`n%Text89%`n%Text90%`n%Text91%`n%Text92%`n%Text93%`n%Text94%`n%Text95%`n%Text96%`n%Text97%`n%Text98%`n%Text99%`n%Text100%`n%Text101%`n%Text102%`n%Text103%`n%Text104%`n%Text105%`n%Text106%`n%Text107%`n%Text108%`n%Text109%`n%Text110%`n%Text111%`n%Text112%`n%Text113%`n%Text114%`n%Text115%`n%Text116%`n%Text117%`n%Text118%`n%Text119%`n%Text120%`n%Text121%`n%Text122%`n%Text123%`n%Text124%`n%Text125%`n%Text126%`n%Text127%`n%Text128%`n%Text129%`n%Text130%`n%Text131%`n%Text132%`n%Text133%`n%Text134%`n%Text135%`n%Text136%`n%Text137%`n%Text138%`n%Text139%`n%Text140%`n%Text141%`n%Text142%`n%Text143%`n%Text144%`n%Text145%`n%Text146%`n%Text147%`n%Text148%`n%Text149%`n%Text150%`n%Text151%`n%Text152%`n%Text153%`n%Text154%`n%Text155%`n%Text156%`n%Text157%`n%Text158%`n%Text159%`n%Text160%`n%Text161%`n%Text163%`n%Text163%`n%Text164%`n%Text165%`n%Text166%`n%Text167%`n%Text168%`n%Text169%`n%Text170%`n%Text171%`n%Text173%`n%Text174%`n%Text175%`n%Text176%`n%Text177%`n%Text178%`n%Text179%`n%Text180%`n%Text181%`n%Text182%`n%Text183%`n%Text184%`n%Text185%`n%Text186%`n%Text187%`n%Text188%`n%Text189%`n%Text190%`n%Text191%`n%Text192%`n%Text193%`n%Text194%`n%Text195%`n%Text196%`n%Text197%`n%Text198%`n%Text199%`n%Text200%`n%Text201%`n%Text202%
-
-AText = %AText1%`n%AText2%`n%AText3%`n%AText4%`n%AText5%`n%AText6%`n%AText7%`n%AText8%`n%AText9%`n%AText10%`n%AText11%`n%AText12%`n%AText13%`n%AText14%`n%AText15%`n%AText16%`n%AText17%`n%AText18%`n%AText19%`n%AText20%`n%AText21%`n%AText22%`n%AText23%`n%AText24%`n%AText25%`n%AText26%`n%AText27%`n%AText28%
-
-BText = %BText1%`n%BText2%`n%BText3%`n%BText4%`n%BText5%`n%BText6%`n%BText7%`n%BText8%`n%BText9%`n%BText10%`n%BText11%`n%BText12%`n%BText13%`n%BText14%`n%BText15%`n%BText16%`n%BText17%`n%BText18%`n%BText19%`n%BText20%`n%BText21%`n%BText22%`n%BText23%`n%BText24%`n%BText25%`n%BText26%`n%BText27%`n%BText28%`n%BText29%`n%BText30%`n%BText31%`n%BText32%`n%BText33%`n%BText34%`n%BText35%`n%BText36%`n%BText37%`n%BText38%`n%BText39%`n%BText39%`n%Tex40%`n%BText41%`n%BText42%`n%BText43%`n%BText44%`n%BText45%`n%BText46%`n%BText47%`n%BText48%`n%BText49%`n%BText50%`n%BText51%`n%BText52%`n%BText53%`n%BText54%`n%BText55%`n%BText56%`n%BText57%`n%BText58%`n%BText59%`n%BText60%`n%BText61%`n%BText62%`n%BText63%`n%BText64%`n%BText65%`n%BText66%`n%BText67%`n%BText68%`n%BText69%`n%BText70%`n%BText71%`n%BText72%`n%BText73%`n%BText74%`n%BText75%`n%BText76%`n%BText77%`n%BText78%`n%BText79%`n%BText80%`n%BText81%`n%BText82%`n%BText83%`n%BText84%`n%BText85%`n%BText86%`n%BText87%`n%BText88%`n%BText89%`n%BText90%`n%BText91%`n%BText92%`n%BText93%`n%BText94%`n%BText95%`n%BText96%`n%BText97%`n%BText98%`n%BText99%`n%BText100%`n%BText101%`n%BText102%`n%BText103%`n%BText104%`n%BText105%`n%BText106%`n%BText107%`n%BText108%`n%BText109%`n%BText110%`n%BText111%`n%BText112%`n%BText113%`n%BText114%`n%BText115%`n%BText116%`n%BText117%`n%BText118%`n%BText119%`n%BText120%`n%BText121%`n%BText122%`n%BText123%`n%BText124%`n%BText125%`n%BText126%`n%BText127%`n%BText128%`n%BText129%`n%BText130%`n%BText131%`n%BText132%`n%BText133%`n%BText134%`n%BText135%`n%BText136%`n%BText137%`n%BText138%`n%BText139%`n%BText140%`n%BText141%`n%Tex142%`n%BText143%`n%BText144%`n%BText145%`n%BText146%`n%BText147%`n%BText148%`n%BText149%`n%BText150%`n%BText151%`n%BText152%`n%BText153%`n%BText154%`n%BText155%`n%BText156%`n%BText157%`n%BText158%`n%BText159%`n%BText160%`n%BText161%`n%BText163%`n%BText163%`n%BText164%`n%BText165%`n%BText166%`n%BText167%`n%BText168%`n%BText169%`n%BText170%`n%BText171%`n%BText173%`n%BText174%`n%BText175%`n%BText176%`n%BText177%`n%BText178%`n%BText179%`n%BText180%`n%BText181%`n%BText182%`n%BText183%`n%BText184%`n%BText185%`n%BText186%`n%BText187%`n%BText188%`n%BText189%`n%BText190%`n%BText191%`n%BText192%`n%BText193%`n%BText194%`n%BText195%`n%BText196%`n%BText197%`n%BText198%`n%BText199%`n%BText200%`n%BText201%`n%BText202%`n%BText203%`n%BText204%`n%BText205%`n%BText206%`n%BText207%`n%BText208%`n%BText209%`n%BText210%`n%BText211%`n%BText212%`n%BText213%`n%BText214%`n%BText215%`n%BText216%`n%BText217%`n%BText218%`n%BText219%`n%BText220%`n%BText221%`n%BText222%`n%BText223%`n%BText224%`n%BText225%`n%BText226%`n%BText227%`n%BText228%`n%BText229%`n%BText230%`n%BText231%`n%BText232%`n%BText233%`n%BText234%`n%BText235%`n%BText236%`n%BText237%`n%BText238%`n%BText239%`n%BText240%`n%BText241%`n%BText242%`n%BText243%`n%BText244%`n%BText245%`n%BText246%`n%BText247%`n%BText248%`n%BText249%`n%BText250%`n%BText251%`n%BText252%`n%BText253%`n%BText254%`n%BText255%`n%BText256%`n%BText257%`n%BText258%`n%BText259%`n%BText260%`n%BText261%
-
-CText = %CText1%`n%CText2%`n%CText3%`n%CText4%`n%CText5%`n%CText6%`n%CText7%`n%CText8%`n%CText9%`n%CText10%`n%CText11%`n%CText12%`n%CText13%`n%CText14%`n%CText15%`n%CText16%`n%CText17%`n%CText18%`n%CText19%`n%CText20%`n%CText21%`n%CText22%`n%CText23%`n%CText24%`n%CText25%`n%CText26%`n%CText27%`n%CText28%`n%CText29%`n%CText30%`n%CText31%`n%CText32%`n%CText33%`n%CText34%`n%CText35%`n%CText36%`n%CText37%`n%CText38%`n%CText39%`n%CText39%`n%Tex40%`n%CText41%`n%CText42%`n%CText43%`n%CText44%`n%CText45%`n%CText46%`n%CText47%`n%CText48%`n%CText49%`n%CText50%`n%CText51%`n%CText52%`n%CText53%`n%CText54%`n%CText55%`n%CText56%`n%CText57%`n%CText58%`n%CText59%`n%CText60%`n%CText61%`n%CText62%`n%CText63%`n%CText64%`n%CText65%`n%CText66%`n%CText67%`n%CText68%`n%CText69%`n%CText70%`n%CText71%`n%CText72%`n%CText73%`n%CText74%`n%CText75%`n%CText76%`n%CText77%`n%CText78%`n%CText79%`n%CText80%`n%CText81%`n%CText82%`n%CText83%`n%CText84%`n%CText85%`n%CText86%`n%CText87%`n%CText88%`n%CText89%`n%CText90%`n%CText91%`n%CText92%`n%CText93%`n%CText94%`n%CText95%`n%CText96%`n%CText97%`n%CText98%`n%CText99%`n%CText100%`n%CText101%`n%CText102%`n%CText103%`n%CText104%`n%CText105%`n%CText106%`n%CText107%`n%CText108%`n%CText109%`n%CText110%`n%CText111%`n%CText112%`n%CText113%`n%CText114%`n%CText115%`n%CText116%`n%CText117%`n%CText118%`n%CText119%`n%CText120%`n%CText121%`n%CText122%`n%CText123%`n%CText124%`n%CText125%`n%CText126%`n%CText127%`n%CText128%`n%CText129%`n%CText130%`n%CText131%`n%CText132%`n%CText133%`n%CText134%`n%CText135%`n%CText136%`n%CText137%`n%CText138%`n%CText139%`n%CText140%`n%CText141%`n%Tex142%`n%CText143%`n%CText144%`n%CText145%`n%CText146%`n%CText147%`n%CText148%`n%CText149%`n%CText150%`n%CText151%`n%CText152%`n%CText153%`n%CText154%`n%CText155%`n%CText156%`n%CText157%`n%CText158%`n%CText159%`n%CText160%`n%CText161%`n%CText163%`n%CText163%`n%CText164%`n%CText165%`n%CText166%`n%CText167%`n%CText168%`n%CText169%`n%CText170%`n%CText171%`n%CText173%`n%CText174%`n%CText175%`n%CText176%`n%CText177%`n%CText178%`n%CText179%`n%CText180%`n%CText181%`n%CText182%`n%CText183%`n%CText184%`n%CText185%`n%CText186%`n%CText187%`n%CText188%`n%CText189%`n%CText190%`n%CText191%`n%CText192%`n%CText193%`n%CText194%`n%CText195%`n%CText196%`n%CText197%`n%CText198%`n%CText199%`n%CText200%`n%CText201%`n%CText202%`n%CText203%`n%CText204%`n%CText205%`n%CText206%`n%CText207%`n%CText208%`n%CText209%`n%CText210%`n%CText211%`n%CText212%`n%CText213%`n%CText214%`n%CText215%`n%CText216%`n%CText217%`n%CText218%`n%CText219%`n%CText220%`n%CText221%`n%CText222%`n%CText223%`n%CText224%`n%CText225%`n%CText226%`n%CText227%`n%CText228%`n%CText229%`n%CText230%`n%CText231%`n%CText232%`n%CText233%`n%CText234%`n%CText235%`n%CText236%`n%CText237%`n%CText238%`n%CText239%`n%CText240%`n%CText241%`n%CText242%`n%CText243%`n%CText244%`n%CText245%`n%CText246%`n%CText247%`n%CText248%`n%CText249%`n%CText250%
-
-DText = %DText1%`n%DText2%`n%DText3%`n%DText4%`n%DText5%`n%DText6%`n%DText7%`n%DText8%`n%DText9%`n%DText10%`n%DText11%`n%DText12%`n%DText13%`n%DText14%`n%DText15%`n%DText16%`n%DText17%`n%DText18%`n%DText19%`n%DText20%`n%DText21%`n%DText22%`n%DText23%`n%DText24%`n%DText25%`n%DText26%`n%DText27%`n%DText28%`n%DText29%`n%DText30%`n%DText31%`n%DText32%`n%DText33%`n%DText34%`n%DText35%`n%DText36%`n%DText37%`n%DText39%`n%DText39%`n%Tex40%`n%DText41%`n%DText42%`n%DText43%`n%DText44%`n%DText45%`n%DText46%`n%DText47%`n%DText48%`n%DText49%`n%DText50%`n%DText51%`n%DText52%`n%DText53%`n%DText54%`n%DText55%`n%DText56%`n%DText57%`n%DText58%`n%DText59%`n%DText60%`n%DText61%`n%DText62%`n%DText63%`n%DText64%`n%DText65%`n%DText66%`n%DText67%`n%DText68%`n%DText69%`n%DText70%`n%DText71%`n%DText72%`n%DText73%`n%DText74%`n%DText75%`n%DText76%`n%DText77%`n%DText78%`n%DText79%`n%DText80%`n%DText81%`n%DText82%`n%DText83%`n%DText84%`n%DText85%`n%DText86%`n%DText87%`n%DText88%`n%DText89%`n%DText90%`n%DText91%`n%DText92%`n%DText93%`n%DText94%`n%DText95%`n%DText96%`n%DText97%`n%DText98%`n%DText99%`n%DText100%`n%DText101%`n%DText102%`n%DText103%`n%DText104%`n%DText105%`n%DText106%`n%DText107%`n%DText108%`n%DText109%`n%DText110%`n%DText111%`n%DText112%
-
-GuiControl,, AText, %AText%
-GuiControl,, BText, %BText%
-GuiControl,, CText, %CText%
-GuiControl,, DText, %DText%
-GuiControl,, Text, %Text%
-return
-
-;---------------------------------------------------------------------------------
+
+
+
+
+
+
 goto1:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1135.29, 375.56, 70.11{Enter}
+Sleep 100
+SendInput, %osoba1%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto2:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1806.19, 439.39, 127.93{Enter}
+Sleep 100
+SendInput, %osoba2%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto3:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -834.32, 114.14, 56.21{Enter}
+Sleep 100
+SendInput, %osoba3%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto4:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc 228.25, 765.94, 204.56{Enter}
+Sleep 100
+SendInput, %osoba4%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto5:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1188.68, 289.34, 70.50{Enter}
+Sleep 100
+SendInput, %osoba5%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto6:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1549.18, -87.88, 55.72{Enter}
+Sleep 100
+SendInput, %osoba6%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto7:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1579.00, -33.85, 56.94{Enter}
+Sleep 100
+SendInput, %osoba7%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto8:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1462.32, -32.05, 55.54{Enter}
+Sleep 100
+SendInput, %osoba8%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
-
+Gui, Browser: Destroy
+Return
 
 goto9:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -2584.95, 1913.73, 166.90{Enter}
+Sleep 100
+SendInput, %osoba9%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto10:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1516.86, 852.00, 181.20{Enter}
+Sleep 100
+SendInput, %osoba10%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto11:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc 3313.22, 5175.29, 18.81{Enter}
+Sleep 100
+SendInput, %osoba11%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto12:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -712.52, -1298.13, 5.01{Enter}
+Sleep 100
+SendInput, %osoba12%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto13:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1274.98, 496.90, 97.04{Enter}
+Sleep 100
+SendInput, %osoba13%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto14:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1025.39, 360.01, 71.31{Enter}
+Sleep 100
+SendInput, %osoba14%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto15:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -882.32, 365.56, 84.64{Enter}
+Sleep 100
+SendInput, %osoba15%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto16:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -877.60, 306.26, 82.09{Enter}
+Sleep 100
+SendInput, %osoba16%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto17:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -701.00, 647.72, 154.53{Enter}
+Sleep 100
+SendInput, %osoba17%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto18:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1040.43, 222.49, 63.27{Enter}
+Sleep 100
+SendInput, %osoba18%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
-
+Gui, Browser: Destroy
+Return
 
 goto19:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -997.97, 156.94, 60.83{Enter}
+Sleep 100
+SendInput, %osoba19%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto20:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -951.94, 195.32, 67.43{Enter}
+Sleep 100
+SendInput, %osoba20%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto21:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -903.10, 191.32, 69.17{Enter}
+Sleep 100
+SendInput, %osoba21%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto22:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -969.00, 124.09, 55.95{Enter}
+Sleep 100
+SendInput, %osoba22%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto23:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -837.51, -25.94, 40.20{Enter}
+Sleep 100
+SendInput, %osoba23%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto24:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -883.74, 39.66, 49.47{Enter}
+Sleep 100
+SendInput, %osoba24%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto25:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1732.53, 380.27, 88.98{Enter}
+Sleep 100
+SendInput, %osoba25%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto26:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1863.78, 309.64, 88.94{Enter}
+Sleep 100
+SendInput, %osoba26%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto27:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1874.37, 201.60, 85.13{Enter}
+Sleep 100
+SendInput, %osoba27%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto28:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1344.88, 481.11, 101.58{Enter}
+Sleep 100
+SendInput, %osoba28%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
-
+Gui, Browser: Destroy
+Return
 
 goto29:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -1897.34, 132.56, 80.94{Enter}
+Sleep 100
+SendInput, %osoba29%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
 goto30:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, tpc -2797.85, 1431.46, 99.35{Enter}
+Sleep 100
+SendInput, %osoba30%{Enter}
 openbr = 1
-Gui, g: Destroy
-return
-;-------------------------------------------------------
+Gui, Browser: Destroy
+Return
+;--------------------------------------------
 
-
-copy1:
+mark1:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1135.29, 375.56, 70.11{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba1%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy2:
+mark2:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1806.19, 439.39, 127.93{Left 26}
+Sleep 100
+SendInput, set_gps i %osoba2%{Left 26}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy3:
+mark3:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -834.32, 114.14, 56.21{Left 24}
+Sleep 100
+SendInput, set_gps i %osoba3%{Left 24}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy4:
+mark4:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i 228.25, 765.94, 204.56{Left 24}
+Sleep 100
+SendInput, set_gps i %osoba4%{Left 24}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy5:
+mark5:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1188.68, 289.34, 70.50{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba5%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy6:
+mark6:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1549.18, -87.88, 55.72{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba6%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy7:
+mark7:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1579.00, -33.85, 56.94{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba7%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy8:
+mark8:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1462.32, -32.05, 55.54{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba8%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-
-copy9:
+mark9:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -2584.95, 1913.73, 166.90{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba9%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy10:
+mark10:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1516.86, 852.00, 181.20{Left 26}
+Sleep 100
+SendInput, set_gps i %osoba10%{Left 26}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy11:
+mark11:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i 3313.22, 5175.29, 18.81{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba11%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy12:
+mark12:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -712.52, -1298.13, 5.01{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba12%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy13:
+mark13:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1274.98, 496.90, 97.04{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba13%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy14:
+mark14:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1025.39, 360.01, 71.31{Left 24}
+Sleep 100
+SendInput, set_gps i %osoba14%{Left 24}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy15:
+mark15:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -882.32, 365.56, 84.64{Left 24}
+Sleep 100
+SendInput, set_gps i %osoba15%{Left 24}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy16:
+mark16:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -877.60, 306.26, 82.09{Left 24}
+Sleep 100
+SendInput, set_gps i %osoba16%{Left 24}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy17:
+mark17:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -701.00, 647.72, 154.53{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba17%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy18:
+mark18:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1040.43, 222.49, 63.27{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba18%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-
-copy19:
+mark19:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -997.97, 156.94, 60.83{Enter}
+Sleep 100
+SendInput, set_gps i %osoba19%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy20:
+mark20:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -951.94, 195.32, 67.43{Left 23}
+Sleep 100
+SendInput, set_gps i %osoba20%{Left 23}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy21:
+mark21:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -903.10, 191.32, 69.17{Left 23}
+Sleep 100
+SendInput, set_gps i %osoba21%{Left 23}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy22:
+mark22:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -969.00, 124.09, 55.95{Left 23}
+Sleep 100
+SendInput, set_gps i %osoba22%{Left 23}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy23:
+mark23:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -837.51, -25.94, 40.20{Left 24}
+Sleep 100
+SendInput, set_gps i %osoba23%{Left 24}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy24:
+mark24:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -883.74, 39.66, 49.47{Left 22}
+Sleep 100
+SendInput, set_gps i %osoba24%{Left 22}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy25:
+mark25:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1732.53, 380.27, 88.98{Left 24}
+Sleep 100
+SendInput, set_gps i %osoba25%{Left 24}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy26:
+mark26:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1863.78, 309.64, 88.94{Left 24}
+Sleep 100
+SendInput, set_gps i %osoba26%{Left 24}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy27:
+mark27:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1874.37, 201.60, 85.13{Left 24}
+Sleep 100
+SendInput, set_gps i %osoba27%{Left 24}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy28:
+mark28:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1344.88, 481.11, 101.58{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba28%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-
-copy29:
+mark29:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -1897.34, 132.56, 80.94{Left 24}
+Sleep 100
+SendInput, set_gps i %osoba29%{Left 24}
 openbr = 1
-Gui, g: Destroy
-return
+Gui, Browser: Destroy
+Return
 
-copy30:
+mark30:
 Gui, Hide
 Sendinput, {Sc029}
-Sleep 800
+Sleep 300
 MouseClick, left, 55, 374
-Sleep 800
+Sleep 100
 MouseClick, left, 33, 333
-Sleep 800
-SendInput, set_gps i -2797.85, 1431.46, 99.35{Left 25}
+Sleep 100
+SendInput, set_gps i %osoba30%{Left 25}
 openbr = 1
-Gui, g: Destroy
-return
-
-#SingleInstance Force
-#NoEnv
+Gui, Browser: Destroy
+Return
 
 ;-------------------------------------------------------------------------------------
 going1:
@@ -1415,4 +1473,919 @@ MyIniWrite(Value, Filename, Section, Key)
       IniWrite, %A_LoopField%, %Filename%, %Section%, %A_Index%|%Key%
 }
 
+Return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+
+Fin1:
+	Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+	Gui, F1: Add, Text, ym+5, Что:
+	Gui, F1: Add, Edit, x+25 yp-5 w284 vFind hwndhFind, Можно
+	Gui, F1: Add, Button, x+10 yp gGoSearch1, Найти далее
+	Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+	Gui, F1: Add, Checkbox, vLoop y+0 xm Checked, Зациклить поиск
+	Gui, F1: Add, Checkbox, vSens y+10 xp, С учетом регистра
+	Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+	Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp, Вверх
+	Gui, F1: Add, Radio, x+15 Checked, Вниз 
+    Gui, F1: Show, , Найти 
+Return
+
+F1GuiEscape:
+F1GuiClose:
+    Gui, F1: Destroy
+Return
+
+    
+Cancel1:
+    Gui, F1: Destroy
+Return
+
+
+GoSearch1:
+    GuiControlGet, DirectUp, F1:
+    GuiControlGet, Sens, F1:
+    GuiControlGet, Loop, F1:
+    ControlGetText, MainEdit1,, ahk_id %hMainEdit1%
+    ControlGetText, Find,, ahk_id %hFind%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit1%
+    If DirectUp
+        f := (f := InStr(SubStr(MainEdit1, 1, NumGet(start)), Find, Sens, 0)) ? f : (Loop ? InStr(MainEdit1, Find, Sens, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit1, Find, Sens, NumGet(end)+1)) ? f : (Loop ? InStr(MainEdit1, Find, Sens, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find)-1, , ahk_id %hMainEdit1%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit1%
+    Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+
+Fin2:
+	Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+	Gui, F1: Add, Text, ym+5, Что:
+	Gui, F1: Add, Edit, x+25 yp-5 w284 vFind2 hwndhFind2, Можно
+	Gui, F1: Add, Button, x+10 yp gGoSearch2, Найти далее
+	Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+	Gui, F1: Add, Checkbox, vLoop2 y+0 xm Checked, Зациклить поиск
+	Gui, F1: Add, Checkbox, vSens2 y+10 xp, С учетом регистра
+	Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+	Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp2, Вверх
+	Gui, F1: Add, Radio, x+15 Checked, Вниз 
+    Gui, F1: Show, , Найти 
+Return
+
+GoSearch2:
+    GuiControlGet, DirectUp2, F1:
+    GuiControlGet, Sens2, F1:
+    GuiControlGet, Loop2, F1:
+    ControlGetText, MainEdit2,, ahk_id %hMainEdit2%
+    ControlGetText, Find2,, ahk_id %hFind2%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit2%
+    If DirectUp2
+        f := (f := InStr(SubStr(MainEdit2, 1, NumGet(start)), Find2, Sens2, 0)) ? f : (Loop2 ? InStr(MainEdit2, Find2, Sens2, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit2, Find2, Sens2, NumGet(end)+1)) ? f : (Loop2 ? InStr(MainEdit2, Find2, Sens2, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find2%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find2)-1, , ahk_id %hMainEdit2%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit2%
+    Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin3:
+	Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+	Gui, F1: Add, Text, ym+5, Что:
+	Gui, F1: Add, Edit, x+25 yp-5 w284 vFind3 hwndhFind3, Можно
+	Gui, F1: Add, Button, x+10 yp gGoSearch3, Найти далее
+	Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+	Gui, F1: Add, Checkbox, vLoop3 y+0 xm Checked, Зациклить поиск
+	Gui, F1: Add, Checkbox, vSens3 y+10 xp, С учетом регистра
+	Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+	Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp3, Вверх
+	Gui, F1: Add, Radio, x+15 Checked, Вниз 
+    Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch3:
+    GuiControlGet, DirectUp3, F1:
+    GuiControlGet, Sens3, F1:
+    GuiControlGet, Loop3, F1:
+    ControlGetText, MainEdit3,, ahk_id %hMainEdit3%
+    ControlGetText, Find3,, ahk_id %hFind3%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit3%
+    If DirectUp3
+        f := (f := InStr(SubStr(MainEdit3, 1, NumGet(start)), Find3, Sens3, 0)) ? f : (Loop3 ? InStr(MainEdit3, Find3, Sens3, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit3, Find3, Sens3, NumGet(end)+1)) ? f : (Loop3 ? InStr(MainEdit3, Find3, Sens3, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find3%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find3)-1, , ahk_id %hMainEdit3%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit3%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin4:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind4 hwndhFind4, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch4, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop4 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens4 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp4, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch4:
+    GuiControlGet, DirectUp4, F1:
+    GuiControlGet, Sens4, F1:
+    GuiControlGet, Loop4, F1:
+    ControlGetText, MainEdit4,, ahk_id %hMainEdit4%
+    ControlGetText, Find4,, ahk_id %hFind4%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit4%
+    If DirectUp4
+        f := (f := InStr(SubStr(MainEdit4, 1, NumGet(start)), Find4, Sens4, 0)) ? f : (Loop4 ? InStr(MainEdit4, Find4, Sens4, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit4, Find4, Sens4, NumGet(end)+1)) ? f : (Loop4 ? InStr(MainEdit4, Find4, Sens4, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find4%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find4)-1, , ahk_id %hMainEdit4%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit4%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin5:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind5 hwndhFind5, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch5, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop5 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens5 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp5, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch5:
+    GuiControlGet, DirectUp5, F1:
+    GuiControlGet, Sens5, F1:
+    GuiControlGet, Loop5, F1:
+    ControlGetText, MainEdit5,, ahk_id %hMainEdit5%
+    ControlGetText, Find5,, ahk_id %hFind5%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit5%
+    If DirectUp5
+        f := (f := InStr(SubStr(MainEdit5, 1, NumGet(start)), Find5, Sens5, 0)) ? f : (Loop5 ? InStr(MainEdit5, Find5, Sens5, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit5, Find5, Sens5, NumGet(end)+1)) ? f : (Loop5 ? InStr(MainEdit5, Find5, Sens5, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find5%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find5)-1, , ahk_id %hMainEdit5%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit5%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin6:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind6 hwndhFind6, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch6, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop6 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens6 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp6, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch6:
+    GuiControlGet, DirectUp6, F1:
+    GuiControlGet, Sens6, F1:
+    GuiControlGet, Loop6, F1:
+    ControlGetText, MainEdit6,, ahk_id %hMainEdit6%
+    ControlGetText, Find6,, ahk_id %hFind6%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit6%
+    If DirectUp6
+        f := (f := InStr(SubStr(MainEdit6, 1, NumGet(start)), Find6, Sens6, 0)) ? f : (Loop6 ? InStr(MainEdit6, Find6, Sens6, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit6, Find6, Sens6, NumGet(end)+1)) ? f : (Loop6 ? InStr(MainEdit6, Find6, Sens6, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find6%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find6)-1, , ahk_id %hMainEdit6%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit6%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin7:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind7 hwndhFind7, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch7, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop7 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens7 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp7, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch7:
+    GuiControlGet, DirectUp7, F1:
+    GuiControlGet, Sens7, F1:
+    GuiControlGet, Loop7, F1:
+    ControlGetText, MainEdit7,, ahk_id %hMainEdit7%
+    ControlGetText, Find7,, ahk_id %hFind7%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit7%
+    If DirectUp7
+        f := (f := InStr(SubStr(MainEdit7, 1, NumGet(start)), Find7, Sens7, 0)) ? f : (Loop7 ? InStr(MainEdit7, Find7, Sens7, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit7, Find7, Sens7, NumGet(end)+1)) ? f : (Loop7 ? InStr(MainEdit7, Find7, Sens7, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find7%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find7)-1, , ahk_id %hMainEdit7%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit7%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin8:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind8 hwndhFind8, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch8, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop8 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens8 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp8, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch8:
+    GuiControlGet, DirectUp8, F1:
+    GuiControlGet, Sens8, F1:
+    GuiControlGet, Loop8, F1:
+    ControlGetText, MainEdit8,, ahk_id %hMainEdit8%
+    ControlGetText, Find8,, ahk_id %hFind8%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit8%
+    If DirectUp8
+        f := (f := InStr(SubStr(MainEdit8, 1, NumGet(start)), Find8, Sens8, 0)) ? f : (Loop8 ? InStr(MainEdit8, Find8, Sens8, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit8, Find8, Sens8, NumGet(end)+1)) ? f : (Loop8 ? InStr(MainEdit8, Find8, Sens8, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find8%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find8)-1, , ahk_id %hMainEdit8%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit8%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin9:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind9 hwndhFind9, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch9, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop9 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens9 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp9, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch9:
+    GuiControlGet, DirectUp9, F1:
+    GuiControlGet, Sens9, F1:
+    GuiControlGet, Loop9, F1:
+    ControlGetText, MainEdit9,, ahk_id %hMainEdit9%
+    ControlGetText, Find9,, ahk_id %hFind9%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit9%
+    If DirectUp9
+        f := (f := InStr(SubStr(MainEdit9, 1, NumGet(start)), Find9, Sens9, 0)) ? f : (Loop9 ? InStr(MainEdit9, Find9, Sens9, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit9, Find9, Sens9, NumGet(end)+1)) ? f : (Loop9 ? InStr(MainEdit9, Find9, Sens9, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find9%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find9)-1, , ahk_id %hMainEdit9%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit9%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin10:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind10 hwndhFind10, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch10, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop10 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens10 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp10, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch10:
+    GuiControlGet, DirectUp10, F1:
+    GuiControlGet, Sens10, F1:
+    GuiControlGet, Loop10, F1:
+    ControlGetText, MainEdit10,, ahk_id %hMainEdit10%
+    ControlGetText, Find10,, ahk_id %hFind10%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit10%
+    If DirectUp10
+        f := (f := InStr(SubStr(MainEdit10, 1, NumGet(start)), Find10, Sens10, 0)) ? f : (Loop10 ? InStr(MainEdit10, Find10, Sens10, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit10, Find10, Sens10, NumGet(end)+1)) ? f : (Loop10 ? InStr(MainEdit10, Find10, Sens10, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find10%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find10)-1, , ahk_id %hMainEdit10%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit10%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin11:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind11 hwndhFind11, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch11, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop11 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens11 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp11, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch11:
+    GuiControlGet, DirectUp11, F1:
+    GuiControlGet, Sens11, F1:
+    GuiControlGet, Loop11, F1:
+    ControlGetText, MainEdit11,, ahk_id %hMainEdit11%
+    ControlGetText, Find11,, ahk_id %hFind11%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit11%
+    If DirectUp11
+        f := (f := InStr(SubStr(MainEdit11, 1, NumGet(start)), Find11, Sens11, 0)) ? f : (Loop11 ? InStr(MainEdit11, Find11, Sens11, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit11, Find11, Sens11, NumGet(end)+1)) ? f : (Loop11 ? InStr(MainEdit11, Find11, Sens11, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find11%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find11)-1, , ahk_id %hMainEdit11%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit11%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin12:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind12 hwndhFind12, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch12, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop12 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens12 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp12, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch12:
+    GuiControlGet, DirectUp12, F1:
+    GuiControlGet, Sens12, F1:
+    GuiControlGet, Loop12, F1:
+    ControlGetText, MainEdit12,, ahk_id %hMainEdit12%
+    ControlGetText, Find12,, ahk_id %hFind12%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit12%
+    If DirectUp12
+        f := (f := InStr(SubStr(MainEdit12, 1, NumGet(start)), Find12, Sens12, 0)) ? f : (Loop12 ? InStr(MainEdit12, Find12, Sens12, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit12, Find12, Sens12, NumGet(end)+1)) ? f : (Loop12 ? InStr(MainEdit12, Find12, Sens12, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find12%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find12)-1, , ahk_id %hMainEdit12%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit12%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin13:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind13 hwndhFind13, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch13, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop13 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens13 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp13, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch13:
+    GuiControlGet, DirectUp13, F1:
+    GuiControlGet, Sens13, F1:
+    GuiControlGet, Loop13, F1:
+    ControlGetText, MainEdit13,, ahk_id %hMainEdit13%
+    ControlGetText, Find13,, ahk_id %hFind13%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit13%
+    If DirectUp13
+        f := (f := InStr(SubStr(MainEdit13, 1, NumGet(start)), Find13, Sens13, 0)) ? f : (Loop13 ? InStr(MainEdit13, Find13, Sens13, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit13, Find13, Sens13, NumGet(end)+1)) ? f : (Loop13 ? InStr(MainEdit13, Find13, Sens13, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find13%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find13)-1, , ahk_id %hMainEdit13%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit13%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin14:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind14 hwndhFind14, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch14, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop14 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens14 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp14, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch14:
+    GuiControlGet, DirectUp14, F1:
+    GuiControlGet, Sens14, F1:
+    GuiControlGet, Loop14, F1:
+    ControlGetText, MainEdit14,, ahk_id %hMainEdit14%
+    ControlGetText, Find14,, ahk_id %hFind14%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit14%
+    If DirectUp14
+        f := (f := InStr(SubStr(MainEdit14, 1, NumGet(start)), Find14, Sens14, 0)) ? f : (Loop14 ? InStr(MainEdit14, Find14, Sens14, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit14, Find14, Sens14, NumGet(end)+1)) ? f : (Loop14 ? InStr(MainEdit14, Find14, Sens14, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find14%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find14)-1, , ahk_id %hMainEdit14%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit14%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin15:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind15 hwndhFind15, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch15, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop15 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens15 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp15, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch15:
+    GuiControlGet, DirectUp15, F1:
+    GuiControlGet, Sens15, F1:
+    GuiControlGet, Loop15, F1:
+    ControlGetText, MainEdit15,, ahk_id %hMainEdit15%
+    ControlGetText, Find15,, ahk_id %hFind15%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit15%
+    If DirectUp15
+        f := (f := InStr(SubStr(MainEdit15, 1, NumGet(start)), Find15, Sens15, 0)) ? f : (Loop15 ? InStr(MainEdit15, Find15, Sens15, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit15, Find15, Sens15, NumGet(end)+1)) ? f : (Loop15 ? InStr(MainEdit15, Find15, Sens15, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find15%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find15)-1, , ahk_id %hMainEdit15%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit15%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin16:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind16 hwndhFind16, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch16, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop16 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens16 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp16, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch16:
+    GuiControlGet, DirectUp16, F1:
+    GuiControlGet, Sens16, F1:
+    GuiControlGet, Loop16, F1:
+    ControlGetText, MainEdit16,, ahk_id %hMainEdit16%
+    ControlGetText, Find16,, ahk_id %hFind16%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit16%
+    If DirectUp16
+        f := (f := InStr(SubStr(MainEdit16, 1, NumGet(start)), Find16, Sens16, 0)) ? f : (Loop16 ? InStr(MainEdit16, Find16, Sens16, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit16, Find16, Sens16, NumGet(end)+1)) ? f : (Loop16 ? InStr(MainEdit16, Find16, Sens16, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find16%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find16)-1, , ahk_id %hMainEdit16%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit16%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin17:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind17 hwndhFind17, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch17, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop17 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens17 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp17, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch17:
+    GuiControlGet, DirectUp17, F1:
+    GuiControlGet, Sens17, F1:
+    GuiControlGet, Loop17, F1:
+    ControlGetText, MainEdit17,, ahk_id %hMainEdit17%
+    ControlGetText, Find17,, ahk_id %hFind17%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit17%
+    If DirectUp17
+        f := (f := InStr(SubStr(MainEdit17, 1, NumGet(start)), Find17, Sens17, 0)) ? f : (Loop17 ? InStr(MainEdit17, Find17, Sens17, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit17, Find17, Sens17, NumGet(end)+1)) ? f : (Loop17 ? InStr(MainEdit17, Find17, Sens17, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find17%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find17)-1, , ahk_id %hMainEdit17%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit17%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin18:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind18 hwndhFind18, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch18, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop18 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens18 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp18, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch18:
+    GuiControlGet, DirectUp18, F1:
+    GuiControlGet, Sens18, F1:
+    GuiControlGet, Loop18, F1:
+    ControlGetText, MainEdit18,, ahk_id %hMainEdit18%
+    ControlGetText, Find18,, ahk_id %hFind18%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit18%
+    If DirectUp18
+        f := (f := InStr(SubStr(MainEdit18, 1, NumGet(start)), Find18, Sens18, 0)) ? f : (Loop18 ? InStr(MainEdit18, Find18, Sens18, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit18, Find18, Sens18, NumGet(end)+1)) ? f : (Loop18 ? InStr(MainEdit18, Find18, Sens18, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find18%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find18)-1, , ahk_id %hMainEdit18%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit18%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin19:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind19 hwndhFind19, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch19, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop19 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens19 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp19, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch19:
+    GuiControlGet, DirectUp19, F1:
+    GuiControlGet, Sens19, F1:
+    GuiControlGet, Loop19, F1:
+    ControlGetText, MainEdit19,, ahk_id %hMainEdit19%
+    ControlGetText, Find19,, ahk_id %hFind19%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit19%
+    If DirectUp19
+        f := (f := InStr(SubStr(MainEdit19, 1, NumGet(start)), Find19, Sens19, 0)) ? f : (Loop19 ? InStr(MainEdit19, Find19, Sens19, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit19, Find19, Sens19, NumGet(end)+1)) ? f : (Loop19 ? InStr(MainEdit19, Find19, Sens19, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find19%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find19)-1, , ahk_id %hMainEdit19%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit19%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin20:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind20 hwndhFind20, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch20, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop20 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens20 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp20, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch20:
+    GuiControlGet, DirectUp20, F1:
+    GuiControlGet, Sens20, F1:
+    GuiControlGet, Loop20, F1:
+    ControlGetText, MainEdit20,, ahk_id %hMainEdit20%
+    ControlGetText, Find20,, ahk_id %hFind20%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit20%
+    If DirectUp20
+        f := (f := InStr(SubStr(MainEdit20, 1, NumGet(start)), Find20, Sens20, 0)) ? f : (Loop20 ? InStr(MainEdit20, Find20, Sens20, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit20, Find20, Sens20, NumGet(end)+1)) ? f : (Loop20 ? InStr(MainEdit20, Find20, Sens20, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find20%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find20)-1, , ahk_id %hMainEdit20%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit20%
+Return
+
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------
+
+Fin21:
+Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
+Gui, F1: Add, Text, ym+5, Что:
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind21 hwndhFind21, Можно
+Gui, F1: Add, Button, x+10 yp gGoSearch21, Найти далее
+Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
+Gui, F1: Add, Checkbox, vLoop21 y+0 xm Checked, Зациклить поиск
+Gui, F1: Add, Checkbox, vSens21 y+10 xp, С учетом регистра
+Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
+Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp21, Вверх
+Gui, F1: Add, Radio, x+15 Checked, Вниз 
+ Gui, F1: Show, , Найти 
+Return
+
+
+GoSearch21:
+    GuiControlGet, DirectUp21, F1:
+    GuiControlGet, Sens21, F1:
+    GuiControlGet, Loop21, F1:
+    ControlGetText, MainEdit21,, ahk_id %hMainEdit21%
+    ControlGetText, Find21,, ahk_id %hFind21%
+    SendMessage, EM_GETSEL, &start, &end, , ahk_id %hMainEdit21%
+    If DirectUp21
+        f := (f := InStr(SubStr(MainEdit21, 1, NumGet(start)), Find21, Sens21, 0)) ? f : (Loop21 ? InStr(MainEdit21, Find21, Sens21, 0) : 0)
+    Else
+        f := (f := InStr(MainEdit21, Find21, Sens21, NumGet(end)+1)) ? f : (Loop21 ? InStr(MainEdit21, Find21, Sens21, 1) : 0)
+    If !f
+    {
+        MsgBox, 8256, Edit find, Не удаётся найти "%Find21%"
+        Return
+    }
+    SendMessage, EM_SETSEL, f-1, f+StrLen(Find21)-1, , ahk_id %hMainEdit21%
+    SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit21%
 Return
