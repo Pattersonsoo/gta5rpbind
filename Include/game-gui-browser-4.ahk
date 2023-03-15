@@ -9,36 +9,36 @@ buildverbrow = 4
 ;-----------------------------------------------------------------------------------------------------------------
 
 
-osoba1 = tpc -1135.29, 375.56, 70.11
-osoba2 = tpc -1806.19, 439.39, 127.93
-osoba3 = tpc -834.32, 114.14, 56.21
-osoba4 = tpc 228.25, 765.94, 204.56
-osoba5 = tpc -1188.68, 289.34, 70.50
-osoba6 = tpc -1549.18, -87.88, 55.72
-osoba7 = tpc -1579.00, -33.85, 56.94
-osoba8 = tpc -1462.32, -32.05, 55.54
-osoba9 = tpc -2584.95, 1913.73, 166.90
-osoba10 = tpc -1516.86, 852.00, 181.20
-osoba11 = tpc 3313.22, 5175.29, 18.81
-osoba12 = tpc -712.52, -1298.13, 5.01
-osoba13 = tpc -1274.98, 496.90, 97.04
-osoba14 = tpc -1025.39, 360.01, 71.31
-osoba15 = tpc -882.32, 365.56, 84.64
-osoba16 = tpc -877.60, 306.26, 82.09
-osoba17 = tpc -701.00, 647.72, 154.53
-osoba18 = tpc -1040.43, 222.49, 63.27
-osoba19 = tpc -997.97, 156.94, 60.83
-osoba20 = tpc -951.94, 195.32, 67.43
-osoba21 = tpc -903.10, 191.32, 69.17
-osoba22 = tpc -837.51, -25.94, 40.20
-osoba23 = tpc -969.00, 124.09, 55.95
-osoba24 = tpc -883.74, 39.66, 49.47
-osoba25 = tpc -1732.53, 380.27, 88.98
-osoba26 = tpc -1863.78, 309.64, 88.94
-osoba27 = tpc -1874.37, 201.60, 85.13
-osoba28 = tpc -1344.88, 481.11, 101.58
-osoba29 = tpc -1897.34, 132.56, 80.94
-osoba30 = tpc -2797.85, 1431.46, 99.35
+osoba1 = -1135.29, 375.56, 70.11
+osoba2 = -1806.19, 439.39, 127.93
+osoba3 = -834.32, 114.14, 56.21
+osoba4 = 228.25, 765.94, 204.56
+osoba5 = -1188.68, 289.34, 70.50
+osoba6 = -1549.18, -87.88, 55.72
+osoba7 = -1579.00, -33.85, 56.94
+osoba8 = -1462.32, -32.05, 55.54
+osoba9 = -2584.95, 1913.73, 166.90
+osoba10 = -1516.86, 852.00, 181.20
+osoba11 = 3313.22, 5175.29, 18.81
+osoba12 = -712.52, -1298.13, 5.01
+osoba13 = -1274.98, 496.90, 97.04
+osoba14 = -1025.39, 360.01, 71.31
+osoba15 = -882.32, 365.56, 84.64
+osoba16 = -877.60, 306.26, 82.09
+osoba17 = -701.00, 647.72, 154.53
+osoba18 = -1040.43, 222.49, 63.27
+osoba19 = -997.97, 156.94, 60.83
+osoba20 = -951.94, 195.32, 67.43
+osoba21 = -903.10, 191.32, 69.17
+osoba22 = -837.51, -25.94, 40.20
+osoba23 = -969.00, 124.09, 55.95
+osoba24 = -883.74, 39.66, 49.47
+osoba25 = -1732.53, 380.27, 88.98
+osoba26 = -1863.78, 309.64, 88.94
+osoba27 = -1874.37, 201.60, 85.13
+osoba28 = -1344.88, 481.11, 101.58
+osoba29 = -1897.34, 132.56, 80.94
+osoba30 = -2797.85, 1431.46, 99.35
 ;-----------------------------------------------------------------------------------------------------------------
 ;-----------------------------------------------------------------------------------------------------------------
 ;-----------------------------------------------------------------------------------------------------------------
@@ -618,7 +618,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba1%{Enter}
+SendInput, tpc %osoba1%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -631,7 +631,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba2%{Enter}
+SendInput, tpc %osoba2%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -644,7 +644,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba3%{Enter}
+SendInput, tpc %osoba3%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -657,7 +657,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba4%{Enter}
+SendInput, tpc %osoba4%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -670,7 +670,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba5%{Enter}
+SendInput, tpc %osoba5%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -683,7 +683,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba6%{Enter}
+SendInput, tpc %osoba6%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -696,7 +696,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba7%{Enter}
+SendInput, tpc %osoba7%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -709,7 +709,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba8%{Enter}
+SendInput, tpc %osoba8%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -722,7 +722,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba9%{Enter}
+SendInput, tpc %osoba9%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -735,7 +735,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba10%{Enter}
+SendInput, tpc %osoba10%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -748,7 +748,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba11%{Enter}
+SendInput, tpc %osoba11%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -761,7 +761,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba12%{Enter}
+SendInput, tpc %osoba12%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -774,7 +774,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba13%{Enter}
+SendInput, tpc %osoba13%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -787,7 +787,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba14%{Enter}
+SendInput, tpc %osoba14%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -800,7 +800,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba15%{Enter}
+SendInput, tpc %osoba15%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -813,7 +813,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba16%{Enter}
+SendInput, tpc %osoba16%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -826,7 +826,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba17%{Enter}
+SendInput, tpc %osoba17%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -839,7 +839,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba18%{Enter}
+SendInput, tpc %osoba18%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -852,7 +852,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba19%{Enter}
+SendInput, tpc %osoba19%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -865,7 +865,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba20%{Enter}
+SendInput, tpc %osoba20%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -878,7 +878,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba21%{Enter}
+SendInput, tpc %osoba21%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -891,7 +891,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba22%{Enter}
+SendInput, tpc %osoba22%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -904,7 +904,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba23%{Enter}
+SendInput, tpc %osoba23%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -917,7 +917,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba24%{Enter}
+SendInput, tpc %osoba24%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -930,7 +930,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba25%{Enter}
+SendInput, tpc %osoba25%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -943,7 +943,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba26%{Enter}
+SendInput, tpc %osoba26%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -956,7 +956,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba27%{Enter}
+SendInput, tpc %osoba27%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -969,7 +969,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba28%{Enter}
+SendInput, tpc tpc %osoba28%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -982,7 +982,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba29%{Enter}
+SendInput, tpc tpc %osoba29%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -995,7 +995,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, %osoba30%{Enter}
+SendInput, tpc %osoba30%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
