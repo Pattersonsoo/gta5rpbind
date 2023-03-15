@@ -969,7 +969,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, tpc tpc %osoba28%{Enter}
+SendInput, tpc %osoba28%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
@@ -982,7 +982,7 @@ MouseClick, left, 55, 374
 Sleep 100
 MouseClick, left, 33, 333
 Sleep 100
-SendInput, tpc tpc %osoba29%{Enter}
+SendInput, tpc %osoba29%{Enter}
 openbr = 1
 Gui, Browser: Destroy
 Return
