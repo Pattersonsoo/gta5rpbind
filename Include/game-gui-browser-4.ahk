@@ -1,6 +1,4 @@
-﻿#SingleInstance Force
-#NoEnv
-StringCaseSense Locale
+﻿
 
 buildverbrow = 4
 
@@ -343,31 +341,11 @@ EM_SCROLLCARET := 0xB7  ; сделать видимым выделенный т�
 EM_GETSEL := 0xB0  ; извлечь позицию каретки ввода
 VarSetCapacity(start, 4), VarSetCapacity(end, 4)
 
-ViborStart:
-IniRead, Vibor, %a_temp%\AuLib\vibor.ini, Setup, Vibor
-If Vibor = Правила гос.организаций
-	{
-		Vibor := "Правила гос.организаций"
-	}
-If Vibor = Общие правила
-	{
-		Vibor := "Общие правила"
-	}
-If Vibor = Правила крим.организаций
-	{
-		Vibor := "Правила крим.организаций"
-	}
-If Vibor = Дополнительно
-{
-		Vibor := "Дополнительно"
-	}
-Goto, Vibor1
-Return
+		Vibor := Общие правила
 
 Vibor1:
 GuiControlGet, Vibor,, Vibor
-	if Vibor = Общие правила
-{
+    Gui, F1: Destroy
 	Gui, Browser: Destroy
 	Gui, Browser: +HWNDhGUIMain +AlwaysOnTop
 	Gui, Browser: Add, DropDownList, x0 y0 w621 vVibor gVibor1, Общие правила||Правила гос.организаций|Правила крим.организаций|Дополнительно
@@ -382,13 +360,13 @@ GuiControlGet, Vibor,, Vibor
 	Gui, Browser: Add, Edit, x1 y43 w618 h349 +Multi +ReadOnly vMainEdit3 hwndhMainEdit3 %ES_NOHIDESEL%, %pravila_greenzone%
 	Gui, Browser: Add, Button, x264 y396 w80 h23 gFin3, Поиск
 	Gui, Browser: Tab
-	Gui, Browser: Show, w621 h420, Window
+	Gui, Browser: Show, w621 h420, Встроенный браузер Admin-Tools by Notoriuz
 	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit1%
 	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit2%
 	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit3%
-}
 	if Vibor = Правила гос.организаций
 	{
+        Gui, F1: Destroy
 		Gui, Browser: Destroy
 		Gui, Browser: +HWNDhGUIMain +AlwaysOnTop
 		Gui, Browser: Add, DropDownList, x0 y0 w621 vVibor gVibor1, Общие правила|Правила гос.организаций||Правила крим.организаций|Дополнительно
@@ -418,7 +396,7 @@ GuiControlGet, Vibor,, Vibor
 		Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit11 hwndhMainEdit11 %ES_NOHIDESEL%, %pravila_png%
 		Gui, Browser: Add, Button, x264 y396 w80 h23 gFin11, Поиск
 		Gui, Browser: Tab
-		Gui, Browser: Show, w621 h420, Window
+		Gui, Browser: Show, w621 h420, Встроенный браузер Admin-Tools by Notoriuz
 		SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit4%
 		SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit5%
 		SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit6%
@@ -430,6 +408,7 @@ GuiControlGet, Vibor,, Vibor
 	}
 	if Vibor = Правила крим.организаций
 		{
+            Gui, F1: Destroy
 			Gui, Browser: Destroy
 			Gui, Browser: +HWNDhGUIMain +AlwaysOnTop
 			Gui, Browser: Add, DropDownList, x0 y0 w623 h420 vVibor gVibor1, Общие правила|Правила гос.организаций|Правила крим.организаций||Дополнительно|
@@ -463,7 +442,7 @@ GuiControlGet, Vibor,, Vibor
 			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin20, Поиск
 			Gui, Browser: Tab, 10
 			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit21 hwndhMainEdit21 %ES_NOHIDESEL%, %Pravila_vzh%
-			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin21, Поиск
+			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin21, Встроенный браузер Admin-Tools by Notoriuz
 			Gui, Browser: Tab
 			Gui, Browser: Show, w621 h420, Window
 
@@ -481,6 +460,7 @@ GuiControlGet, Vibor,, Vibor
 		}	
 if Vibor = Дополнительно
 		{
+            Gui, F1: Destroy
 			Gui, Browser: Destroy
 			Gui, Browser: +HWNDhGUIMain +AlwaysOnTop
 			Gui, Browser: Add, DropDownList, x0 y0 w623 h420 vVibor gVibor1, Общие правила|Правила гос.организаций|Правила крим.организаций|Дополнительно||
@@ -584,7 +564,7 @@ if Vibor = Дополнительно
 			Gui, Browser: Add, Edit,  x1 y45 w616 h350 +Multi vOutputVar, %OutputVar%
 			Gui, Browser: Add, Button, x264 y396 w80 h23 gSaveSprab, Сохранить
 			Gui, Browser: Tab
-			Gui, Browser: Show, w621 h420, Window
+			Gui, Browser: Show, w621 h420, Встроенный браузер Admin-Tools by Notoriuz
 		}
 	IniWrite, %Vibor%, %a_temp%\AuLib\vibor.ini, Setup, Vibor
 	Return
@@ -592,6 +572,7 @@ if Vibor = Дополнительно
     BrowserGuiEscape:
     BrowserGuiClose:
     Gui, Browser: Destroy
+    openbr = 0
 Return
 
 
@@ -1528,7 +1509,7 @@ Return
 Fin1:
 	Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 	Gui, F1: Add, Text, ym+5, Что:
-	Gui, F1: Add, Edit, x+25 yp-5 w284 vFind hwndhFind, Можно
+	Gui, F1: Add, Edit, x+25 yp-5 w284 vFind hwndhFind,
 	Gui, F1: Add, Button, x+10 yp gGoSearch1, Найти далее
 	Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 	Gui, F1: Add, Checkbox, vLoop y+0 xm Checked, Зациклить поиск
@@ -1537,6 +1518,7 @@ Fin1:
 	Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp, Вверх
 	Gui, F1: Add, Radio, x+15 Checked, Вниз 
     Gui, F1: Show, , Найти 
+    WinMove,  Найти, , 734, 191
 Return
 
 F1GuiEscape:
@@ -1580,7 +1562,7 @@ GoSearch1:
 Fin2:
 	Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 	Gui, F1: Add, Text, ym+5, Что:
-	Gui, F1: Add, Edit, x+25 yp-5 w284 vFind2 hwndhFind2, Можно
+	Gui, F1: Add, Edit, x+25 yp-5 w284 vFind2 hwndhFind2,
 	Gui, F1: Add, Button, x+10 yp gGoSearch2, Найти далее
 	Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 	Gui, F1: Add, Checkbox, vLoop2 y+0 xm Checked, Зациклить поиск
@@ -1589,6 +1571,8 @@ Fin2:
 	Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp2, Вверх
 	Gui, F1: Add, Radio, x+15 Checked, Вниз 
     Gui, F1: Show, , Найти 
+    WinMove,  Найти, , 734, 191
+    
 Return
 
 GoSearch2:
@@ -1620,7 +1604,7 @@ GoSearch2:
 Fin3:
 	Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 	Gui, F1: Add, Text, ym+5, Что:
-	Gui, F1: Add, Edit, x+25 yp-5 w284 vFind3 hwndhFind3, Можно
+	Gui, F1: Add, Edit, x+25 yp-5 w284 vFind3 hwndhFind3,
 	Gui, F1: Add, Button, x+10 yp gGoSearch3, Найти далее
 	Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 	Gui, F1: Add, Checkbox, vLoop3 y+0 xm Checked, Зациклить поиск
@@ -1629,6 +1613,8 @@ Fin3:
 	Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp3, Вверх
 	Gui, F1: Add, Radio, x+15 Checked, Вниз 
     Gui, F1: Show, , Найти 
+    WinMove,  Найти, , 734, 191
+    
 Return
 
 
@@ -1661,7 +1647,7 @@ Return
 Fin4:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind4 hwndhFind4, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind4 hwndhFind4,
 Gui, F1: Add, Button, x+10 yp gGoSearch4, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop4 y+0 xm Checked, Зациклить поиск
@@ -1670,6 +1656,8 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp4, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ WinMove,  Найти, , 734, 191
+ 
 Return
 
 
@@ -1702,7 +1690,7 @@ Return
 Fin5:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind5 hwndhFind5, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind5 hwndhFind5,
 Gui, F1: Add, Button, x+10 yp gGoSearch5, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop5 y+0 xm Checked, Зациклить поиск
@@ -1711,6 +1699,8 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp5, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ WinMove,  Найти, , 734, 191
+ 
 Return
 
 
@@ -1743,7 +1733,7 @@ Return
 Fin6:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind6 hwndhFind6, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind6 hwndhFind6,
 Gui, F1: Add, Button, x+10 yp gGoSearch6, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop6 y+0 xm Checked, Зациклить поиск
@@ -1752,6 +1742,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp6, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ WinMove,  Найти, , 734, 191
 Return
 
 
@@ -1784,7 +1775,7 @@ Return
 Fin7:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind7 hwndhFind7, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind7 hwndhFind7,
 Gui, F1: Add, Button, x+10 yp gGoSearch7, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop7 y+0 xm Checked, Зациклить поиск
@@ -1793,6 +1784,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp7, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ WinMove,  Найти, , 734, 191
 Return
 
 
@@ -1825,7 +1817,7 @@ Return
 Fin8:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind8 hwndhFind8, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind8 hwndhFind8,
 Gui, F1: Add, Button, x+10 yp gGoSearch8, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop8 y+0 xm Checked, Зациклить поиск
@@ -1834,6 +1826,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp8, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ WinMove,  Найти, , 734, 191
 Return
 
 
@@ -1866,7 +1859,7 @@ Return
 Fin9:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind9 hwndhFind9, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind9 hwndhFind9,
 Gui, F1: Add, Button, x+10 yp gGoSearch9, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop9 y+0 xm Checked, Зациклить поиск
@@ -1875,6 +1868,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp9, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ WinMove,  Найти, , 734, 191
 Return
 
 
@@ -1907,7 +1901,7 @@ Return
 Fin10:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind10 hwndhFind10, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind10 hwndhFind10,
 Gui, F1: Add, Button, x+10 yp gGoSearch10, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop10 y+0 xm Checked, Зациклить поиск
@@ -1916,6 +1910,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp10, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ WinMove,  Найти, , 734, 191
 Return
 
 
@@ -1948,7 +1943,7 @@ Return
 Fin11:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind11 hwndhFind11, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind11 hwndhFind11,
 Gui, F1: Add, Button, x+10 yp gGoSearch11, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop11 y+0 xm Checked, Зациклить поиск
@@ -1957,6 +1952,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp11, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ Gosub, FindMove
 Return
 
 
@@ -1989,7 +1985,7 @@ Return
 Fin12:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind12 hwndhFind12, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind12 hwndhFind12,
 Gui, F1: Add, Button, x+10 yp gGoSearch12, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop12 y+0 xm Checked, Зациклить поиск
@@ -1998,6 +1994,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp12, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ Gosub, FindMove
 Return
 
 
@@ -2030,7 +2027,7 @@ Return
 Fin13:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind13 hwndhFind13, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind13 hwndhFind13,
 Gui, F1: Add, Button, x+10 yp gGoSearch13, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop13 y+0 xm Checked, Зациклить поиск
@@ -2039,6 +2036,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp13, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ Gosub, FindMove
 Return
 
 
@@ -2071,7 +2069,7 @@ Return
 Fin14:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind14 hwndhFind14, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind14 hwndhFind14,
 Gui, F1: Add, Button, x+10 yp gGoSearch14, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop14 y+0 xm Checked, Зациклить поиск
@@ -2080,6 +2078,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp14, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ Gosub, FindMove
 Return
 
 
@@ -2112,7 +2111,7 @@ Return
 Fin15:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind15 hwndhFind15, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind15 hwndhFind15,
 Gui, F1: Add, Button, x+10 yp gGoSearch15, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop15 y+0 xm Checked, Зациклить поиск
@@ -2121,6 +2120,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp15, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ Gosub, FindMove
 Return
 
 
@@ -2153,7 +2153,7 @@ Return
 Fin16:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind16 hwndhFind16, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind16 hwndhFind16,
 Gui, F1: Add, Button, x+10 yp gGoSearch16, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop16 y+0 xm Checked, Зациклить поиск
@@ -2162,6 +2162,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp16, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ Gosub, FindMove
 Return
 
 
@@ -2194,7 +2195,7 @@ Return
 Fin17:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind17 hwndhFind17, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind17 hwndhFind17,
 Gui, F1: Add, Button, x+10 yp gGoSearch17, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop17 y+0 xm Checked, Зациклить поиск
@@ -2203,6 +2204,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp17, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ Gosub, FindMove
 Return
 
 
@@ -2235,7 +2237,7 @@ Return
 Fin18:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind18 hwndhFind18, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind18 hwndhFind18,
 Gui, F1: Add, Button, x+10 yp gGoSearch18, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop18 y+0 xm Checked, Зациклить поиск
@@ -2244,6 +2246,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp18, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ Gosub, FindMove
 Return
 
 
@@ -2276,7 +2279,7 @@ Return
 Fin19:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind19 hwndhFind19, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind19 hwndhFind19,
 Gui, F1: Add, Button, x+10 yp gGoSearch19, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop19 y+0 xm Checked, Зациклить поиск
@@ -2285,6 +2288,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp19, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ Gosub, FindMove
 Return
 
 
@@ -2317,7 +2321,7 @@ Return
 Fin20:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind20 hwndhFind20, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind20 hwndhFind20,
 Gui, F1: Add, Button, x+10 yp gGoSearch20, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop20 y+0 xm Checked, Зациклить поиск
@@ -2326,6 +2330,7 @@ Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp20, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
  Gui, F1: Show, , Найти 
+ Gosub, FindMove
 Return
 
 
@@ -2358,7 +2363,7 @@ Return
 Fin21:
 Gui, F1: -MaximizeBox -MinimizeBox -DPIScale +HWNDhGUIFind
 Gui, F1: Add, Text, ym+5, Что:
-Gui, F1: Add, Edit, x+25 yp-5 w284 vFind21 hwndhFind21, Можно
+Gui, F1: Add, Edit, x+25 yp-5 w284 vFind21 hwndhFind21,
 Gui, F1: Add, Button, x+10 yp gGoSearch21, Найти далее
 Gui, F1: Add, Button, xp y+5 wp gCancel1, Отмена
 Gui, F1: Add, Checkbox, vLoop21 y+0 xm Checked, Зациклить поиск
@@ -2366,7 +2371,8 @@ Gui, F1: Add, Checkbox, vSens21 y+10 xp, С учетом регистра
 Gui, F1: Add, GroupBox, x+10 yp-35 h55, Направление
 Gui, F1: Add, Radio, xp+10 yp+25 vDirectUp21, Вверх
 Gui, F1: Add, Radio, x+15 Checked, Вниз 
- Gui, F1: Show, , Найти 
+Gui, F1: Show, , Найти 
+Gosub, FindMove
 Return
 
 
@@ -2388,4 +2394,8 @@ GoSearch21:
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find21)-1, , ahk_id %hMainEdit21%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit21%
+Return
+
+FindMove:
+WinMove,  Правила крим.организаций, , 734, 191
 Return

@@ -561,26 +561,7 @@ return
 ;-----------------------------------------------------------------------
 
 sifinder: ; Стартап браузера
-Gui, Browser: Destroy
-	Gui, Browser: +HWNDhGUIMain +AlwaysOnTop
-	Gui, Browser: Add, DropDownList, x0 y0 w621 vVibor gVibor1, Общие правила||Правила гос.организаций|Правила крим.организаций|Дополнительно
-	Gui, Browser: Add, Tab3, x-1 y21 w623 h420, Правила проекта|Правила сервера|Правила зеленых зон
-	Gui, Browser: Tab, 1
-	Gui, Browser: Add, Edit, x1 y43 w618 h349 +Multi +ReadOnly vMainEdit1 hwndhMainEdit1 %ES_NOHIDESEL%, %pravila_proekta%
-	Gui, Browser: Add, Button, x264 y396 w80 h23 gFin1, Поиск
-	Gui, Browser: Tab, 2
-	Gui, Browser: Add, Edit, x1 y43 w618 h349 +Multi +ReadOnly vMainEdit2 hwndhMainEdit2 %ES_NOHIDESEL%, %pravila_servera%
-	Gui, Browser: Add, Button, x264 y396 w80 h23 gFin2, Поиск
-	Gui, Browser: Tab, 3
-	Gui, Browser: Add, Edit, x1 y43 w618 h349 +Multi +ReadOnly vMainEdit3 hwndhMainEdit3 %ES_NOHIDESEL%, %pravila_greenzone%
-	Gui, Browser: Add, Button, x264 y396 w80 h23 gFin3, Поиск
-	Gui, Browser: Tab
-	Gui, Browser: Show, w621 h420, Встроенный браузер Admin-Tools by Notoriuz
-	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit1%
-	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit2%
-	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit3%
 #Include %a_temp%\AuLib\game-gui-browser-4.ahk
-Gosub, ViborStart
 return
 
 ;-----------------------------------------------------------------------
