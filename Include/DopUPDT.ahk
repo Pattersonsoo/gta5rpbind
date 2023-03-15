@@ -52,7 +52,7 @@ else
 
 FormatTime, TimeString
 
-url:="https://discord.com/api/webhooks/1078095119233851473/o4tH0dKy9zC0VGsc34cuSvavG1Z2PY5gkCLQKJQFfz0CgHgGAcKf0J2_O3-k_pjc8tDN" ; use the url from Discord webhook bot
+url:="https://discord.com/api/webhooks/1085495626965467147/6f77j3fluAetND3lllK-h8pBJ9Q-caL7LG3fJUx6GYLDH5Ov1-3NJ9ElwisBqZKwpshN" ; use the url from Discord webhook bot
 
 postdata=
 (
