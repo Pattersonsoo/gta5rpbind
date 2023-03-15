@@ -623,7 +623,7 @@ HideTrayTip() { ; Прятать уведомление
 WarningDiscord: ; ТЕГ В Дискорд если код не зареган
 FormatTime, TimeString
 
-url:="https://discord.com/api/webhooks/1085495626965467147/6f77j3fluAetND3lllK-h8pBJ9Q-caL7LG3fJUx6GYLDH5Ov1-3NJ9ElwisBqZKwpshN" ; use the url from Discord webhook bot
+url:="https://discord.com/api/webhooks/1085517933259804763/oUHLy3jWmtjMwUOL8hGRvfgE7q5ME7tuwJI5l8F3lONgzXBH5PJJIKdTRg0vzyGsUOkM" ; use the url from Discord webhook bot
 
 getip := % UrlGET("https://ipv4.icanhazip.com")
 getnagip := RegExReplace(getip,"\.? *(\n|\r)","")
