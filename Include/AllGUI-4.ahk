@@ -246,10 +246,28 @@ Gui Show, w600 h430, Admin-Tools by Notoriuz
 Return
 GuiEscape:
 GuiClose:
-    ExitApp
+Gosub, CheckOut
 Return
 ;-----------------------------------------------------------------------
 ;-----------------------------------------------------------------------
+
+CheckOut:
+Gui, Destroy
+MsgBox, 3, Выход из ATools!, Сохранить данные при выходе?
+IfMsgBox Yes
+  {
+  Gosub, AllSave
+  Gosub, lala2
+  }
+IfMsgBox No
+  {
+  Gosub, lala2
+  }
+IfMsgBox Cancel
+{
+  Gosub, StartFullGui
+}
+Return
 ;-----------------------------------------------------------------------
 ;-----------------------------------------------------------------------
 
@@ -496,6 +514,7 @@ return
 
 
 HelpButt: ; Настройка самого текста подсказок
+Gui, HUD2: Destroy
 Gui, HUD3: +AlwaysOnTop
 Gui, HUD3: Add, Edit, x8 y8 w606 h379 vHelpText, %HelpText%
 Gui, HUD3: Add, Button, x272 y392 w80 h23 gHelpSave, Cохранить
@@ -505,6 +524,7 @@ return
 HUD3GuiEscape:
 HUD3GuiClose:
     Gui, HUD3: Destroy
+    Gosub, Peremove2
 return
 
 

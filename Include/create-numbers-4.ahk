@@ -1875,7 +1875,6 @@ Gui Destroy
             IniWrite, %xbop2%, %A_WorkingDir%\setting_console.ini, Setup, xbop2
             IniWrite, %ybop2%, %A_WorkingDir%\setting_console.ini, Setup, ybop2
         openrub = 1
-	;Send {F2}
         }
     }
 return
@@ -1884,6 +1883,15 @@ sBindriText:
     IniRead, xbop2, %A_WorkingDir%\setting_console.ini , Setup, xbop2, 759
     IniRead, ybop2, %A_WorkingDir%\setting_console.ini , Setup, ybop2, 462
 
+    if xbop2 is not number
+        {
+            xbop2 := 100
+        }
+
+    if ybop2 is not number
+    {
+        ybop2 := 100
+    }
     Gui, b123: -MinimizeBox -MaximizeBox -SysMenu +AlwaysOnTop -DPIScale +LastFound +E0x20
     Gui, b123: Add, Button, x8 y8 w92 h34 gBindClick1, %BindText1%
     Gui, b123: Add, Button, x104 y8 w92 h34 gBindClick2, %BindText2%
