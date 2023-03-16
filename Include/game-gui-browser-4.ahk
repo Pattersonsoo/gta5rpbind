@@ -444,7 +444,7 @@ GuiControlGet, Vibor,, Vibor
 			Gui, Browser: Add, Edit,  x1 y62 w616 h330 +Multi +ReadOnly vMainEdit21 hwndhMainEdit21 %ES_NOHIDESEL%, %Pravila_vzh%
 			Gui, Browser: Add, Button, x264 y396 w80 h23 gFin21, Встроенный браузер Admin-Tools by Notoriuz
 			Gui, Browser: Tab
-			Gui, Browser: Show, w621 h420, Window
+			Gui, Browser: Show, w621 h420, Встроенный браузер Admin-Tools by Notoriuz
 
 			
 	SendMessage, EM_SETSEL, 0, 0, , ahk_id %hMainEdit12%
