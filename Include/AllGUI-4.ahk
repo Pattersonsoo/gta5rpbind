@@ -2,258 +2,259 @@
 StartFullGui:
 ;-----------------------------------------------------------------------
 ;-----------------------ОТРИСОВКА ОСНОВНОГО GUI------------------------
-Gui Add, Button, x10 y372 w116 h23 gFullClear, Удалить настройки
-Gui Add, Button, x10 y400 w116 h23 gAllSave, Сохранить настройки
-Gui Add, Button, x131 y372 w103 h51 gStart, Запустить биндер
+Gui, Own: Add, Button, x10 y372 w116 h23 gFullClear, Удалить настройки
+Gui, Own: Add, Button, x10 y400 w116 h23 gAllSave, Сохранить настройки
+Gui, Own: Add, Button, x131 y372 w103 h51 gStart, Запустить биндер
 
-Gui Add, Text, x489 y371 w59 h41, Репортов отвечено
-Gui Add, Text, x540 y378 w15 h16, -
-Gui Add, Text, x545 y380 w45 h10 +0x200 vCounter, %Counter%
-Gui Add, Text, x999 y999 w45 h10 +0x200 vCounter2, %Counter2%
-Gui Add, Button, x487 y399 w85 h23 gClear, Изменить
-Gui Add, GroupBox, x482 y362 w95 h67
+Gui, Own: Add, Text, x489 y371 w59 h41, Репортов отвечено
+Gui, Own: Add, Text, x540 y378 w15 h16, -
+Gui, Own: Add, Text, x545 y380 w45 h10 +0x200 vCounter, %Counter%
+Gui, Own: Add, Text, x999 y999 w45 h10 +0x200 vCounter2, %Counter2%
+Gui, Own: Add, Button, x487 y399 w85 h23 gClear, Изменить
+Gui, Own: Add, GroupBox, x482 y362 w95 h67
 
-Gui Add, Text, x-34 y362 w715 h2 +0x10
-Gui Add, Button, x272 y372 w80 h24 gfaqr, FAQ
-Gui Add, Button, x272 y400 w80 h24 ginfo, INFO
-Gui Add, GroupBox, x265 y362 w94 h67
-Gui Add, GroupBox, x6 y362 w233 h67
+Gui, Own: Add, Text, x-34 y362 w715 h2 +0x10
+Gui, Own: Add, Button, x272 y372 w80 h24 gfaqr, FAQ
+Gui, Own: Add, Button, x272 y400 w80 h24 ginfo, INFO
+Gui, Own: Add, GroupBox, x265 y362 w94 h67
+Gui, Own: Add, GroupBox, x6 y362 w233 h67
 
-Gui Add, Tab, x0 y0 w600 h362, Основное|Свой бинд|Быстрый ответ [1]|Быстрый ответ [2]|Настройки ; Строка выбора
-Gui, Tab, 1 ; Вкладка основное
+Gui, Own: Add, Tab, x0 y0 w600 h362, Основное|Свой бинд|Быстрый ответ [1]|Быстрый ответ [2]|Настройки ; Строка выбора
+Gui, Own: Tab, 1 ; Вкладка основное
 
-Gui Add, Hotkey, x16 y44 w82 h21 vMyHotKey1, %MyHotKey1%
-Gui Add, Hotkey, x16 y76 w82 h21 vMyHotKey2, %MyHotKey2%
-Gui Add, Hotkey, x16 y108 w82 h21 vMyHotKey3, %MyHotKey3%
-Gui Add, Hotkey, x16 y140 w82 h21 vMyHotKey4, %MyHotKey4%
-Gui Add, Hotkey, x16 y172 w82 h21 vMyHotKey5, %MyHotKey5%
-Gui Add, Hotkey, x16 y204 w82 h21 vMyHotKey6, %MyHotKey6%
-Gui Add, Hotkey, x16 y236 w82 h21 vMyHotKey7, %MyHotKey7%
-Gui Add, Hotkey, x16 y268 w82 h21 vMyHotKey8, %MyHotKey8%
-Gui Add, Hotkey, x16 y300 w82 h21 vMyHotKey9, %MyHotKey9%
-Gui Add, Hotkey, x16 y332 w82 h21 vMyHotKey10, %MyHotKey10%
-Gui Add, GroupBox, x8 y25 w98 h334 +Center -Background, Комбинация
+Gui, Own: Add, Hotkey, x16 y44 w82 h21 vMyHotKey1, %MyHotKey1%
+Gui, Own: Add, Hotkey, x16 y76 w82 h21 vMyHotKey2, %MyHotKey2%
+Gui, Own: Add, Hotkey, x16 y108 w82 h21 vMyHotKey3, %MyHotKey3%
+Gui, Own: Add, Hotkey, x16 y140 w82 h21 vMyHotKey4, %MyHotKey4%
+Gui, Own: Add, Hotkey, x16 y172 w82 h21 vMyHotKey5, %MyHotKey5%
+Gui, Own: Add, Hotkey, x16 y204 w82 h21 vMyHotKey6, %MyHotKey6%
+Gui, Own: Add, Hotkey, x16 y236 w82 h21 vMyHotKey7, %MyHotKey7%
+Gui, Own: Add, Hotkey, x16 y268 w82 h21 vMyHotKey8, %MyHotKey8%
+Gui, Own: Add, Hotkey, x16 y300 w82 h21 vMyHotKey9, %MyHotKey9%
+Gui, Own: Add, Hotkey, x16 y332 w82 h21 vMyHotKey10, %MyHotKey10%
+Gui, Own: Add, GroupBox, x8 y25 w98 h334 +Center -Background, Комбинация
 
-Gui Add, Edit, x128 y44 w59 h21 vMySett1, %MySett1%
-Gui Add, Edit, x128 y76 w59 h21 vMySett2, %MySett2%
-Gui Add, Edit, x128 y108 w59 h21 vMySett3, %MySett3%
-Gui Add, Edit, x128 y140 w59 h21 vMySett4, %MySett4%
-Gui Add, Edit, x128 y172 w59 h21 vMySett5, %MySett5%
-Gui Add, Edit, x128 y204 w59 h21 vMySett6, %MySett6%
-Gui Add, Edit, x128 y236 w59 h21 vMySett7, %MySett7%
-Gui Add, Edit, x128 y268 w59 h21 vMySett8, %MySett8%
-Gui Add, Edit, x128 y300 w59 h21 vMySett9, %MySett9%
-Gui Add, Edit, x128 y332 w59 h21 vMySett10, %MySett10%
-Gui Add, GroupBox, x113 y25 w86 h334 +Center -Background, Кол-во вариантов
+Gui, Own: Add, Edit, x128 y44 w59 h21 vMySett1, %MySett1%
+Gui, Own: Add, Edit, x128 y76 w59 h21 vMySett2, %MySett2%
+Gui, Own: Add, Edit, x128 y108 w59 h21 vMySett3, %MySett3%
+Gui, Own: Add, Edit, x128 y140 w59 h21 vMySett4, %MySett4%
+Gui, Own: Add, Edit, x128 y172 w59 h21 vMySett5, %MySett5%
+Gui, Own: Add, Edit, x128 y204 w59 h21 vMySett6, %MySett6%
+Gui, Own: Add, Edit, x128 y236 w59 h21 vMySett7, %MySett7%
+Gui, Own: Add, Edit, x128 y268 w59 h21 vMySett8, %MySett8%
+Gui, Own: Add, Edit, x128 y300 w59 h21 vMySett9, %MySett9%
+Gui, Own: Add, Edit, x128 y332 w59 h21 vMySett10, %MySett10%
+Gui, Own: Add, GroupBox, x113 y25 w86 h334 +Center -Background, Кол-во вариантов
 
-Gui Add, Edit, x217 y44 w120 h21 vMyText1, %MyText1%
-Gui Add, Edit, x216 y76 w120 h21 vMyText2, %MyText2%
-Gui Add, Edit, x216 y108 w120 h21 vMyText3, %MyText3%
-Gui Add, Edit, x216 y140 w120 h21 vMyText4, %MyText4%
-Gui Add, Edit, x216 y172 w120 h21 vMyText5, %MyText5%
-Gui Add, Edit, x216 y204 w120 h21 vMyText6, %MyText6%
-Gui Add, Edit, x216 y236 w120 h21 vMyText7, %MyText7%
-Gui Add, Edit, x216 y268 w120 h21 vMyText8, %MyText8%
-Gui Add, Edit, x216 y300 w120 h21 vMyText9, %MyText9%
-Gui Add, Edit, x216 y332 w120 h21 vMyText10, %MyText10%
-Gui Add, GroupBox, x208 y25 w135 h334 +Center -Background, Примечание
+Gui, Own: Add, Edit, x217 y44 w120 h21 vMyText1, %MyText1%
+Gui, Own: Add, Edit, x216 y76 w120 h21 vMyText2, %MyText2%
+Gui, Own: Add, Edit, x216 y108 w120 h21 vMyText3, %MyText3%
+Gui, Own: Add, Edit, x216 y140 w120 h21 vMyText4, %MyText4%
+Gui, Own: Add, Edit, x216 y172 w120 h21 vMyText5, %MyText5%
+Gui, Own: Add, Edit, x216 y204 w120 h21 vMyText6, %MyText6%
+Gui, Own: Add, Edit, x216 y236 w120 h21 vMyText7, %MyText7%
+Gui, Own: Add, Edit, x216 y268 w120 h21 vMyText8, %MyText8%
+Gui, Own: Add, Edit, x216 y300 w120 h21 vMyText9, %MyText9%
+Gui, Own: Add, Edit, x216 y332 w120 h21 vMyText10, %MyText10%
+Gui, Own: Add, GroupBox, x208 y25 w135 h334 +Center -Background, Примечание
 
-Gui Add, Button, x352 y44 w80 h23 gSett1, Настроить
-Gui Add, Button, x352 y76 w80 h23 gSett2, Настроить
-Gui Add, Button, x352 y108 w80 h23 gSett3, Настроить
-Gui Add, Button, x352 y140 w80 h23 gSett4, Настроить
-Gui Add, Button, x352 y172 w80 h23 gSett5, Настроить
-Gui Add, Button, x352 y204 w80 h23 gSett6, Настроить
-Gui Add, Button, x352 y236 w80 h23 gSett7, Настроить
-Gui Add, Button, x352 y268 w80 h23 gSett8, Настроить
-Gui Add, Button, x352 y300 w80 h23 gSett9, Настроить
-Gui Add, Button, x352 y332 w80 h23 gSett10, Настроить
-Gui Add, GroupBox, x349 y25 w86 h334 +Center -Background, Настройки
+Gui, Own: Add, Button, x352 y44 w80 h23 gSett1, Настроить
+Gui, Own: Add, Button, x352 y76 w80 h23 gSett2, Настроить
+Gui, Own: Add, Button, x352 y108 w80 h23 gSett3, Настроить
+Gui, Own: Add, Button, x352 y140 w80 h23 gSett4, Настроить
+Gui, Own: Add, Button, x352 y172 w80 h23 gSett5, Настроить
+Gui, Own: Add, Button, x352 y204 w80 h23 gSett6, Настроить
+Gui, Own: Add, Button, x352 y236 w80 h23 gSett7, Настроить
+Gui, Own: Add, Button, x352 y268 w80 h23 gSett8, Настроить
+Gui, Own: Add, Button, x352 y300 w80 h23 gSett9, Настроить
+Gui, Own: Add, Button, x352 y332 w80 h23 gSett10, Настроить
+Gui, Own: Add, GroupBox, x349 y25 w86 h334 +Center -Background, Настройки
 
-Gui, Tab, 2  ; Вкладка свой бинд
+Gui, Own: Tab, 2  ; Вкладка свой бинд
 
-Gui Add, Hotkey, x16 y40 w85 h21 vMy2HotKey1, %My2HotKey1%
-Gui Add, Hotkey, x16 y72 w85 h21 vMy2HotKey2, %My2HotKey2%
-Gui Add, Hotkey, x16 y104 w85 h21 vMy2HotKey3, %My2HotKey3%
-Gui Add, Hotkey, x16 y136 w85 h21 vMy2HotKey4, %My2HotKey4%
-Gui Add, Hotkey, x16 y168 w85 h21 vMy2HotKey5, %My2HotKey5%
-Gui Add, Hotkey, x16 y200 w85 h21 vMy2HotKey6, %My2HotKey6%
-Gui Add, Hotkey, x16 y232 w85 h21 vMy2HotKey7, %My2HotKey7%
-Gui Add, Hotkey, x16 y264 w85 h21 vMy2HotKey8, %My2HotKey8%
-Gui Add, Hotkey, x16 y296 w85 h21 vMy2HotKey9, %My2HotKey9%
-Gui Add, Hotkey, x16 y328 w85 h21 vMy2HotKey10, %My2HotKey10%
+Gui, Own: Add, Hotkey, x16 y40 w85 h21 vMy2HotKey1, %My2HotKey1%
+Gui, Own: Add, Hotkey, x16 y72 w85 h21 vMy2HotKey2, %My2HotKey2%
+Gui, Own: Add, Hotkey, x16 y104 w85 h21 vMy2HotKey3, %My2HotKey3%
+Gui, Own: Add, Hotkey, x16 y136 w85 h21 vMy2HotKey4, %My2HotKey4%
+Gui, Own: Add, Hotkey, x16 y168 w85 h21 vMy2HotKey5, %My2HotKey5%
+Gui, Own: Add, Hotkey, x16 y200 w85 h21 vMy2HotKey6, %My2HotKey6%
+Gui, Own: Add, Hotkey, x16 y232 w85 h21 vMy2HotKey7, %My2HotKey7%
+Gui, Own: Add, Hotkey, x16 y264 w85 h21 vMy2HotKey8, %My2HotKey8%
+Gui, Own: Add, Hotkey, x16 y296 w85 h21 vMy2HotKey9, %My2HotKey9%
+Gui, Own: Add, Hotkey, x16 y328 w85 h21 vMy2HotKey10, %My2HotKey10%
 
-Gui Add, Edit, x112 y40 w400 h21 vMy2Edit1, %My2Edit1%
-Gui Add, Edit, x112 y72 w400 h21 vMy2Edit2, %My2Edit2%
-Gui Add, Edit, x112 y104 w400 h21 vMy2Edit3, %My2Edit3%
-Gui Add, Edit, x112 y136 w400 h21 vMy2Edit4, %My2Edit4%
-Gui Add, Edit, x112 y168 w400 h21 vMy2Edit5, %My2Edit5%
-Gui Add, Edit, x112 y200 w400 h21 vMy2Edit6, %My2Edit6%
-Gui Add, Edit, x112 y232 w400 h21 vMy2Edit7, %My2Edit7%
-Gui Add, Edit, x112 y264 w400 h21 vMy2Edit8, %My2Edit8%
-Gui Add, Edit, x112 y296 w400 h21 vMy2Edit9, %My2Edit9%
-Gui Add, Edit, x112 y328 w400 h21 vMy2Edit10, %My2Edit10%
+Gui, Own: Add, Edit, x112 y40 w400 h21 vMy2Edit1, %My2Edit1%
+Gui, Own: Add, Edit, x112 y72 w400 h21 vMy2Edit2, %My2Edit2%
+Gui, Own: Add, Edit, x112 y104 w400 h21 vMy2Edit3, %My2Edit3%
+Gui, Own: Add, Edit, x112 y136 w400 h21 vMy2Edit4, %My2Edit4%
+Gui, Own: Add, Edit, x112 y168 w400 h21 vMy2Edit5, %My2Edit5%
+Gui, Own: Add, Edit, x112 y200 w400 h21 vMy2Edit6, %My2Edit6%
+Gui, Own: Add, Edit, x112 y232 w400 h21 vMy2Edit7, %My2Edit7%
+Gui, Own: Add, Edit, x112 y264 w400 h21 vMy2Edit8, %My2Edit8%
+Gui, Own: Add, Edit, x112 y296 w400 h21 vMy2Edit9, %My2Edit9%
+Gui, Own: Add, Edit, x112 y328 w400 h21 vMy2Edit10, %My2Edit10%
 
-Gui Add, Button, x520 y39 w73 h23 g2Tab1, Настроить
-Gui Add, Button, x520 y71 w73 h23 g2Tab2, Настроить
-Gui Add, Button, x520 y103 w73 h23 g2Tab3, Настроить
-Gui Add, Button, x520 y135 w73 h23 g2Tab4, Настроить
-Gui Add, Button, x520 y167 w73 h23 g2Tab5, Настроить
-Gui Add, Button, x520 y199 w73 h23 g2Tab6, Настроить
-Gui Add, Button, x520 y231 w73 h23 g2Tab7, Настроить
-Gui Add, Button, x520 y263 w73 h23 g2Tab8, Настроить
-Gui Add, Button, x520 y295 w73 h23 g2Tab9, Настроить
-Gui Add, Button, x520 y327 w73 h23 g2Tab10, Настроить
+Gui, Own: Add, Button, x520 y39 w73 h23 g2Tab1, Настроить
+Gui, Own: Add, Button, x520 y71 w73 h23 g2Tab2, Настроить
+Gui, Own: Add, Button, x520 y103 w73 h23 g2Tab3, Настроить
+Gui, Own: Add, Button, x520 y135 w73 h23 g2Tab4, Настроить
+Gui, Own: Add, Button, x520 y167 w73 h23 g2Tab5, Настроить
+Gui, Own: Add, Button, x520 y199 w73 h23 g2Tab6, Настроить
+Gui, Own: Add, Button, x520 y231 w73 h23 g2Tab7, Настроить
+Gui, Own: Add, Button, x520 y263 w73 h23 g2Tab8, Настроить
+Gui, Own: Add, Button, x520 y295 w73 h23 g2Tab9, Настроить
+Gui, Own: Add, Button, x520 y327 w73 h23 g2Tab10, Настроить
 
-Gui Add, GroupBox, x8 y24 w99 h334 +Center, Комбинация
-Gui Add, GroupBox, x108 y24 w408 h334 +Center, Действие
-Gui Add, GroupBox, x518 y24 w78 h334 +Center -Background, Настройки
-Gui, Tab, 3 ; Вкладка Быстрый ответ [1]
+Gui, Own: Add, GroupBox, x8 y24 w99 h334 +Center, Комбинация
+Gui, Own: Add, GroupBox, x108 y24 w408 h334 +Center, Действие
+Gui, Own: Add, GroupBox, x518 y24 w78 h334 +Center -Background, Настройки
+Gui, Own: Tab, 3 ; Вкладка Быстрый ответ [1]
 
-Gui Add, Edit, x16 y40 w85 h21 vCommand1, %Command1%
-Gui Add, Edit, x16 y72 w85 h21 vCommand2, %Command2%
-Gui Add, Edit, x16 y104 w85 h21 vCommand3, %Command3%
-Gui Add, Edit, x16 y136 w85 h21 vCommand4, %Command4%
-Gui Add, Edit, x16 y168 w85 h21 vCommand5, %Command5%
-Gui Add, Edit, x16 y200 w85 h21 vCommand6, %Command6%
-Gui Add, Edit, x16 y232 w85 h21 vCommand7, %Command7%
-Gui Add, Edit, x16 y264 w85 h21 vCommand8, %Command8%
-Gui Add, Edit, x16 y296 w85 h21 vCommand9, %Command9%
-Gui Add, Edit, x16 y328 w85 h21 vCommand10, %Command10%
+Gui, Own: Add, Edit, x16 y40 w85 h21 vCommand1, %Command1%
+Gui, Own: Add, Edit, x16 y72 w85 h21 vCommand2, %Command2%
+Gui, Own: Add, Edit, x16 y104 w85 h21 vCommand3, %Command3%
+Gui, Own: Add, Edit, x16 y136 w85 h21 vCommand4, %Command4%
+Gui, Own: Add, Edit, x16 y168 w85 h21 vCommand5, %Command5%
+Gui, Own: Add, Edit, x16 y200 w85 h21 vCommand6, %Command6%
+Gui, Own: Add, Edit, x16 y232 w85 h21 vCommand7, %Command7%
+Gui, Own: Add, Edit, x16 y264 w85 h21 vCommand8, %Command8%
+Gui, Own: Add, Edit, x16 y296 w85 h21 vCommand9, %Command9%
+Gui, Own: Add, Edit, x16 y328 w85 h21 vCommand10, %Command10%
 
-Gui Add, Edit, x112 y40 w400 h21 vComDev1, %ComDev1%
-Gui Add, Edit, x112 y72 w400 h21 vComDev2, %ComDev2%
-Gui Add, Edit, x112 y104 w400 h21 vComDev3, %ComDev3%
-Gui Add, Edit, x112 y136 w400 h21 vComDev4, %ComDev4%
-Gui Add, Edit, x112 y168 w400 h21 vComDev5, %ComDev5%
-Gui Add, Edit, x112 y200 w400 h21 vComDev6, %ComDev6%
-Gui Add, Edit, x112 y232 w400 h21 vComDev7, %ComDev7%
-Gui Add, Edit, x112 y264 w400 h21 vComDev8, %ComDev8%
-Gui Add, Edit, x112 y296 w400 h21 vComDev9, %ComDev9%
-Gui Add, Edit, x112 y328 w400 h21 vComDev10, %ComDev10%
+Gui, Own: Add, Edit, x112 y40 w400 h21 vComDev1, %ComDev1%
+Gui, Own: Add, Edit, x112 y72 w400 h21 vComDev2, %ComDev2%
+Gui, Own: Add, Edit, x112 y104 w400 h21 vComDev3, %ComDev3%
+Gui, Own: Add, Edit, x112 y136 w400 h21 vComDev4, %ComDev4%
+Gui, Own: Add, Edit, x112 y168 w400 h21 vComDev5, %ComDev5%
+Gui, Own: Add, Edit, x112 y200 w400 h21 vComDev6, %ComDev6%
+Gui, Own: Add, Edit, x112 y232 w400 h21 vComDev7, %ComDev7%
+Gui, Own: Add, Edit, x112 y264 w400 h21 vComDev8, %ComDev8%
+Gui, Own: Add, Edit, x112 y296 w400 h21 vComDev9, %ComDev9%
+Gui, Own: Add, Edit, x112 y328 w400 h21 vComDev10, %ComDev10%
 
-Gui Add, Button, x520 y39 w73 h23 g3Tab1, Настроить
-Gui Add, Button, x520 y71 w73 h23 g3Tab2, Настроить
-Gui Add, Button, x520 y103 w73 h23 g3Tab3, Настроить
-Gui Add, Button, x520 y135 w73 h23 g3Tab4, Настроить
-Gui Add, Button, x520 y167 w73 h23 g3Tab5, Настроить
-Gui Add, Button, x520 y199 w73 h23 g3Tab6, Настроить
-Gui Add, Button, x520 y231 w73 h23 g3Tab7, Настроить
-Gui Add, Button, x520 y263 w73 h23 g3Tab8, Настроить
-Gui Add, Button, x520 y295 w73 h23 g3Tab9, Настроить
-Gui Add, Button, x520 y327 w73 h23 g3Tab10, Настроить
+Gui, Own: Add, Button, x520 y39 w73 h23 g3Tab1, Настроить
+Gui, Own: Add, Button, x520 y71 w73 h23 g3Tab2, Настроить
+Gui, Own: Add, Button, x520 y103 w73 h23 g3Tab3, Настроить
+Gui, Own: Add, Button, x520 y135 w73 h23 g3Tab4, Настроить
+Gui, Own: Add, Button, x520 y167 w73 h23 g3Tab5, Настроить
+Gui, Own: Add, Button, x520 y199 w73 h23 g3Tab6, Настроить
+Gui, Own: Add, Button, x520 y231 w73 h23 g3Tab7, Настроить
+Gui, Own: Add, Button, x520 y263 w73 h23 g3Tab8, Настроить
+Gui, Own: Add, Button, x520 y295 w73 h23 g3Tab9, Настроить
+Gui, Own: Add, Button, x520 y327 w73 h23 g3Tab10, Настроить
 
-Gui Add, GroupBox, x8 y24 w99 h334 +Center, Комбинация
-Gui Add, GroupBox, x108 y24 w408 h334 +Center, Действие
-Gui Add, GroupBox, x518 y24 w78 h334 +Center -Background, Настройки
+Gui, Own: Add, GroupBox, x8 y24 w99 h334 +Center, Комбинация
+Gui, Own: Add, GroupBox, x108 y24 w408 h334 +Center, Действие
+Gui, Own: Add, GroupBox, x518 y24 w78 h334 +Center -Background, Настройки
 
-Gui, Tab, 4 ; Вкладка Быстрый ответ [2]
+Gui, Own: Tab, 4 ; Вкладка Быстрый ответ [2]
 
-Gui Add, Edit, x16 y40 w85 h21 vCommand11, %Command11%
-Gui Add, Edit, x16 y72 w85 h21 vCommand12, %Command12%
-Gui Add, Edit, x16 y104 w85 h21 vCommand13, %Command13%
-Gui Add, Edit, x16 y136 w85 h21 vCommand14, %Command14%
-Gui Add, Edit, x16 y168 w85 h21 vCommand15, %Command15%
-Gui Add, Edit, x16 y200 w85 h21 vCommand16, %Command16%
-Gui Add, Edit, x16 y232 w85 h21 vCommand17, %Command17%
-Gui Add, Edit, x16 y264 w85 h21 vCommand18, %Command18%
-Gui Add, Edit, x16 y296 w85 h21 vCommand19, %Command19%
-Gui Add, Edit, x16 y328 w85 h21 vCommand20, %Command20%
+Gui, Own: Add, Edit, x16 y40 w85 h21 vCommand11, %Command11%
+Gui, Own: Add, Edit, x16 y72 w85 h21 vCommand12, %Command12%
+Gui, Own: Add, Edit, x16 y104 w85 h21 vCommand13, %Command13%
+Gui, Own: Add, Edit, x16 y136 w85 h21 vCommand14, %Command14%
+Gui, Own: Add, Edit, x16 y168 w85 h21 vCommand15, %Command15%
+Gui, Own: Add, Edit, x16 y200 w85 h21 vCommand16, %Command16%
+Gui, Own: Add, Edit, x16 y232 w85 h21 vCommand17, %Command17%
+Gui, Own: Add, Edit, x16 y264 w85 h21 vCommand18, %Command18%
+Gui, Own: Add, Edit, x16 y296 w85 h21 vCommand19, %Command19%
+Gui, Own: Add, Edit, x16 y328 w85 h21 vCommand20, %Command20%
 
-Gui Add, Edit, x112 y40 w400 h21 vComDev11, %ComDev11%
-Gui Add, Edit, x112 y72 w400 h21 vComDev12, %ComDev12%
-Gui Add, Edit, x112 y104 w400 h21 vComDev13, %ComDev13%
-Gui Add, Edit, x112 y136 w400 h21 vComDev14, %ComDev14%
-Gui Add, Edit, x112 y168 w400 h21 vComDev15, %ComDev15%
-Gui Add, Edit, x112 y200 w400 h21 vComDev16, %ComDev16%
-Gui Add, Edit, x112 y232 w400 h21 vComDev17, %ComDev17%
-Gui Add, Edit, x112 y264 w400 h21 vComDev18, %ComDev18%
-Gui Add, Edit, x112 y296 w400 h21 vComDev19, %ComDev19%
-Gui Add, Edit, x112 y328 w400 h21 vComDev20, %ComDev20%
+Gui, Own: Add, Edit, x112 y40 w400 h21 vComDev11, %ComDev11%
+Gui, Own: Add, Edit, x112 y72 w400 h21 vComDev12, %ComDev12%
+Gui, Own: Add, Edit, x112 y104 w400 h21 vComDev13, %ComDev13%
+Gui, Own: Add, Edit, x112 y136 w400 h21 vComDev14, %ComDev14%
+Gui, Own: Add, Edit, x112 y168 w400 h21 vComDev15, %ComDev15%
+Gui, Own: Add, Edit, x112 y200 w400 h21 vComDev16, %ComDev16%
+Gui, Own: Add, Edit, x112 y232 w400 h21 vComDev17, %ComDev17%
+Gui, Own: Add, Edit, x112 y264 w400 h21 vComDev18, %ComDev18%
+Gui, Own: Add, Edit, x112 y296 w400 h21 vComDev19, %ComDev19%
+Gui, Own: Add, Edit, x112 y328 w400 h21 vComDev20, %ComDev20%
 
-Gui Add, Button, x520 y39 w73 h23 g3Tab11, Настроить
-Gui Add, Button, x520 y71 w73 h23 g3Tab12, Настроить
-Gui Add, Button, x520 y103 w73 h23 g3Tab13, Настроить
-Gui Add, Button, x520 y135 w73 h23 g3Tab14, Настроить
-Gui Add, Button, x520 y167 w73 h23 g3Tab15, Настроить
-Gui Add, Button, x520 y199 w73 h23 g3Tab16, Настроить
-Gui Add, Button, x520 y231 w73 h23 g3Tab17, Настроить
-Gui Add, Button, x520 y263 w73 h23 g3Tab18, Настроить
-Gui Add, Button, x520 y295 w73 h23 g3Tab19, Настроить
-Gui Add, Button, x520 y327 w73 h23 g3Tab20, Настроить
+Gui, Own: Add, Button, x520 y39 w73 h23 g3Tab11, Настроить
+Gui, Own: Add, Button, x520 y71 w73 h23 g3Tab12, Настроить
+Gui, Own: Add, Button, x520 y103 w73 h23 g3Tab13, Настроить
+Gui, Own: Add, Button, x520 y135 w73 h23 g3Tab14, Настроить
+Gui, Own: Add, Button, x520 y167 w73 h23 g3Tab15, Настроить
+Gui, Own: Add, Button, x520 y199 w73 h23 g3Tab16, Настроить
+Gui, Own: Add, Button, x520 y231 w73 h23 g3Tab17, Настроить
+Gui, Own: Add, Button, x520 y263 w73 h23 g3Tab18, Настроить
+Gui, Own: Add, Button, x520 y295 w73 h23 g3Tab19, Настроить
+Gui, Own: Add, Button, x520 y327 w73 h23 g3Tab20, Настроить
 
-Gui Add, Button, x370 y372 w103 h51 gDopGui, Дополнительные строки
-Gui Add, GroupBox, x365 y362 w112 h67
+Gui, Own: Add, Button, x370 y372 w103 h51 gDopGui, Дополнительные строки
+Gui, Own: Add, GroupBox, x365 y362 w112 h67
 
-Gui Add, GroupBox, x8 y24 w99 h334 +Center, Комбинация
-Gui Add, GroupBox, x108 y24 w408 h334 +Center, Действие
-Gui Add, GroupBox, x518 y24 w78 h334 +Center -Background, Настройки
+Gui, Own: Add, GroupBox, x8 y24 w99 h334 +Center, Комбинация
+Gui, Own: Add, GroupBox, x108 y24 w408 h334 +Center, Действие
+Gui, Own: Add, GroupBox, x518 y24 w78 h334 +Center -Background, Настройки
 
-Gui, Tab, 5 ; Вкладка Настройки
+Gui, Own: Tab, 5 ; Вкладка Настройки
 
-Gui Add, Hotkey, x350 y33 w88 h21 vHotLogin1, %HotLogin1%
-Gui Add, Edit, x440 y33 w120 h21 +Password vAutoLogin1, %AutoLogin1%
-Gui Add, Text, x415 y54 w61 h13 +0x200 , Автологин
-Gui Add, GroupBox, x346 y21 w218 h53
+Gui, Own: Add, Hotkey, x350 y33 w88 h21 vHotLogin1, %HotLogin1%
+Gui, Own: Add, Edit, x440 y33 w120 h21 +Password vAutoLogin1, %AutoLogin1%
+Gui, Own: Add, Text, x415 y54 w61 h13 +0x200 , Автологин
+Gui, Own: Add, GroupBox, x346 y21 w218 h53
 
-Gui Add, Hotkey, x400 y90 w88 h21 vHotLogin2, %HotLogin2%
-Gui Add, Text, x355 y115 w200 h13 +0x200, Отправка репорта с учетом в счетчике
-Gui Add, Button, x350 y87 w49 h30 gPeremove3, Настройки
-Gui Add, GroupBox, x346 y78 w218 h53
+Gui, Own: Add, Hotkey, x400 y90 w88 h21 vHotLogin2, %HotLogin2%
+Gui, Own: Add, Text, x355 y115 w200 h13 +0x200, Отправка репорта с учетом в счетчике
+Gui, Own: Add, Button, x350 y87 w49 h30 gPeremove3, Настройки
+Gui, Own: Add, GroupBox, x346 y78 w218 h53
 
-Gui Add, Hotkey, x400 y140 w88 h21 vHotLogin3, %HotLogin3%
-Gui Add, Text, x370 y165 w200 h13 +0x200, Открыть встроенный браузер
-Gui Add, GroupBox, x346 y128 w218 h53
+Gui, Own: Add, Hotkey, x400 y140 w88 h21 vHotLogin3, %HotLogin3%
+Gui, Own: Add, Text, x370 y165 w200 h13 +0x200, Открыть встроенный браузер
+Gui, Own: Add, GroupBox, x346 y128 w218 h53
 
-Gui Add, CheckBox, x16 y29 w200 h30 +Center vCheck51 Checked%Check51%, Использовать 1,2 Доп.Клавишу мыши
-Gui Add, CheckBox, x16 y66 w200 h30 +Center vCheck52 Checked%Check52%, Использовать нажатие на колесико мыши
-Gui Add, CheckBox, x16 y104 w200 h30 +Center vCheck53 Checked%Check53%, Использовать прокрут колеса мыши(вверх, вниз)
-Gui Add, CheckBox, x16 y141 w200 h30 +Center vCheck80 Checked%Check80%, Отображать HUD репорта
-Gui Add, CheckBox, x16 y180 w200 h30 +Center vCheck1 Checked%Check1%, Отображать HUD подсказок
-Gui Add, GroupBox, x8 y21 w328 h40
-Gui Add, GroupBox, x8 y59 w328 h40
-Gui Add, GroupBox, x8 y97 w328 h40
-Gui Add, GroupBox, x8 y134 w328 h40
-Gui Add, GroupBox, x8 y172 w328 h40
-Gui Add, Button, x230 y29 w100 h30 gmouse1, Сохранить
-Gui Add, Button, x230 y67 w100 h30 gmouse2, Сохранить
-Gui Add, Button, x230 y104 w100 h30 gmouse3, Сохранить
+Gui, Own: Add, CheckBox, x16 y29 w200 h30 +Center vCheck51 Checked%Check51%, Использовать 1,2 Доп.Клавишу мыши
+Gui, Own: Add, CheckBox, x16 y66 w200 h30 +Center vCheck52 Checked%Check52%, Использовать нажатие на колесико мыши
+Gui, Own: Add, CheckBox, x16 y104 w200 h30 +Center vCheck53 Checked%Check53%, Использовать прокрут колеса мыши(вверх, вниз)
+Gui, Own: Add, CheckBox, x16 y141 w200 h30 +Center vCheck80 Checked%Check80%, Отображать HUD репорта
+Gui, Own: Add, CheckBox, x16 y180 w200 h30 +Center vCheck1 Checked%Check1%, Отображать HUD подсказок
+Gui, Own: Add, GroupBox, x8 y21 w328 h40
+Gui, Own: Add, GroupBox, x8 y59 w328 h40
+Gui, Own: Add, GroupBox, x8 y97 w328 h40
+Gui, Own: Add, GroupBox, x8 y134 w328 h40
+Gui, Own: Add, GroupBox, x8 y172 w328 h40
+Gui, Own: Add, Button, x230 y29 w100 h30 gmouse1, Сохранить
+Gui, Own: Add, Button, x230 y67 w100 h30 gmouse2, Сохранить
+Gui, Own: Add, Button, x230 y104 w100 h30 gmouse3, Сохранить
 
-Gui Add, Button, x225 y141 w60 h30 gmouse4, Сохранить
-Gui Add, Button, x285 y141 w49 h30 gPeremove1, Настройки
+Gui, Own: Add, Button, x225 y141 w60 h30 gmouse4, Сохранить
+Gui, Own: Add, Button, x285 y141 w49 h30 gPeremove1, Настройки
 
-Gui Add, Button, x225 y180 w60 h30 gmouse5, Сохранить
-Gui Add, Button, x285 y180 w49 h30 gPeremove2, Настройки
+Gui, Own: Add, Button, x225 y180 w60 h30 gmouse5, Сохранить
+Gui, Own: Add, Button, x285 y180 w49 h30 gPeremove2, Настройки
 
-Gui Add, CheckBox, x16 y218 w210 h30 +Center vCheck82 Checked%Check82%, Автоматически использовать kickme в случае долгого афк
-Gui Add, GroupBox, x8 y210 w328 h40
-Gui Add, Button, x260 y218 w70 h30 gSetkickme, Настройки
+Gui, Own: Add, CheckBox, x16 y218 w210 h30 +Center vCheck82 Checked%Check82%, Автоматически использовать kickme в случае долгого афк
+Gui, Own: Add, GroupBox, x8 y210 w328 h40
+Gui, Own: Add, Button, x260 y218 w70 h30 gSetkickme, Настройки
 
-Gui Add, CheckBox, x16 y258 w240 h30 +Center vCheck83 Checked%Check83%, Использовать окно с дополнительными кнопками в консоли
-Gui Add, GroupBox, x8 y250 w328 h40
-Gui Add, Button, x260 y258 w70 h30 gsett, Настройки
+Gui, Own: Add, CheckBox, x16 y258 w240 h30 +Center vCheck83 Checked%Check83%, Использовать окно с дополнительными кнопками в консоли
+Gui, Own: Add, GroupBox, x8 y250 w328 h40
+Gui, Own: Add, Button, x260 y258 w70 h30 gsett, Настройки
 
-Gui Add, Button, x440 y327 w150 h30 gPassAdm, Авторизоваться как администратор
+Gui, Own: Add, Button, x440 y327 w150 h30 gPassAdm, Авторизоваться как администратор
 
-Gui Add, Button, x260 y330 w87 h23 gCounter13, Перезагрузить
+Gui, Own: Add, Button, x260 y330 w87 h23 gCounter13, Перезагрузить
 
-Gui Add, Text, x30 y340, ATLOG: %HWID%
+Gui, Own: Add, Text, x30 y340, ATLOG: %HWID%
 
-Gui Add, Button, x350 y327 w87 h30 gbitiyfail, Проверить файлы
+Gui, Own: Add, Button, x350 y327 w87 h30 gbitiyfail, Проверить файлы
 
-Gui Show, w600 h430, Admin-Tools by Notoriuz
+Gui, Own: Show, w600 h430, Admin-Tools by Notoriuz
 
 Return
-GuiEscape:
-GuiClose:
-Gosub, CheckOut
+OwnGuiEscape:
+OwnGuiClose:
+Gui, Own: Destroy
+Gosub, StartApp
 Return
 ;-----------------------------------------------------------------------
 ;-----------------------------------------------------------------------
 
-CheckOut:
-Gui, Destroy
-MsgBox, 3, Выход из ATools!, Сохранить данные при выходе?
+CheckOwn:
+Gui, StartApp: Destroy
+MsgBox, 3, Выход из ATools!, Сохранить данные настроек?
 IfMsgBox Yes
   {
   Gosub, AllSave
@@ -265,7 +266,7 @@ IfMsgBox No
   }
 IfMsgBox Cancel
 {
-  Gosub, StartFullGui
+  Gosub, StartApp
 }
 Return
 ;-----------------------------------------------------------------------
