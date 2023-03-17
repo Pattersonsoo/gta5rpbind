@@ -1,5 +1,6 @@
 ﻿Return
 StartFullGui:
+Gui, Own: Destroy
 ;-----------------------------------------------------------------------
 ;-----------------------ОТРИСОВКА ОСНОВНОГО GUI------------------------
 Gui, Own: Add, Button, x10 y372 w116 h23 gFullClear, Удалить настройки
@@ -253,6 +254,7 @@ Return
 ;-----------------------------------------------------------------------
 
 CheckOwn:
+Gui, Own: Destroy
 Gui, StartApp: Destroy
 MsgBox, 3, Выход из ATools!, Сохранить данные настроек?
 IfMsgBox Yes
@@ -320,7 +322,7 @@ return
 
 
 DopGui:
-
+Gui, Own: Destroy
 Gui, 85: Add, GroupBox, x109 y5 w417 h404 +Center, Действие
 Gui, 85: Add, GroupBox, x7 y5 w99 h404 +Center, Комбинация
 
@@ -383,6 +385,7 @@ return
 85GuiEscape:
 85GuiClose:
     Gui, 85: Destroy
+    Gosub, StartFullGui
 return
 ;-----------------------------------------------------------------------
 ;-----------------------------------------------------------------------
@@ -457,6 +460,7 @@ return
 ;-----------------------------------------------------------------------
 
 Peremove1: ; Настройки HUD счетчика репорта
+Gui, Own: Destroy
 Gui, HUD1: +AlwaysOnTop
 Gui, HUD1: Add, Text, x13 y9 w54 h23 +0x200, Цвет №1
 Gui, HUD1: Add, Text, x13 y45 w54 h23 +0x200, Цвет №2
@@ -478,15 +482,16 @@ Gui, HUD1: Add, Slider, x208 y104 w181 h24 +0x40 +NoTicks vMySlider3 +Tooltip, %
 Gui, HUD1: Add, Text, x224 y80 w145 h23 +0x200 +Center, Насыщенность(жирность)
 
 Gui, HUD1: Show, , Настройка HUD Репорта
-WinMove, Настройка HUD Репорта, , 900, 400
 return
 HUD1GuiEscape:
 HUD1GuiClose:
     Gui, HUD1: Destroy
+    Gosub, StartFullGui
 return
 
 
 Peremove2: ; Настройка HUD подсказок
+Gui, Own: Destroy
 Gui, HUD2: +AlwaysOnTop
 Gui, HUD2: Add, Text, x13 y30 w54 h23 +0x200, Цвет №1
 Gui, HUD2: Add, ListBox, x72 y20 w120 h55 vRep2Color1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
@@ -506,15 +511,16 @@ Gui, HUD2: Add, Slider, x208 y104 w181 h24 +0x40 +NoTicks vMy2Slider3 +Tooltip, 
 Gui, HUD2: Add, Text, x224 y80 w145 h23 +0x200 +Center, Насыщенность(жирность)
 
 Gui, HUD2: Show, , Настройка HUD Подсказок
-WinMove, Настройка HUD Подсказок, , 900, 400
 return
 HUD2GuiEscape:
 HUD2GuiClose:
     Gui, HUD2: Destroy
+    Gosub, StartFullGui
 return
 
 
 HelpButt: ; Настройка самого текста подсказок
+Gosub, StartFullGui
 Gui, HUD2: Destroy
 Gui, HUD3: +AlwaysOnTop
 Gui, HUD3: Add, Edit, x8 y8 w606 h379 vHelpText, %HelpText%
@@ -530,6 +536,7 @@ return
 
 
 Peremove3: ; Настройка OVERLAY Уведомления при нажатии ENTER
+Gui, Own: Destroy
 Gui, HUD4: +AlwaysOnTop
 Gui, HUD4: Add, Text, x13 y30 w54 h23 +0x200, Цвет №1
 Gui, HUD4: Add, ListBox, x72 y20 w120 h55 vRep3Color1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
@@ -551,11 +558,10 @@ Gui, HUD4: Add, Slider, x208 y104 w181 h24 +0x40 +NoTicks vMy3Slider3 +Tooltip, 
 Gui, HUD4: Add, Text, x224 y80 w145 h23 +0x200 +Center, Насыщенность(жирность)
 Gui, HUD4: Show, , Настройка функции отправки
 
-WinMove, Настройка функции отправки, , 900, 400
-
 Return
 HUD4GuiEscape:
 HUD4GuiClose:
+Gosub, StartFullGui
     Gui, HUD4: Destroy
 return
 
@@ -565,6 +571,7 @@ return
 ;-----------------------------------------------------------------------
 
 bitiyfail: ; Проверка файлов
+Gui, Own: Destroy
 Gui 1s: Add, Text, x18 y6 w246 h64 +Center, В случае если найдены отсутствующие/неактуальные файлы выберите Ваш сервер и нажмите "GO".
 Gui 1s: Add, ListBox, x56 y58 w165 h54 vChoice, Del Perro|Richman|Strawberry|Rockford
 Gui 1s: Add, Button, x223 y57 w50 h44 gAction, GO
@@ -573,6 +580,7 @@ Return
 1sGuiEscape:
 1sGuiClose:
     Gui Destroy
+    Gosub, StartFullGui
 return
 
 
