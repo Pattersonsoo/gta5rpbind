@@ -2031,6 +2031,7 @@ IniWrite, %Check%, %A_WorkingDir%\setting_check.ini, Setup, Check
 IniWrite, %Check31%, %A_WorkingDir%\setting_check.ini, Setup, Check31
 Gosub, Prok1
 Gosub, Galka1
+Gosub, StartFullGui
 Gui Destroy
  return
 
@@ -2045,6 +2046,7 @@ IniWrite, %Check2%, %A_WorkingDir%\setting_check.ini, Setup, Check2
 IniWrite, %Check32%, %A_WorkingDir%\setting_check.ini, Setup, Check32
 Gosub, Prok2
 Gosub, Galka2
+Gosub, StartFullGui
  Gui Destroy
  return
 
@@ -2059,6 +2061,7 @@ IniWrite, %Check3%, %A_WorkingDir%\setting_check.ini, Setup, Check3
 IniWrite, %Check33%, %A_WorkingDir%\setting_check.ini, Setup, Check33
 Gosub, Prok3
 Gosub, Galka3
+Gosub, StartFullGui
  Gui Destroy
  return
 
@@ -2073,6 +2076,7 @@ IniWrite, %Check4%, %A_WorkingDir%\setting_check.ini, Setup, Check4
 IniWrite, %Check34%, %A_WorkingDir%\setting_check.ini, Setup, Check34
 Gosub, Prok4
 Gosub, Galka4
+Gosub, StartFullGui
  Gui Destroy
  return
 
@@ -2087,6 +2091,7 @@ IniWrite, %Check5%, %A_WorkingDir%\setting_check.ini, Setup, Check5
 IniWrite, %Check35%, %A_WorkingDir%\setting_check.ini, Setup, Check35
 Gosub, Prok5
 Gosub, Galka5
+Gosub, StartFullGui
  Gui Destroy
  return
 
@@ -2101,6 +2106,7 @@ IniWrite, %Check6%, %A_WorkingDir%\setting_check.ini, Setup, Check6
 IniWrite, %Check36%, %A_WorkingDir%\setting_check.ini, Setup, Check36
 Gosub, Prok6
 Gosub, Galka6
+Gosub, StartFullGui
  Gui Destroy
  return
 
@@ -2115,6 +2121,7 @@ IniWrite, %Check7%, %A_WorkingDir%\setting_check.ini, Setup, Check7
 IniWrite, %Check37%, %A_WorkingDir%\setting_check.ini, Setup, Check37
 Gosub, Prok7
 Gosub, Galka7
+Gosub, StartFullGui
  Gui Destroy
  return
 
@@ -2129,6 +2136,7 @@ IniWrite, %Check8%, %A_WorkingDir%\setting_check.ini, Setup, Check8
 IniWrite, %Check38%, %A_WorkingDir%\setting_check.ini, Setup, Check38
 Gosub, Prok8
 Gosub, Galka8
+Gosub, StartFullGui
  Gui Destroy
  return
 
@@ -2143,6 +2151,7 @@ IniWrite, %Check9%, %A_WorkingDir%\setting_check.ini, Setup, Check9
 IniWrite, %Check39%, %A_WorkingDir%\setting_check.ini, Setup, Check39
 Gosub, Prok9
 Gosub, Galka9
+Gosub, StartFullGui
 Gui Destroy
  return
 
@@ -2157,6 +2166,7 @@ IniWrite, %Check10%, %A_WorkingDir%\setting_check.ini, Setup, Check10
 IniWrite, %Check40%, %A_WorkingDir%\setting_check.ini, Setup, Check40
 Gosub, Prok10
 Gosub, Galka10
+Gosub, StartFullGui
 Gui Destroy
  return
 
@@ -2371,7 +2381,26 @@ BindClick12:
         }
 Return
 ;-----------------------------------------------------------------------------------------------------------------------------------------
+::pm::
+SendInput, pm%A_Space%
+KeyWait, Enter, D T20
+if ErrorLevel = 1
+{
+}
+Else
+Gui, b123: Destroy
+Return
 
+::ainvite::
+SendInput, ainvite{enter}
+KeyWait, Enter, D T20
+if ErrorLevel = 1
+{
+}
+Else
+Gui, b123: Destroy
+Return
+;--------------------------------------------------------------
 sett:
 Gui, sett: Add, Button, x8 y8 w87 h32 gHUD1, 1. %BindText1%
 Gui, sett: Add, Button, x96 y8 w87 h32 gHUD2, 2. %BindText2%

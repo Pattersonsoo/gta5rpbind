@@ -533,6 +533,40 @@ HUD2GuiClose:
     Gosub, StartFullGui
 return
 
+Peremove3: ; Настройка OVERLAY Уведомления при нажатии ENTER
+Gui, Own: Destroy
+Gui, HUD4: +AlwaysOnTop
+Gui, HUD4: Add, Text, x13 y20 w54 h23 +0x200, Цвет №1
+Gui, HUD4: Add, ListBox, gPereSet3 x72 y17 w120 h30 vRep3Color1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
+Gui, HUD4: Add, GroupBox, x5 y8 w191 h42
+
+Gui, HUD4: Add, Text, x18 y55 w54 h23 +0x200, Шрифт
+Gui, HUD4: Add, ListBox, gPereSet3 x72 y53 w120 h30 vMySliderFont3, Arial|MS sans serif|Verdana|Arimo-Bold|Courier New|Impact|Tahoma|Times New Roman
+Gui, HUD4: Add, GroupBox, x5 y45 w191 h42
+
+Gui, HUD4: Add, Text, x40 y90 w120 h23 +0x200 +Center, Прозрачность
+Gui, HUD4: Add, Slider, gPereSet3 x10 y110 w181 h24 +NoTicks +0x40 vMy3Slider1 +Tooltip, %My3SliderVid1%
+Gui, HUD4: Add, GroupBox, x5 y84 w191 h50
+
+Gui, HUD4: Add, Button, x304 y144 w80 h25 gSetPeremove3, Положение
+Gui, HUD4: Add, Button, x392 y144 w80 h25 gSaveSetHUD3, Применить
+
+Gui, HUD4: Add, CheckBox, x170 y144 w120 h26 +Center vCheck81 Checked%Check81%, Использовать overlay-yведомление
+
+Gui, HUD4: Add, Text, x232 y16 w120 h23 +0x200 +Center, Размер шрифта
+Gui, HUD4: Add, Slider, gPereSet3 x208 y40 w181 h24 +0x40 +NoTicks vMy3Slider2 +Tooltip, %My3SliderVid2%
+Gui, HUD4: Add, GroupBox, x200 y8 w191 h62
+Gui, HUD4: Add, GroupBox, x200 y72 w191 h62
+Gui, HUD4: Add, Slider, gPereSet3 x208 y104 w181 h24 +0x40 +NoTicks vMy3Slider3 +Tooltip, %My3SliderVid3%
+Gui, HUD4: Add, Text, x224 y80 w145 h23 +0x200 +Center, Насыщенность(жирность)
+Gui, HUD4: Show, , Настройка функции отправки
+
+Return
+HUD4GuiEscape:
+HUD4GuiClose:
+Gosub, StartFullGui
+    Gui, HUD4: Destroy
+return
 
 HelpButt: ; Настройка самого текста подсказок
 Gosub, StartFullGui
@@ -548,38 +582,6 @@ HUD3GuiClose:
     Gui, HUD3: Destroy
     Gosub, Peremove2
 return
-
-
-Peremove3: ; Настройка OVERLAY Уведомления при нажатии ENTER
-Gui, Own: Destroy
-Gui, HUD4: +AlwaysOnTop
-Gui, HUD4: Add, Text, x13 y30 w54 h23 +0x200, Цвет №1
-Gui, HUD4: Add, ListBox, x72 y20 w120 h55 vRep3Color1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
-Gui, HUD4: Add, GroupBox, x5 y8 w191 h62
-Gui, HUD4: Add, Text, x40 y80 w120 h23 +0x200 +Center, Прозрачность
-Gui, HUD4: Add, Slider, x10 y105 w181 h24 +NoTicks +0x40 vMy3Slider1 +Tooltip, %My3SliderVid1%
-Gui, HUD4: Add, GroupBox, x5 y72 w191 h62
-
-Gui, HUD4: Add, Button, x304 y144 w80 h25 gSetPeremove3, Положение
-Gui, HUD4: Add, Button, x392 y144 w80 h25 gPereSet3, Применить
-
-Gui, HUD4: Add, CheckBox, x170 y144 w120 h26 +Center vCheck81 Checked%Check81%, Использовать overlay-yведомление
-
-Gui, HUD4: Add, Text, x232 y16 w120 h23 +0x200 +Center, Размер шрифта
-Gui, HUD4: Add, Slider, x208 y40 w181 h24 +0x40 +NoTicks vMy3Slider2 +Tooltip, %My3SliderVid2%
-Gui, HUD4: Add, GroupBox, x200 y8 w191 h62
-Gui, HUD4: Add, GroupBox, x200 y72 w191 h62
-Gui, HUD4: Add, Slider, x208 y104 w181 h24 +0x40 +NoTicks vMy3Slider3 +Tooltip, %My3SliderVid3%
-Gui, HUD4: Add, Text, x224 y80 w145 h23 +0x200 +Center, Насыщенность(жирность)
-Gui, HUD4: Show, , Настройка функции отправки
-
-Return
-HUD4GuiEscape:
-HUD4GuiClose:
-Gosub, StartFullGui
-    Gui, HUD4: Destroy
-return
-
 
 ;-----------------------------------------------------------------------
 ;-----------------------------------------------------------------------

@@ -149,6 +149,9 @@ Loop, 10
     IniRead, MyText%A_index%, %A_WorkingDir%\setting_1tab.ini, Setup, MyText%A_index%, %A_Space%
     IniRead, MySett%A_index%, %A_WorkingDir%\setting_1tab.ini, Setup, Kolvo%A_index%, 1
     IniRead, EditValue%A_index%, %A_WorkingDir%\setting_2tab.ini, Setup, EditValue%A_index%, %A_Space%
+    }
+Loop, 10
+    {
     IniRead, My2HotKey%A_index%, %A_WorkingDir%\setting_2tab.ini, Setup, 2Bind%A_index%, %A_Space%
     IniRead, My2Edit%A_index%, %A_WorkingDir%\setting_2tab.ini, Setup, 2MyText%A_index%, %A_Space%
     }
@@ -167,8 +170,11 @@ Loop, 10
   
   IniRead, xpos2, %A_WorkingDir%\setting.ini , Position, xpos2, 1750
   IniRead, ypos2, %A_WorkingDir%\setting.ini , Position, ypos2, 250
+
   IniRead, MySliderFont1, %A_WorkingDir%\setting.ini , Position, MySliderFont1, Arial
   IniRead, MySliderFont2, %A_WorkingDir%\setting.ini , Position, MySliderFont2, Arial
+  IniRead, MySliderFont3, %A_WorkingDir%\setting.ini , Position, MySliderFont3, Arial
+
   IniRead, kicktimer, %A_WorkingDir%\setting.ini, KickTime, kicktimer, 900000
   IniRead, kicktime, %A_WorkingDir%\setting.ini, KickTime, kicktime, 15
   

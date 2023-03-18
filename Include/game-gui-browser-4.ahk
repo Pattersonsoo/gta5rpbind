@@ -1425,10 +1425,11 @@ hudinfo1:
 Gui, 3bb: +LastFound +AlwaysOnTop -Caption +ToolWindow +E0x20 ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
 Gui, 3bb: Color, cWhite
 Gui, 3bb: Font, Intro
+Gui, 3bb: Font,, %MySliderFont3%
 Gui, 3bb: Font, s%My3Slider2% ; Set a large font size (32-point).
 Gui, 3bb: Font, q1
 Gui, 3bb: Font, w%My3Slider3%
-Gui, 3bb: Add, Text, x8 y10 c%3Set1Color% +Center, Нажмите %HotLogin2% чтобы`nответ был засчитан в счетчик.`nТаймер: %Counter3%
+Gui, 3bb: Add, Text, xm ym c%3Set1Color% +Center, Нажмите %HotLogin2% чтобы`nответ был засчитан в счетчик.`nТаймер: %Counter3%
 
 Gui, 3bb: Show, x%xpos2% y%ypos2% NoActivate
 WinSet, TransColor, %CustomColor%  %My3Slider1%
