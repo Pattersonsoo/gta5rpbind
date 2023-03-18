@@ -425,12 +425,13 @@ if hudih1 = 100
   Gui, 3a: +LastFound +AlwaysOnTop -Caption +ToolWindow +E0x20 ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
   Gui, 3a: Color, cWhite
   Gui, 3a: Font, Intro
+  Gui, 3a: Font,, %MySliderFont1%
   Gui, 3a: Font, s%MySlider2% ; Set a large font size (32-point).
   Gui, 3a: Font, q1
   Gui, 3a: Font, w%MySlider3%
-  Gui, 3a: Add, Text, x8 y10 c%Set1Color%, REPS: %Counter%
-  Gui, 3a: Add, Text, x8 y30 c%Set2Color%, SESSION: %Counter2%
-  Gui, 3a: Show, x%xpos% y%ypos% NoActivate w100 h50
+  Gui, 3a: Add, Text, xm ym c%Set1Color%, REPS: %Counter%
+  Gui, 3a: Add, Text, xm ym+15 c%Set2Color%, SESSION: %Counter2%
+  Gui, 3a: Show, x%xpos% y%ypos% NoActivate
   WinSet, TransColor, %CustomColor% %MySlider1%
   }
 else
@@ -444,11 +445,12 @@ if hudih2 = 100
   Gui, 3b: +LastFound +AlwaysOnTop -Caption +ToolWindow  +E0x20 ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
   Gui, 3b: Color, cWhite
   Gui, 3b: Font, Intro
+  Gui, 3b: Font,, %MySliderFont2%
   Gui, 3b: Font, s%My2Slider2% ; Set a large font size (32-point).
   Gui, 3b: Font, q1
   Gui, 3b: Font, w%My2Slider3%
 
-  Gui, 3b: Add, Text, x12 y10 c%2Set1Color%, %HelpText%
+  Gui, 3b: Add, Text, xm ym c%2Set1Color%, %HelpText%
 
   Gui, 3b: Show, x%xpos1% y%ypos1% NoActivate
   WinSet, TransColor, %CustomColor% %My2Slider1%
@@ -464,27 +466,34 @@ Gui, Own: Destroy
 Gui, HUD1: +AlwaysOnTop
 Gui, HUD1: Add, Text, x13 y9 w54 h23 +0x200, Цвет №1
 Gui, HUD1: Add, Text, x13 y45 w54 h23 +0x200, Цвет №2
-Gui, HUD1: Add, ListBox, x72 y6 w120 h30 vRepColor1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
-Gui, HUD1: Add, ListBox, x72 y43 w120 h30 vRepColor2, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
+Gui, HUD1: Add, ListBox, gPereSet1 x72 y6 w120 h30 vRepColor1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
+Gui, HUD1: Add, ListBox, gPereSet1 x72 y43 w120 h30 vRepColor2, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
+Gui, HUD1: Add, Text, x13 y82 w54 h23 +0x200, Шрифт
+Gui, HUD1: Add, ListBox, gPereSet1 x72 y80 w120 h30 vMySliderFont1, Arial|MS sans serif|Verdana|Arimo-Bold|Courier New|Impact|Tahoma|Times New Roman
+
 Gui, HUD1: Add, GroupBox, x5 y34 w191 h42
+Gui, HUD1: Add, GroupBox, x5 y72 w191 h42
 Gui, HUD1: Add, GroupBox, x5 y-3 w191 h42
-Gui, HUD1: Add, Text, x40 y80 w120 h23 +0x200 +Center, Прозрачность
-Gui, HUD1: Add, Slider, x10 y105 w181 h24 +NoTicks +0x40 vMySlider1 +Tooltip, %MySliderVid1%
-Gui, HUD1: Add, GroupBox, x5 y72 w191 h62
+
+Gui, HUD1: Add, Text, x40 y120 w120 h23 +0x200 +Center, Прозрачность
+Gui, HUD1: Add, Slider, gPereSet1 x10 y140 w181 h24 +NoTicks +0x40 vMySlider1 +Tooltip, %MySliderVid1%
+Gui, HUD1: Add, GroupBox, x5 y110 w191 h55
+
 Gui, HUD1: Add, Button, x304 y144 w80 h25 gSetPeremove1, Положение
-Gui, HUD1: Add, Button, x392 y144 w80 h25 gPereSet1, Применить
+Gui, HUD1: Add, Button, x392 y144 w80 h25 gSaveSetHUD1, Применить
 
 Gui, HUD1: Add, Text, x232 y16 w120 h23 +0x200 +Center, Размер шрифта
-Gui, HUD1: Add, Slider, x208 y40 w181 h24 +0x40 +NoTicks vMySlider2 +Tooltip, %MySliderVid2%
+Gui, HUD1: Add, Slider, gPereSet1 x208 y40 w181 h24 +0x40 +NoTicks vMySlider2 +Tooltip, %MySliderVid2%
 Gui, HUD1: Add, GroupBox, x200 y8 w191 h62
 Gui, HUD1: Add, GroupBox, x200 y72 w191 h62
-Gui, HUD1: Add, Slider, x208 y104 w181 h24 +0x40 +NoTicks vMySlider3 +Tooltip, %MySliderVid3%
+Gui, HUD1: Add, Slider, gPereSet1 x208 y104 w181 h24 +0x40 +NoTicks vMySlider3 +Tooltip, %MySliderVid3%
 Gui, HUD1: Add, Text, x224 y80 w145 h23 +0x200 +Center, Насыщенность(жирность)
 
 Gui, HUD1: Show, , Настройка HUD Репорта
 return
 HUD1GuiEscape:
 HUD1GuiClose:
+    Gui, 3a: Destroy
     Gui, HUD1: Destroy
     Gosub, StartFullGui
 return
@@ -493,21 +502,27 @@ return
 Peremove2: ; Настройка HUD подсказок
 Gui, Own: Destroy
 Gui, HUD2: +AlwaysOnTop
-Gui, HUD2: Add, Text, x13 y30 w54 h23 +0x200, Цвет №1
-Gui, HUD2: Add, ListBox, x72 y20 w120 h55 vRep2Color1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
-Gui, HUD2: Add, GroupBox, x5 y8 w191 h62
-Gui, HUD2: Add, Text, x40 y80 w120 h23 +0x200 +Center, Прозрачность
-Gui, HUD2: Add, Slider, x10 y105 w181 h24 +NoTicks +0x40 vMy2Slider1 +Tooltip, %My2SliderVid1%
-Gui, HUD2: Add, GroupBox, x5 y72 w191 h62
+Gui, HUD2: Add, Text, x13 y20 w54 h23 +0x200, Цвет №1
+Gui, HUD2: Add, ListBox, gPereSet2 x72 y17 w120 h30 vRep2Color1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
+Gui, HUD2: Add, GroupBox, x5 y8 w191 h42
+
+Gui, HUD2: Add, Text, x18 y55 w54 h23 +0x200, Шрифт
+Gui, HUD2: Add, ListBox, gPereSet2 x72 y53 w120 h30 vMySliderFont2, Arial|MS sans serif|Verdana|Arimo-Bold|Courier New|Impact|Tahoma|Times New Roman
+Gui, HUD2: Add, GroupBox, x5 y45 w191 h42
+
+Gui, HUD2: Add, Text, x40 y90 w120 h23 +0x200 +Center, Прозрачность
+Gui, HUD2: Add, Slider, gPereSet2 x10 y110 w181 h24 +NoTicks +0x40 vMy2Slider1 +Tooltip, %My2SliderVid1%
+Gui, HUD2: Add, GroupBox, x5 y84 w191 h50
+
 Gui, HUD2: Add, Button, x304 y144 w80 h25 gSetPeremove2, Положение
-Gui, HUD2: Add, Button, x392 y144 w80 h25 gPereSet2, Применить
+Gui, HUD2: Add, Button, x392 y144 w80 h25 gSaveSetHUD2, Применить
 Gui, HUD2: Add, Button, x175 y144 w120 h25 gHelpButt, Настроить подсказки
 
 Gui, HUD2: Add, Text, x232 y16 w120 h23 +0x200 +Center, Размер шрифта
-Gui, HUD2: Add, Slider, x208 y40 w181 h24 +0x40 +NoTicks vMy2Slider2 +Tooltip, %My2SliderVid2%
+Gui, HUD2: Add, Slider, gPereSet2 x208 y40 w181 h24 +0x40 +NoTicks vMy2Slider2 +Tooltip, %My2SliderVid2%
 Gui, HUD2: Add, GroupBox, x200 y8 w191 h62
 Gui, HUD2: Add, GroupBox, x200 y72 w191 h62
-Gui, HUD2: Add, Slider, x208 y104 w181 h24 +0x40 +NoTicks vMy2Slider3 +Tooltip, %My2SliderVid3%
+Gui, HUD2: Add, Slider, gPereSet2 x208 y104 w181 h24 +0x40 +NoTicks vMy2Slider3 +Tooltip, %My2SliderVid3%
 Gui, HUD2: Add, Text, x224 y80 w145 h23 +0x200 +Center, Насыщенность(жирность)
 
 Gui, HUD2: Show, , Настройка HUD Подсказок

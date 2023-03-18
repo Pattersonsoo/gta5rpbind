@@ -167,8 +167,8 @@ Loop, 10
   
   IniRead, xpos2, %A_WorkingDir%\setting.ini , Position, xpos2, 1750
   IniRead, ypos2, %A_WorkingDir%\setting.ini , Position, ypos2, 250
-  
-  
+  IniRead, MySliderFont1, %A_WorkingDir%\setting.ini , Position, MySliderFont1, Arial
+  IniRead, MySliderFont2, %A_WorkingDir%\setting.ini , Position, MySliderFont2, Arial
   IniRead, kicktimer, %A_WorkingDir%\setting.ini, KickTime, kicktimer, 900000
   IniRead, kicktime, %A_WorkingDir%\setting.ini, KickTime, kicktime, 15
   
