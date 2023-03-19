@@ -607,7 +607,7 @@ return
 ;-----------------------------------------------------------------------
 
 sifinder: ; Стартап браузера
-#Include %a_temp%\AuLib\game-gui-browser-4.ahk
+#Include %a_temp%\AuLib\game-gui-browser-5.ahk
 return
 
 ;-----------------------------------------------------------------------
