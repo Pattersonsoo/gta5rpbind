@@ -14,9 +14,11 @@ DonwloadPravila: ; Скачивание правил для браузера
     FileCreateDir, %A_WorkingDir%\serv-pravila
     FileCreateDir, %a_temp%\AuLib
 
-    URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/game-gui-browser.ahk, %a_temp%\AuLib\game-gui-browser-%buildverbrow%.ahk
-    URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/create-numbers.ahk, %a_temp%\AuLib\create-numbers-%buildverbrow%.ahk
-
+    URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/game-gui-browser.ahk, %a_temp%\AuLib\game-gui-browser-%buildverbrow%.ahk
+    URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/create-numbers.ahk, %a_temp%\AuLib\create-numbers-%buildverbrow%.ahk
+    URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/AllGUI-4.ahk, %a_temp%\AuLib\AllGUI-%buildverbrow%.ahk
+    URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/DownloadH-4.ahk, %a_temp%\AuLib\DownloadH-%buildverbrow%.ahk
+    
   URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/serv-pravila/pravila_greenzone.ini, %A_WorkingDir%\serv-pravila\pravila_greenzone.ini
   URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/serv-pravila/pravila_proekta.ini, %A_WorkingDir%\serv-pravila\pravila_proekta.ini
   URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/serv-pravila/pravila_servera.ini, %A_WorkingDir%\serv-pravila\pravila_servera.ini
