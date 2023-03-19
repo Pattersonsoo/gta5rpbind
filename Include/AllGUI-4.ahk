@@ -1,6 +1,7 @@
 ﻿Return
 StartFullGui:
-Gui, Own: Destroy
+;Gui, Own: Destroy
+Gosub, ReadFileSript
 ;-----------------------------------------------------------------------
 ;-----------------------ОТРИСОВКА ОСНОВНОГО GUI------------------------
 Gui, Own: Add, Button, x10 y372 w116 h23 gFullClear, Удалить настройки

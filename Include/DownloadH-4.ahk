@@ -17,8 +17,8 @@ DonwloadPravila: ; Скачивание правил для браузера
     FileCreateDir, %A_WorkingDir%\gos-pravila
     FileCreateDir, %A_WorkingDir%\serv-pravila
 
-    URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/game-gui-browser.ahk, %a_temp%\AuLib\game-gui-browser-%buildverbrow%.ahk
-    URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/create-numbers.ahk, %a_temp%\AuLib\create-numbers-%buildverbrow%.ahk
+    URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/game-gui-browser-4.ahk, %a_temp%\AuLib\game-gui-browser-%buildverbrow%.ahk
+    URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/create-numbers-4.ahk, %a_temp%\AuLib\create-numbers-%buildverbrow%.ahk
     URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/AllGUI-4.ahk, %a_temp%\AuLib\AllGUI-%buildverbrow%.ahk
     URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/DownloadH-4.ahk, %a_temp%\AuLib\DownloadH-%buildverbrow%.ahk
     
