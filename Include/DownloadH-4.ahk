@@ -7,12 +7,15 @@ DonwloadPravila: ; Скачивание правил для браузера
     FileRemoveDir, %A_WorkingDir%\crime-pravila
     FileRemoveDir, %A_WorkingDir%\gos-pravila
     FileRemoveDir, %A_WorkingDir%\serv-pravila
-    FileRemoveDir, %a_temp%\AuLib
+
+    FileDelete, %a_temp%\AuLib\game-gui-browser-%buildverbrow%.ahk
+    FileDelete, %a_temp%\AuLib\create-numbers-%buildverbrow%.ahk
+    FileDelete, %a_temp%\AuLib\AllGUI-%buildverbrow%.ahk
+    FileDelete, %a_temp%\AuLib\DownloadH-%buildverbrow%.ahk
 
     FileCreateDir, %A_WorkingDir%\crime-pravila
     FileCreateDir, %A_WorkingDir%\gos-pravila
     FileCreateDir, %A_WorkingDir%\serv-pravila
-    FileCreateDir, %a_temp%\AuLib
 
     URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/game-gui-browser.ahk, %a_temp%\AuLib\game-gui-browser-%buildverbrow%.ahk
     URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/create-numbers.ahk, %a_temp%\AuLib\create-numbers-%buildverbrow%.ahk
