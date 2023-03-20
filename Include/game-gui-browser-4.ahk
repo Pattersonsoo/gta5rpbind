@@ -1546,8 +1546,6 @@ GoSearch1:
         f := (f := InStr(MainEdit1, Find, Sens, NumGet(end)+1)) ? f : (Loop ? InStr(MainEdit1, Find, Sens, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find)-1, , ahk_id %hMainEdit1%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit1%
@@ -1589,8 +1587,6 @@ GoSearch2:
         f := (f := InStr(MainEdit2, Find2, Sens2, NumGet(end)+1)) ? f : (Loop2 ? InStr(MainEdit2, Find2, Sens2, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find2%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find2)-1, , ahk_id %hMainEdit2%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit2%
@@ -1632,8 +1628,6 @@ GoSearch3:
         f := (f := InStr(MainEdit3, Find3, Sens3, NumGet(end)+1)) ? f : (Loop3 ? InStr(MainEdit3, Find3, Sens3, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find3%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find3)-1, , ahk_id %hMainEdit3%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit3%
@@ -1675,8 +1669,6 @@ GoSearch4:
         f := (f := InStr(MainEdit4, Find4, Sens4, NumGet(end)+1)) ? f : (Loop4 ? InStr(MainEdit4, Find4, Sens4, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find4%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find4)-1, , ahk_id %hMainEdit4%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit4%
@@ -1718,8 +1710,6 @@ GoSearch5:
         f := (f := InStr(MainEdit5, Find5, Sens5, NumGet(end)+1)) ? f : (Loop5 ? InStr(MainEdit5, Find5, Sens5, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find5%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find5)-1, , ahk_id %hMainEdit5%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit5%
@@ -1760,8 +1750,6 @@ GoSearch6:
         f := (f := InStr(MainEdit6, Find6, Sens6, NumGet(end)+1)) ? f : (Loop6 ? InStr(MainEdit6, Find6, Sens6, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find6%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find6)-1, , ahk_id %hMainEdit6%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit6%
@@ -1802,8 +1790,6 @@ GoSearch7:
         f := (f := InStr(MainEdit7, Find7, Sens7, NumGet(end)+1)) ? f : (Loop7 ? InStr(MainEdit7, Find7, Sens7, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find7%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find7)-1, , ahk_id %hMainEdit7%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit7%
@@ -1844,8 +1830,6 @@ GoSearch8:
         f := (f := InStr(MainEdit8, Find8, Sens8, NumGet(end)+1)) ? f : (Loop8 ? InStr(MainEdit8, Find8, Sens8, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find8%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find8)-1, , ahk_id %hMainEdit8%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit8%
@@ -1886,8 +1870,6 @@ GoSearch9:
         f := (f := InStr(MainEdit9, Find9, Sens9, NumGet(end)+1)) ? f : (Loop9 ? InStr(MainEdit9, Find9, Sens9, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find9%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find9)-1, , ahk_id %hMainEdit9%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit9%
@@ -1928,8 +1910,6 @@ GoSearch10:
         f := (f := InStr(MainEdit10, Find10, Sens10, NumGet(end)+1)) ? f : (Loop10 ? InStr(MainEdit10, Find10, Sens10, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find10%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find10)-1, , ahk_id %hMainEdit10%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit10%
@@ -1970,8 +1950,6 @@ GoSearch11:
         f := (f := InStr(MainEdit11, Find11, Sens11, NumGet(end)+1)) ? f : (Loop11 ? InStr(MainEdit11, Find11, Sens11, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find11%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find11)-1, , ahk_id %hMainEdit11%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit11%
@@ -2012,8 +1990,6 @@ GoSearch12:
         f := (f := InStr(MainEdit12, Find12, Sens12, NumGet(end)+1)) ? f : (Loop12 ? InStr(MainEdit12, Find12, Sens12, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find12%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find12)-1, , ahk_id %hMainEdit12%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit12%
@@ -2054,8 +2030,6 @@ GoSearch13:
         f := (f := InStr(MainEdit13, Find13, Sens13, NumGet(end)+1)) ? f : (Loop13 ? InStr(MainEdit13, Find13, Sens13, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find13%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find13)-1, , ahk_id %hMainEdit13%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit13%
@@ -2096,8 +2070,6 @@ GoSearch14:
         f := (f := InStr(MainEdit14, Find14, Sens14, NumGet(end)+1)) ? f : (Loop14 ? InStr(MainEdit14, Find14, Sens14, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find14%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find14)-1, , ahk_id %hMainEdit14%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit14%
@@ -2138,8 +2110,6 @@ GoSearch15:
         f := (f := InStr(MainEdit15, Find15, Sens15, NumGet(end)+1)) ? f : (Loop15 ? InStr(MainEdit15, Find15, Sens15, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find15%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find15)-1, , ahk_id %hMainEdit15%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit15%
@@ -2180,8 +2150,6 @@ GoSearch16:
         f := (f := InStr(MainEdit16, Find16, Sens16, NumGet(end)+1)) ? f : (Loop16 ? InStr(MainEdit16, Find16, Sens16, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find16%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find16)-1, , ahk_id %hMainEdit16%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit16%
@@ -2222,8 +2190,6 @@ GoSearch17:
         f := (f := InStr(MainEdit17, Find17, Sens17, NumGet(end)+1)) ? f : (Loop17 ? InStr(MainEdit17, Find17, Sens17, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find17%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find17)-1, , ahk_id %hMainEdit17%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit17%
@@ -2264,8 +2230,6 @@ GoSearch18:
         f := (f := InStr(MainEdit18, Find18, Sens18, NumGet(end)+1)) ? f : (Loop18 ? InStr(MainEdit18, Find18, Sens18, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find18%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find18)-1, , ahk_id %hMainEdit18%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit18%
@@ -2306,8 +2270,6 @@ GoSearch19:
         f := (f := InStr(MainEdit19, Find19, Sens19, NumGet(end)+1)) ? f : (Loop19 ? InStr(MainEdit19, Find19, Sens19, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find19%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find19)-1, , ahk_id %hMainEdit19%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit19%
@@ -2348,8 +2310,6 @@ GoSearch20:
         f := (f := InStr(MainEdit20, Find20, Sens20, NumGet(end)+1)) ? f : (Loop20 ? InStr(MainEdit20, Find20, Sens20, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find20%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find20)-1, , ahk_id %hMainEdit20%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit20%
@@ -2390,13 +2350,11 @@ GoSearch21:
         f := (f := InStr(MainEdit21, Find21, Sens21, NumGet(end)+1)) ? f : (Loop21 ? InStr(MainEdit21, Find21, Sens21, 1) : 0)
     If !f
     {
-        MsgBox, 8256, Edit find, Не удаётся найти "%Find21%"
-        Return
     }
     SendMessage, EM_SETSEL, f-1, f+StrLen(Find21)-1, , ahk_id %hMainEdit21%
     SendMessage, EM_SCROLLCARET,,,, ahk_id %hMainEdit21%
 Return
 
 FindMove:
-WinMove,  Правила крим.организаций, , 734, 191
+WinMove,  Найти, , 734, 191
 Return
