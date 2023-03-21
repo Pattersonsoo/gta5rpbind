@@ -2539,6 +2539,7 @@ Loop, 12
     {
     IniWrite, % BindText%A_Index%, %A_WorkingDir%\setting_console.ini, Setup, BindText%A_Index%
     IniWrite, % PressN%A_Index%, %A_WorkingDir%\setting_console.ini, Setup, PressN%A_Index%
+    IniWrite, % PressK%A_Index%, %A_WorkingDir%\setting_console.ini, Setup, PressK%A_Index%
     }
 Gui, sett: Destroy
 Return
