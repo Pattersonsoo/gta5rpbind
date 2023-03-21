@@ -2535,6 +2535,7 @@ settGuiClose:
 Return
 
 HUDSave:
+Gui, Submit, NoHide
 Loop, 12
     {
     IniWrite, % BindText%A_Index%, %A_WorkingDir%\setting_console.ini, Setup, BindText%A_Index%
