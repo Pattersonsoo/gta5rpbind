@@ -2336,7 +2336,7 @@ sBindriText:
     {
         ybop2 := 100
     }
-    Gui, b123: +Owner1 -MinimizeBox -MaximizeBox -SysMenu +AlwaysOnTop -DPIScale +LastFound +E0x20
+    Gui, b123: +Owner -MinimizeBox -MaximizeBox -SysMenu +AlwaysOnTop -DPIScale +LastFound +E0x20
     Gui, b123: Add, Button, x8 y8 w92 h34 gBindClick1, %BindText1%
     Gui, b123: Add, Button, x104 y8 w92 h34 gBindClick2, %BindText2%
     Gui, b123: Add, Button, x200 y8 w92 h34 gBindClick3, %BindText3%
