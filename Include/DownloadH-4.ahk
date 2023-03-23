@@ -156,6 +156,7 @@ Loop, 10
     IniRead, MySett%A_index%, %A_WorkingDir%\setting_1tab.ini, Setup, Kolvo%A_index%, 1
     IniRead, EditValue%A_index%, %A_WorkingDir%\setting_2tab.ini, Setup, EditValue%A_index%, %A_Space%
     }
+    
 Loop, 10
     {
     IniRead, My2HotKey%A_index%, %A_WorkingDir%\setting_2tab.ini, Setup, 2Bind%A_index%, %A_Space%
