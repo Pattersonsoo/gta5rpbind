@@ -2303,7 +2303,7 @@ Gui Destroy
         }
     else
         {
-        WinGetPos, xbop2, ybop2, , , %A_Space%
+        WinGetPos, xbop2, ybop2, , , Shift + Ё - Если не закрылось
         Gui, b123: Destroy
             IniWrite, %xbop2%, %A_WorkingDir%\setting_console.ini, Setup, xbop2
             IniWrite, %ybop2%, %A_WorkingDir%\setting_console.ini, Setup, ybop2
@@ -2311,6 +2311,17 @@ Gui Destroy
         }
     }
 return
+
++sc29::
+    if Check83 > 0
+        {
+            WinGetPos, xbop2, ybop2, , , Shift + Ё - Если не закрылось
+            Gui, b123: Destroy
+                IniWrite, %xbop2%, %A_WorkingDir%\setting_console.ini, Setup, xbop2
+                IniWrite, %ybop2%, %A_WorkingDir%\setting_console.ini, Setup, ybop2
+            openrub = 1
+            }
+            Return
 
 sBindriText:
     IniRead, xbop2, %A_WorkingDir%\setting_console.ini , Setup, xbop2, 759
@@ -2325,7 +2336,7 @@ sBindriText:
     {
         ybop2 := 100
     }
-    Gui, b123: -MinimizeBox -MaximizeBox -SysMenu +AlwaysOnTop -DPIScale +LastFound +E0x20
+    Gui, b123: +Owner1 -MinimizeBox -MaximizeBox -SysMenu +AlwaysOnTop -DPIScale +LastFound +E0x20
     Gui, b123: Add, Button, x8 y8 w92 h34 gBindClick1, %BindText1%
     Gui, b123: Add, Button, x104 y8 w92 h34 gBindClick2, %BindText2%
     Gui, b123: Add, Button, x200 y8 w92 h34 gBindClick3, %BindText3%
@@ -2338,7 +2349,7 @@ sBindriText:
     Gui, b123: Add, Button, x104 y88 w92 h34 gBindClick10, %BindText10%
     Gui, b123: Add, Button, x200 y88 w92 h34 gBindClick11, %BindText11%
     Gui, b123: Add, Button, x296 y88 w92 h34 gBindClick12, %BindText12%
-    Gui, b123: Show, x%xbop2% y%ybop2% w395 h130, %A_Space%
+    Gui, b123: Show, x%xbop2% y%ybop2% w395 h130, Shift + Ё - Если не закрылось
 Return
 
 b123GuiEscape:
@@ -2499,7 +2510,13 @@ if ErrorLevel = 1
 {
 }
 Else
-Gui, b123: Destroy
+    {
+        WinGetPos, xbop2, ybop2, , , Shift + Ё - Если не закрылось
+        Gui, b123: Destroy
+            IniWrite, %xbop2%, %A_WorkingDir%\setting_console.ini, Setup, xbop2
+            IniWrite, %ybop2%, %A_WorkingDir%\setting_console.ini, Setup, ybop2
+        openrub = 1
+    }
 Return
 
 ::ainvite::
@@ -2509,7 +2526,13 @@ if ErrorLevel = 1
 {
 }
 Else
-Gui, b123: Destroy
+    {
+        WinGetPos, xbop2, ybop2, , , Shift + Ё - Если не закрылось
+        Gui, b123: Destroy
+            IniWrite, %xbop2%, %A_WorkingDir%\setting_console.ini, Setup, xbop2
+            IniWrite, %ybop2%, %A_WorkingDir%\setting_console.ini, Setup, ybop2
+        openrub = 1
+    }
 Return
 ;--------------------------------------------------------------
 sett:

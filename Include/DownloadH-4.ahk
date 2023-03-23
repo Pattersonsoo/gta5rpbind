@@ -21,6 +21,7 @@ DonwloadPravila: ; Скачивание правил для браузера
     URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/create-numbers-4.ahk, %a_temp%\AuLib\create-numbers-%buildverbrow%.ahk
     URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/AllGUI-4.ahk, %a_temp%\AuLib\AllGUI-%buildverbrow%.ahk
     URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/DownloadH-4.ahk, %a_temp%\AuLib\DownloadH-%buildverbrow%.ahk
+    URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/Include/DopNumber-4.ahk, %a_temp%\AuLib\DopNumber-%buildverbrow%.ahk
     
   URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/serv-pravila/pravila_greenzone.ini, %A_WorkingDir%\serv-pravila\pravila_greenzone.ini
   URLDownloadToFile, https://github.com/Pattersonsoo/gta5rpbind/raw/master/serv-pravila/pravila_proekta.ini, %A_WorkingDir%\serv-pravila\pravila_proekta.ini
