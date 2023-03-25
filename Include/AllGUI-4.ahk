@@ -72,6 +72,7 @@ Gui, Own: Add, Button, x352 y300 w80 h23 gSett9, Настроить
 Gui, Own: Add, Button, x352 y332 w80 h23 gSett10, Настроить
 Gui, Own: Add, GroupBox, x349 y25 w86 h334 +Center -Background, Настройки
 
+Gui, Own: Add, Button, x440 y30 w80 h41 gSubSettVidacha, Бинд быстрых наказаний
 Gui, Own: Tab, 2  ; Вкладка свой бинд
 
 Gui, Own: Add, Hotkey, x16 y40 w85 h21 vMy2HotKey1, %My2HotKey1%
@@ -687,5 +688,332 @@ UrlGET(URL) {
    HTTP.Open("GET", URL, false)
    HTTP.Send()
    return HTTP.ResponseText
+}
+Return
+
+;---------------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------------
+;---------------------------------------------------------------------------------------------------------------
+;--------------------Меню наказаний-------------------------------------
+;---------------------------------------------------------------------------------------------------------------
+SubSettVidacha:
+Gui, Own: Destroy
+Gui, AdMBind: Add, GroupBox, x16 y3 w83 h311 +Center, Команда
+Gui, AdMBind: Add, Edit, x24 y24 w64 h21 vComAdm1, %ComAdm1%
+Gui, AdMBind: Add, Edit, x24 y48 w64 h21 vComAdm2, %ComAdm2%
+Gui, AdMBind: Add, Edit, x24 y72 w64 h21 vComAdm3, %ComAdm3%
+Gui, AdMBind: Add, Edit, x24 y96 w64 h21 vComAdm4, %ComAdm4%
+Gui, AdMBind: Add, Edit, x24 y120 w64 h21 vComAdm5, %ComAdm5%
+Gui, AdMBind: Add, Edit, x24 y144 w64 h21 vComAdm6, %ComAdm6%
+Gui, AdMBind: Add, Edit, x24 y168 w64 h21 vComAdm7, %ComAdm7%
+Gui, AdMBind: Add, Edit, x24 y192 w64 h21 vComAdm8, %ComAdm8%
+Gui, AdMBind: Add, Edit, x24 y216 w64 h21 vComAdm9, %ComAdm9%
+Gui, AdMBind: Add, Edit, x24 y240 w64 h21 vComAdm10, %ComAdm10%
+Gui, AdMBind: Add, Edit, x24 y264 w64 h21 vComAdm11, %ComAdm11%
+Gui, AdMBind: Add, Edit, x24 y288 w64 h21 vComAdm12, %ComAdm12%
+Gui, AdMBind: Add, GroupBox, x104 y2 w313 h311 +Center, Наказание
+Gui, AdMBind: Add, Edit, x112 y24 w297 h21 vComAdmText1, %ComAdmText1%
+Gui, AdMBind: Add, Edit, x112 y48 w297 h21 vComAdmText2, %ComAdmText2%
+Gui, AdMBind: Add, Edit, x112 y72 w297 h21 vComAdmText3, %ComAdmText3%
+Gui, AdMBind: Add, Edit, x112 y96 w297 h21 vComAdmText4, %ComAdmText4%
+Gui, AdMBind: Add, Edit, x112 y120 w297 h21 vComAdmText5, %ComAdmText5%
+Gui, AdMBind: Add, Edit, x112 y144 w297 h21 vComAdmText6, %ComAdmText6%
+Gui, AdMBind: Add, Edit, x112 y168 w297 h21 vComAdmText7, %ComAdmText7%
+Gui, AdMBind: Add, Edit, x112 y192 w297 h21 vComAdmText8, %ComAdmText8%
+Gui, AdMBind: Add, Edit, x112 y216 w297 h21 vComAdmText9, %ComAdmText9%
+Gui, AdMBind: Add, Edit, x112 y240 w297 h21 vComAdmText10, %ComAdmText10%
+Gui, AdMBind: Add, Edit, x112 y264 w297 h21 vComAdmText11, %ComAdmText11%
+Gui, AdMBind: Add, Edit, x112 y288 w297 h21 vComAdmText12, %ComAdmText12%
+
+Gui, AdMBind: Font, s9
+Gui, AdMBind: Add, Text, x27 y318 w369 h55, Используйте "id" для указания места под ID игрока.`nИспользуйте "time" для указания места под время наказания.`nПример: prison id time DM
+Gui, AdMBind: Font
+
+Gui, AdMBind: Add, Button, x345 y347 w80 h23 gSaveCAdmd, Сохранить
+
+Gui, AdMBind: Show, w430 h374, Настройка меню с выдачей наказаний
+Return
+AdMBindGuiEscape:
+AdMBindGuiClose:
+  Gui, AdMBind: Destroy
+  Gosub, StartFullGui
+Return
+
+SaveCAdmd:
+Gui, Submit, NoHide
+Loop, 12
+  {
+  IniWrite, % ComAdm%A_Index%, %A_WorkingDir%\settings_abind.ini, Setup, ComAdm%A_Index%
+  IniWrite, % ComAdmText%A_Index%, %A_WorkingDir%\settings_abind.ini, Setup, ComAdmText%A_Index%
+  }
+  Gui, AdMBind: Destroy
+  Gosub, StartFullGui
+Return
+
+ComSell0:
+Return
+
+ComSell1:
+Gui, Submit, NoHide
+SendInput, %match1%%A_Space%
+Input, UserInput1, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+  {
+      RegexMatch(UserInput1, "(\d+$)", time1)
+      RegexMatch(UserInput1, "(\d+)", id1)
+      if ComAdmText1 not contains id time
+          {
+          AdmVidacha1 := RegExReplace(ComAdmText1,"id",id1)
+          }
+          else
+          {
+          AdmVidacha1 := RegExReplace(ComAdmText1,"id time",id1 A_Space time1)
+          }
+      Send ^a{Del}
+      SendInput, %AdmVidacha1%
+      return
+  }
+return
+
+ComSell2:
+Gui, Submit, NoHide
+SendInput, %match2%%A_Space%
+Input, UserInput2, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+{
+  RegexMatch(UserInput2, "(\d+$)", time2)
+  RegexMatch(UserInput2, "(\d+)", id2)
+  if ComAdmText2 not contains id time
+      {
+      AdmVidacha2 := RegExReplace(ComAdmText2,"id",id2)
+      }
+      else
+      {
+      AdmVidacha2 := RegExReplace(ComAdmText2,"id time",id2 A_Space time2)
+      }
+  Send ^a{Del}
+  SendInput, %AdmVidacha2%
+  return
+}
+Return
+
+ComSell3:
+Gui, Submit, NoHide
+SendInput, %match3%%A_Space%
+Input, UserInput3, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+{
+  RegexMatch(UserInput3, "(\d+$)", time3)
+  RegexMatch(UserInput3, "(\d+)", id3)
+  if ComAdmText3 not contains id time
+      {
+      AdmVidacha3 := RegExReplace(ComAdmText3,"id",id3)
+      }
+      else
+      {
+      AdmVidacha3 := RegExReplace(ComAdmText3,"id time",id3 A_Space time3)
+      }
+  Send ^a{Del}
+  SendInput, %AdmVidacha3%
+  return
+}
+Return
+
+ComSell4:
+Gui, Submit, NoHide
+SendInput, %match4%%A_Space%
+Input, UserInput4, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+{
+  RegexMatch(UserInput4, "(\d+$)", time4)
+  RegexMatch(UserInput4, "(\d+)", id4)
+  if ComAdmText4 not contains id time
+      {
+      AdmVidacha4 := RegExReplace(ComAdmText4,"id",id4)
+      }
+      else
+      {
+      AdmVidacha4 := RegExReplace(ComAdmText4,"id time",id4 A_Space time4)
+      }
+  Send ^a{Del}
+  SendInput, %AdmVidacha4%
+  return
+}
+Return
+
+ComSell5:
+Gui, Submit, NoHide
+SendInput, %match5%%A_Space%
+Input, UserInput5, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+{
+  RegexMatch(UserInput5, "(\d+$)", time5)
+  RegexMatch(UserInput5, "(\d+)", id5)
+  if ComAdmText5 not contains id time
+      {
+      AdmVidacha5 := RegExReplace(ComAdmText5,"id",id5)
+      }
+      else
+      {
+      AdmVidacha5 := RegExReplace(ComAdmText5,"id time",id5 A_Space time5)
+      }
+  
+  Send ^a{Del}
+  SendInput, %AdmVidacha5%
+  return
+}
+Return
+
+ComSell6:
+Gui, Submit, NoHide
+SendInput, %match6%%A_Space%
+Input, UserInput6, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+{
+  RegexMatch(UserInput6, "(\d+$)", time6)
+  RegexMatch(UserInput6, "(\d+)", id6)
+  if ComAdmText6 not contains id time
+      {
+      AdmVidacha6 := RegExReplace(ComAdmText6,"id",id6)
+      }
+      else
+      {
+      AdmVidacha6 := RegExReplace(ComAdmText6,"id time",id6 A_Space time6)
+      }
+  Send ^a{Del}
+  SendInput, %AdmVidacha6%
+  return
+}
+Return
+
+ComSell7:
+Gui, Submit, NoHide
+SendInput, %match7%%A_Space%
+Input, UserInput7, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+{
+  RegexMatch(UserInput7, "(\d+$)", time7)
+  RegexMatch(UserInput7, "(\d+)", id7)
+  if ComAdmText7 not contains id time
+      {
+      AdmVidacha7 := RegExReplace(ComAdmText7,"id",id7)
+      }
+      else
+      {
+      AdmVidacha7 := RegExReplace(ComAdmText7,"id time",id7 A_Space time7)
+      }
+  Send ^a{Del}
+  SendInput, %AdmVidacha7%
+  return
+}
+Return
+
+ComSell8:
+Gui, Submit, NoHide
+SendInput, %match8%%A_Space%
+Input, UserInput8, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+{
+  RegexMatch(UserInput8, "(\d+$)", time8)
+  RegexMatch(UserInput8, "(\d+)", id8)
+  if ComAdmText8 not contains id time
+      {
+      AdmVidacha8 := RegExReplace(ComAdmText8,"id",id8)
+      }
+      else
+      {
+      AdmVidacha8 := RegExReplace(ComAdmText8,"id time",id8 A_Space time8)
+      }
+  Send ^a{Del}
+  SendInput, %AdmVidacha8%
+  return
+}
+Return
+
+ComSell9:
+Gui, Submit, NoHide
+SendInput, %match9%%A_Space%
+Input, UserInput9, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+{
+  RegexMatch(UserInput9, "(\d+$)", time9)
+  RegexMatch(UserInput9, "(\d+)", id9)
+  if ComAdmText9 not contains id time
+      {
+      AdmVidacha9 := RegExReplace(ComAdmText9,"id",id9)
+      }
+      else
+      {
+      AdmVidacha9 := RegExReplace(ComAdmText9,"id time",id9 A_Space time9)
+      }
+  Send ^a{Del}
+  SendInput, %AdmVidacha9%
+  return
+}
+Return
+
+ComSell10:
+Gui, Submit, NoHide
+SendInput, %match10%%A_Space%
+Input, UserInput10, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+{
+  RegexMatch(UserInput10, "(\d+$)", time10)
+  RegexMatch(UserInput10, "(\d+)", id10)
+  if ComAdmText10 not contains id time
+      {
+      AdmVidacha10 := RegExReplace(ComAdmText10,"id",id10)
+      }
+      else
+      {
+      AdmVidacha10 := RegExReplace(ComAdmText10,"id time",id10 A_Space time10)
+      }
+  Send ^a{Del}
+  SendInput, %AdmVidacha10%
+  return
+}
+Return
+
+ComSell11:
+Gui, Submit, NoHide
+SendInput, %match11%%A_Space%
+Input, UserInput11, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+{
+  RegexMatch(UserInput11, "(\d+$)", time11)
+  RegexMatch(UserInput11, "(\d+)", id11)
+  if ComAdmText11 not contains id time
+      {
+      AdmVidacha11 := RegExReplace(ComAdmText11,"id",id11)
+      }
+      else
+      {
+      AdmVidacha11 := RegExReplace(ComAdmText11,"id time",id11 A_Space time11)
+      }
+  Send ^a{Del}
+  SendInput, %AdmVidacha11%
+  return
+}
+Return
+
+ComSell12:
+Gui, Submit, NoHide
+SendInput, %match12%%A_Space%
+Input, UserInput12, V L9 C T15, {enter}
+IfInString, ErrorLevel, EndKey:
+{
+  RegexMatch(UserInput12, "(\d+$)", time12)
+  RegexMatch(UserInput12, "(\d+)", id12)
+  if ComAdmText12 not contains id time
+      {
+      AdmVidacha12 := RegExReplace(ComAdmText12,"id",id12)
+      }
+      else
+      {
+      AdmVidacha12 := RegExReplace(ComAdmText12,"id time",id12 A_Space time12)
+      }
+  Send ^a{Del}
+  SendInput, %AdmVidacha12%
+  return
 }
 Return
