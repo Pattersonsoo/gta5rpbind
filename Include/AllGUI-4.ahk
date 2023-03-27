@@ -420,28 +420,41 @@ Return
 ;-----------------------------------------------------------------------
 ;-----------------------------------------------------------------------
 ;-----------------------------------------------------------------------
+hudlabstart:
+SetTimer, hudlub, 4000
+Return
+
+hudrepstart:
+SetTimer, hudrep, 4000
+Return
 
 hudlub: ; Счетчик репорта HUD
-if hudih1 = 100
+If WinActive("ahk_exe GTA5.exe")
   {
-  Gui, 3a: +LastFound +AlwaysOnTop -Caption +ToolWindow +E0x20 ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
-  Gui, 3a: Color, cWhite
-  Gui, 3a: Font, Intro
-  Gui, 3a: Font,, %MySliderFont1%
-  Gui, 3a: Font, s%MySlider2% ; Set a large font size (32-point).
-  Gui, 3a: Font, q1
-  Gui, 3a: Font, w%MySlider3%
-  Gui, 3a: Add, Text, xm ym c%Set1Color%, REPS: %Counter%
-  Gui, 3a: Add, Text, xm ym+15 c%Set2Color%, SESSION: %Counter2%
-  Gui, 3a: Show, x%xpos% y%ypos% NoActivate
-  WinSet, TransColor, %CustomColor% %MySlider1%
+  if hudih1 = 100
+    {
+    Gui, 3a: +LastFound +AlwaysOnTop -Caption +ToolWindow +E0x20 ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
+    Gui, 3a: Color, cWhite
+    Gui, 3a: Font, Intro
+    Gui, 3a: Font,, %MySliderFont1%
+    Gui, 3a: Font, s%MySlider2% ; Set a large font size (32-point).
+    Gui, 3a: Font, q1
+    Gui, 3a: Font, w%MySlider3%
+    Gui, 3a: Add, Text, xm ym c%Set1Color%, REPS: %Counter%
+    Gui, 3a: Add, Text, xm ym+15 c%Set2Color%, SESSION: %Counter2%
+    Gui, 3a: Show, x%xpos% y%ypos% NoActivate
+    WinSet, TransColor, %CustomColor% %MySlider1%
   }
-else
-{
 }
+Else 
+  {
+  Gui, 3a: Destroy
+  }
 return
 
 hudrep: ; HUD подсказок
+If WinActive("ahk_exe GTA5.exe")
+  {
 if hudih2 = 100
   {
   Gui, 3b: +LastFound +AlwaysOnTop -Caption +ToolWindow  +E0x20 ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
@@ -457,6 +470,11 @@ if hudih2 = 100
   Gui, 3b: Show, x%xpos1% y%ypos1% NoActivate
   WinSet, TransColor, %CustomColor% %My2Slider1%
   }
+}
+Else 
+  {
+  Gui, 3b: Destroy
+  }
 return
 
 ;-----------------------------------------------------------------------
@@ -464,6 +482,8 @@ return
 ;-----------------------------------------------------------------------
 
 Peremove1: ; Настройки HUD счетчика репорта
+Gui, Submit, NoHide
+IniWrite, %Check80%, %A_WorkingDir%\setting_check.ini, Setup, Check80
 Gui, Own: Destroy
 Gui, HUD1: +AlwaysOnTop
 Gui, HUD1: Add, Text, x13 y9 w54 h23 +0x200, Цвет №1
@@ -502,6 +522,8 @@ return
 
 
 Peremove2: ; Настройка HUD подсказок
+Gui, Submit, NoHide
+IniWrite, %Check1%, %A_WorkingDir%\setting_check.ini, Setup, Check1
 Gui, Own: Destroy
 Gui, HUD2: +AlwaysOnTop
 Gui, HUD2: Add, Text, x13 y20 w54 h23 +0x200, Цвет №1

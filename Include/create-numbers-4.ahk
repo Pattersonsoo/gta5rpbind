@@ -2281,13 +2281,6 @@ Gosub, StartFullGui
 Gui Destroy
  return
 
-
-
-
-
-
-
-
 ~sc29::
     KeyWait, sc29
     if Check83 > 0
@@ -2295,11 +2288,14 @@ Gui Destroy
     MouseGetPos, xbop1, ybop1
     if openrub > 0
         {
+            If WinActive("ahk_exe GTA5.exe")
+                {
         Gosub, sBindriText
         MouseClick, left, 0, 0
 	Sleep, 50
 	MouseMove, %xbop1%, %ybop1%
         openrub = 0
+                }
         }
     else
         {
@@ -2313,6 +2309,8 @@ Gui Destroy
 return
 
 +sc29::
+If WinActive("ahk_exe GTA5.exe")
+    {
     if Check83 > 0
         {
             WinGetPos, xbop2, ybop2, , , Shift + Ё - Если не закрылось
@@ -2320,7 +2318,10 @@ return
                 IniWrite, %xbop2%, %A_WorkingDir%\setting_console.ini, Setup, xbop2
                 IniWrite, %ybop2%, %A_WorkingDir%\setting_console.ini, Setup, ybop2
             openrub = 1
-            }
+        }
+    }
+    Else
+        Send +{sc29}    
             Return
 
 sBindriText:

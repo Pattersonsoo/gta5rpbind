@@ -334,7 +334,6 @@ My101IniRead(ByRef Pravila_vzh, Filename, Section, Key, ByRef Default)
     }
 }
 ;-----------------------------------------------------------------------------------------------------------------
-
 ES_NOHIDESEL := 256  ; показывает выделение текста в Edit при неактивном окне
 EM_SETSEL := 0x00B1  ; установка выделения
 EM_SCROLLCARET := 0xB7  ; сделать видимым выделенный текст
@@ -1399,7 +1398,8 @@ if Check81 > 0
 		if flick = 1
 			{
 if (Counter3 > 0)
-
+    If WinActive("ahk_exe GTA5.exe")
+        {
 {
 				 GuiControlGet, %Counter3%
 				Counter3 := Counter3 - 1
@@ -1408,6 +1408,7 @@ if (Counter3 > 0)
 				Gui, 3bb: Destroy
 				Gosub, hudinfo1
 }
+        }
 			}
 		else
 		{
