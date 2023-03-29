@@ -243,7 +243,6 @@ Gui, Own: Add, Button, x260 y330 w87 h23 gCounter13, Перезагрузить
 Gui, Own: Add, Text, x30 y340, ATLOG: %HWID%
 
 Gui, Own: Add, Button, x350 y327 w87 h30 gbitiyfail, Проверить файлы
-
 Gui, Own: Show, w600 h430, Admin-Tools by Notoriuz
 
 Return
@@ -421,16 +420,20 @@ Return
 ;-----------------------------------------------------------------------
 ;-----------------------------------------------------------------------
 hudlabstart:
+labsett := 1
 SetTimer, hudlub, 4000
 Return
 
 hudrepstart:
+repsett := 1
 SetTimer, hudrep, 4000
 Return
 
 hudlub: ; Счетчик репорта HUD
 If WinActive("ahk_exe GTA5.exe")
   {
+if labsett = 1
+{
   if hudih1 = 100
     {
     Gui, 3a: +LastFound +AlwaysOnTop -Caption +ToolWindow +E0x20 ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
@@ -444,10 +447,15 @@ If WinActive("ahk_exe GTA5.exe")
     Gui, 3a: Add, Text, xm ym+15 c%Set2Color%, SESSION: %Counter2%
     Gui, 3a: Show, x%xpos% y%ypos% NoActivate
     WinSet, TransColor, %CustomColor% %MySlider1%
+labsett := 0
   }
+}
+else
+labsett := 0
 }
 Else 
   {
+labsett := 1
   Gui, 3a: Destroy
   }
 return
@@ -455,6 +463,8 @@ return
 hudrep: ; HUD подсказок
 If WinActive("ahk_exe GTA5.exe")
   {
+if repsett = 1
+{
 if hudih2 = 100
   {
   Gui, 3b: +LastFound +AlwaysOnTop -Caption +ToolWindow  +E0x20 ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
@@ -469,10 +479,15 @@ if hudih2 = 100
 
   Gui, 3b: Show, x%xpos1% y%ypos1% NoActivate
   WinSet, TransColor, %CustomColor% %My2Slider1%
+repsett := 0
   }
+}
+else
+repsett := 0
 }
 Else 
   {
+repsett := 1
   Gui, 3b: Destroy
   }
 return
@@ -483,7 +498,7 @@ return
 
 Peremove1: ; Настройки HUD счетчика репорта
 Gui, Submit, NoHide
-IniWrite, %Check80%, %A_WorkingDir%\setting_check.ini, Setup, Check80
+IniWrite, %Check80%, %A_ScriptDir%\setting_check.ini, Setup, Check80
 Gui, Own: Destroy
 Gui, HUD1: +AlwaysOnTop
 Gui, HUD1: Add, Text, x13 y9 w54 h23 +0x200, Цвет №1
@@ -523,7 +538,7 @@ return
 
 Peremove2: ; Настройка HUD подсказок
 Gui, Submit, NoHide
-IniWrite, %Check1%, %A_WorkingDir%\setting_check.ini, Setup, Check1
+IniWrite, %Check1%, %A_ScriptDir%\setting_check.ini, Setup, Check1
 Gui, Own: Destroy
 Gui, HUD2: +AlwaysOnTop
 Gui, HUD2: Add, Text, x13 y20 w54 h23 +0x200, Цвет №1
@@ -765,8 +780,8 @@ SaveCAdmd:
 Gui, Submit, NoHide
 Loop, 12
   {
-  IniWrite, % ComAdm%A_Index%, %A_WorkingDir%\settings_abind.ini, Setup, ComAdm%A_Index%
-  IniWrite, % ComAdmText%A_Index%, %A_WorkingDir%\settings_abind.ini, Setup, ComAdmText%A_Index%
+  IniWrite, % ComAdm%A_Index%, %A_ScriptDir%\settings_abind.ini, Setup, ComAdm%A_Index%
+  IniWrite, % ComAdmText%A_Index%, %A_ScriptDir%\settings_abind.ini, Setup, ComAdmText%A_Index%
   }
   Gui, AdMBind: Destroy
   Gosub, StartFullGui

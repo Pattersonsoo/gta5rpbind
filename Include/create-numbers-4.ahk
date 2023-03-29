@@ -1480,8 +1480,8 @@ Return
 
 3Tab1:
 Gui, Submit, NoHide
-IniWrite, %ComDev1%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand1
-IniWrite, %Command1%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand1
+IniWrite, %ComDev1%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand1
+IniWrite, %Command1%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand1
 Gui, Own: Destroy
 Gui, 63: Add, CheckBox, x22 y6 w137 h37 vCheck21 Checked%Check21%, Учитывать в счетчике
 Gui, 63: Add, GroupBox, x11 y-3 w161 h53
@@ -1496,8 +1496,8 @@ return
 
 3Tab2:
 Gui, Submit, NoHide
-IniWrite, %ComDev2%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand2
-IniWrite, %Command2%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand2
+IniWrite, %ComDev2%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand2
+IniWrite, %Command2%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand2
 Gui, Own: Destroy
 Gui, 64: Add, CheckBox, x22 y6 w137 h37 vCheck22 Checked%Check22%, Учитывать в счетчике
 Gui, 64: Add, GroupBox, x11 y-3 w161 h53
@@ -1513,8 +1513,8 @@ return
 
 3Tab3:
 Gui, Submit, NoHide
-IniWrite, %ComDev3%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand3
-IniWrite, %Command3%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand3
+IniWrite, %ComDev3%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand3
+IniWrite, %Command3%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand3
 Gui, Own: Destroy
 Gui, 65: Add, CheckBox, x22 y6 w137 h37 vCheck23 Checked%Check23%, Учитывать в счетчике
 Gui, 65: Add, GroupBox, x11 y-3 w161 h53
@@ -1530,8 +1530,8 @@ return
 
 3Tab4:
 Gui, Submit, NoHide
-IniWrite, %ComDev4%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand4
-IniWrite, %Command4%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand4
+IniWrite, %ComDev4%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand4
+IniWrite, %Command4%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand4
 Gui, Own: Destroy
 Gui, 66: Add, CheckBox, x22 y6 w137 h37 vCheck24 Checked%Check24%, Учитывать в счетчике
 Gui, 66: Add, GroupBox, x11 y-3 w161 h53
@@ -1547,8 +1547,8 @@ return
 
 3Tab5:
 Gui, Submit, NoHide
-IniWrite, %ComDev5%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand5
-IniWrite, %Command5%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand5
+IniWrite, %ComDev5%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand5
+IniWrite, %Command5%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand5
 Gui, Own: Destroy
 Gui, 67: Add, CheckBox, x22 y6 w137 h37 vCheck25 Checked%Check25%, Учитывать в счетчике
 Gui, 67: Add, GroupBox, x11 y-3 w161 h53
@@ -1563,8 +1563,8 @@ return
 
 3Tab6:
 Gui, Submit, NoHide
-IniWrite, %ComDev5%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand5
-IniWrite, %Command5%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand5
+IniWrite, %ComDev5%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand5
+IniWrite, %Command5%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand5
 Gui, Own: Destroy
 Gui, 68: Add, CheckBox, x22 y6 w137 h37 vCheck26 Checked%Check26%, Учитывать в счетчике
 Gui, 68: Add, GroupBox, x11 y-3 w161 h53
@@ -1579,8 +1579,8 @@ return
 
 3Tab7:
 Gui, Submit, NoHide
-IniWrite, %ComDev7%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand7
-IniWrite, %Command7%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand7
+IniWrite, %ComDev7%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand7
+IniWrite, %Command7%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand7
 Gui, Own: Destroy
 Gui, 69: Add, CheckBox, x22 y6 w137 h37 vCheck27 Checked%Check27%, Учитывать в счетчике
 Gui, 69: Add, GroupBox, x11 y-3 w161 h53
@@ -1595,8 +1595,8 @@ return
 
 3Tab8:
 Gui, Submit, NoHide
-IniWrite, %ComDev8%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand8
-IniWrite, %Command8%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand8
+IniWrite, %ComDev8%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand8
+IniWrite, %Command8%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand8
 Gui, Own: Destroy
 Gui, 70: Add, CheckBox, x22 y6 w137 h37 vCheck28 Checked%Check28%, Учитывать в счетчике
 Gui, 70: Add, GroupBox, x11 y-3 w161 h53
@@ -1611,8 +1611,8 @@ return
 
 3Tab9:
 Gui, Submit, NoHide
-IniWrite, %ComDev9%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand9
-IniWrite, %Command9%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand9
+IniWrite, %ComDev9%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand9
+IniWrite, %Command9%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand9
 Gui, Own: Destroy
 Gui, 71: Add, CheckBox, x22 y6 w137 h37 vCheck29 Checked%Check29%, Учитывать в счетчике
 Gui, 71: Add, GroupBox, x11 y-3 w161 h53
@@ -1627,8 +1627,8 @@ return
 
 3Tab10:
 Gui, Submit, NoHide
-IniWrite, %ComDev10%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand10
-IniWrite, %Command10%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand10
+IniWrite, %ComDev10%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand10
+IniWrite, %Command10%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand10
 Gui, Own: Destroy
 Gui, 72: Add, CheckBox, x22 y6 w137 h37 vCheck30 Checked%Check30%, Учитывать в счетчике
 Gui, 72: Add, GroupBox, x11 y-3 w161 h53
@@ -1745,8 +1745,8 @@ Return
 
 3Tab11:
 Gui, Submit, NoHide
-IniWrite, %ComDev11%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand11
-IniWrite, %Command11%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand11
+IniWrite, %ComDev11%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand11
+IniWrite, %Command11%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand11
 Gui, Own: Destroy
 Gui, 73: Add, CheckBox, x22 y6 w137 h37 vCheck54 Checked%Check54%, Учитывать в счетчике
 Gui, 73: Add, GroupBox, x11 y-3 w161 h53
@@ -1761,8 +1761,8 @@ return
 
 3Tab12:
 Gui, Submit, NoHide
-IniWrite, %ComDev12%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand12
-IniWrite, %Command12%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand12
+IniWrite, %ComDev12%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand12
+IniWrite, %Command12%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand12
 Gui, Own: Destroy
 Gui, 74: Add, CheckBox, x22 y6 w137 h37 vCheck55 Checked%Check55%, Учитывать в счетчике
 Gui, 74: Add, GroupBox, x11 y-3 w161 h53
@@ -1777,8 +1777,8 @@ return
 
 3Tab13:
 Gui, Submit, NoHide
-IniWrite, %ComDev13%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand13
-IniWrite, %Command13%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand13
+IniWrite, %ComDev13%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand13
+IniWrite, %Command13%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand13
 Gui, Own: Destroy
 Gui, 75: Add, CheckBox, x22 y6 w137 h37 vCheck56 Checked%Check56%, Учитывать в счетчике
 Gui, 75: Add, GroupBox, x11 y-3 w161 h53
@@ -1793,8 +1793,8 @@ return
 
 3Tab14:
 Gui, Submit, NoHide
-IniWrite, %ComDev14%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand14
-IniWrite, %Command14%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand14
+IniWrite, %ComDev14%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand14
+IniWrite, %Command14%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand14
 Gui, Own: Destroy
 Gui, 76: Add, CheckBox, x22 y6 w137 h37 vCheck57 Checked%Check57%, Учитывать в счетчике
 Gui, 76: Add, GroupBox, x11 y-3 w161 h53
@@ -1809,8 +1809,8 @@ return
 
 3Tab15:
 Gui, Submit, NoHide
-IniWrite, %ComDev15%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand15
-IniWrite, %Command15%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand15
+IniWrite, %ComDev15%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand15
+IniWrite, %Command15%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand15
 Gui, Own: Destroy
 Gui, 77: Add, CheckBox, x22 y6 w137 h37 vCheck58 Checked%Check58%, Учитывать в счетчике
 Gui, 77: Add, GroupBox, x11 y-3 w161 h53
@@ -1825,8 +1825,8 @@ return
 
 3Tab16:
 Gui, Submit, NoHide
-IniWrite, %ComDev16%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand16
-IniWrite, %Command16%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand16
+IniWrite, %ComDev16%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand16
+IniWrite, %Command16%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand16
 Gui, Own: Destroy
 Gui, 78: Add, CheckBox, x22 y6 w137 h37 vCheck59 Checked%Check59%, Учитывать в счетчике
 Gui, 78: Add, GroupBox, x11 y-3 w161 h53
@@ -1841,8 +1841,8 @@ return
 
 3Tab17:
 Gui, Submit, NoHide
-IniWrite, %ComDev17%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand17
-IniWrite, %Command17%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand17
+IniWrite, %ComDev17%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand17
+IniWrite, %Command17%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand17
 Gui, Own: Destroy
 Gui, 79: Add, CheckBox, x22 y6 w137 h37 vCheck60 Checked%Check60%, Учитывать в счетчике
 Gui, 79: Add, GroupBox, x11 y-3 w161 h53
@@ -1857,8 +1857,8 @@ return
 
 3Tab18:
 Gui, Submit, NoHide
-IniWrite, %ComDev18%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand18
-IniWrite, %Command18%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand18
+IniWrite, %ComDev18%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand18
+IniWrite, %Command18%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand18
 Gui, Own: Destroy
 Gui, 80: Add, CheckBox, x22 y6 w137 h37 vCheck61 Checked%Check61%, Учитывать в счетчике
 Gui, 80: Add, GroupBox, x11 y-3 w161 h53
@@ -1873,8 +1873,8 @@ return
 
 3Tab19:
 Gui, Submit, NoHide
-IniWrite, %ComDev19%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand19
-IniWrite, %Command19%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand19
+IniWrite, %ComDev19%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand19
+IniWrite, %Command19%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand19
 Gui, Own: Destroy
 Gui, 81: Add, CheckBox, x22 y6 w137 h37 vCheck62 Checked%Check62%, Учитывать в счетчике
 Gui, 81: Add, GroupBox, x11 y-3 w161 h53
@@ -1889,8 +1889,8 @@ return
 
 3Tab20:
 Gui, Submit, NoHide
-IniWrite, %ComDev20%, %A_WorkingDir%\setting_3tab.ini, Setup, 3Comand20
-IniWrite, %Command20%, %A_WorkingDir%\setting_3tab.ini, Setup, 3BindComand20
+IniWrite, %ComDev20%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand20
+IniWrite, %Command20%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand20
 Gui, Own: Destroy
 Gui, 82: Add, CheckBox, x22 y6 w137 h37 vCheck63 Checked%Check63%, Учитывать в счетчике
 Gui, 82: Add, GroupBox, x11 y-3 w161 h53
@@ -1907,8 +1907,8 @@ return
 
 3Tab21:
 Gui, Submit, NoHide
-IniWrite, %BindComDev1%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText1
-IniWrite, %BindCommand1%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand1
+IniWrite, %BindComDev1%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText1
+IniWrite, %BindCommand1%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand1
 Gui, 86: Add, CheckBox, x22 y6 w137 h37 vCheck64 Checked%Check64%, Учитывать в счетчике
 Gui, 86: Add, GroupBox, x11 y-3 w161 h53
 Gui, 86: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1921,8 +1921,8 @@ return
 
 3Tab22:
 Gui, Submit, NoHide
-IniWrite, %BindComDev2%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText2
-IniWrite, %BindCommand2%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand2
+IniWrite, %BindComDev2%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText2
+IniWrite, %BindCommand2%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand2
 Gui, 87: Add, CheckBox, x22 y6 w137 h37 vCheck65 Checked%Check65%, Учитывать в счетчике
 Gui, 87: Add, GroupBox, x11 y-3 w161 h53
 Gui, 87: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1935,8 +1935,8 @@ return
 
 3Tab23:
 Gui, Submit, NoHide
-IniWrite, %BindComDev3%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText3
-IniWrite, %BindCommand3%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand3
+IniWrite, %BindComDev3%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText3
+IniWrite, %BindCommand3%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand3
 Gui, 88: Add, CheckBox, x22 y6 w137 h37 vCheck66 Checked%Check66%, Учитывать в счетчике
 Gui, 88: Add, GroupBox, x11 y-3 w161 h53
 Gui, 88: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1949,8 +1949,8 @@ return
 
 3Tab24:
 Gui, Submit, NoHide
-IniWrite, %BindComDev4%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText4
-IniWrite, %BindCommand4%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand4
+IniWrite, %BindComDev4%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText4
+IniWrite, %BindCommand4%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand4
 Gui, 89: Add, CheckBox, x22 y6 w137 h37 vCheck67 Checked%Check67%, Учитывать в счетчике
 Gui, 89: Add, GroupBox, x11 y-3 w161 h53
 Gui, 89: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1963,8 +1963,8 @@ return
 
 3Tab25:
 Gui, Submit, NoHide
-IniWrite, %BindComDev5%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText5
-IniWrite, %BindCommand5%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand5
+IniWrite, %BindComDev5%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText5
+IniWrite, %BindCommand5%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand5
 Gui, 90: Add, CheckBox, x22 y6 w137 h37 vCheck68 Checked%Check68%, Учитывать в счетчике
 Gui, 90: Add, GroupBox, x11 y-3 w161 h53
 Gui, 90: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1977,8 +1977,8 @@ return
 
 3Tab26:
 Gui, Submit, NoHide
-IniWrite, %BindComDev6%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText6
-IniWrite, %BindCommand6%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand6
+IniWrite, %BindComDev6%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText6
+IniWrite, %BindCommand6%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand6
 Gui, 91: Add, CheckBox, x22 y6 w137 h37 vCheck69 Checked%Check69%, Учитывать в счетчике
 Gui, 91: Add, GroupBox, x11 y-3 w161 h53
 Gui, 91: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1991,8 +1991,8 @@ return
 
 3Tab27:
 Gui, Submit, NoHide
-IniWrite, %BindComDev7%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText7
-IniWrite, %BindCommand7%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand7
+IniWrite, %BindComDev7%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText7
+IniWrite, %BindCommand7%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand7
 Gui, 92: Add, CheckBox, x22 y6 w137 h37 vCheck70 Checked%Check70%, Учитывать в счетчике
 Gui, 92: Add, GroupBox, x11 y-3 w161 h53
 Gui, 92: Show, w185 h78, Admin-Tools by Notoriuz
@@ -2005,8 +2005,8 @@ return
 
 3Tab28:
 Gui, Submit, NoHide
-IniWrite, %BindComDev8%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText8
-IniWrite, %BindCommand8%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand8
+IniWrite, %BindComDev8%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText8
+IniWrite, %BindCommand8%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand8
 Gui, 93: Add, CheckBox, x22 y6 w137 h37 vCheck71 Checked%Check71%, Учитывать в счетчике
 Gui, 93: Add, GroupBox, x11 y-3 w161 h53
 Gui, 93: Show, w185 h78, Admin-Tools by Notoriuz
@@ -2019,8 +2019,8 @@ return
 
 3Tab29:
 Gui, Submit, NoHide
-IniWrite, %BindComDev9%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText9
-IniWrite, %BindCommand9%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand9
+IniWrite, %BindComDev9%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText9
+IniWrite, %BindCommand9%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand9
 Gui, 94: Add, CheckBox, x22 y6 w137 h37 vCheck72 Checked%Check72%, Учитывать в счетчике
 Gui, 94: Add, GroupBox, x11 y-3 w161 h53
 Gui, 94: Show, w185 h78, Admin-Tools by Notoriuz
@@ -2033,8 +2033,8 @@ return
 
 3Tab30:
 Gui, Submit, NoHide
-IniWrite, %BindComDev10%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText10
-IniWrite, %BindCommand10%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand10
+IniWrite, %BindComDev10%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText10
+IniWrite, %BindCommand10%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand10
 Gui, 95: Add, CheckBox, x22 y6 w137 h37 vCheck73 Checked%Check73%, Учитывать в счетчике
 Gui, 95: Add, GroupBox, x11 y-3 w161 h53
 Gui, 95: Show, w185 h78, Admin-Tools by Notoriuz
@@ -2047,8 +2047,8 @@ return
 
 3Tab31:
 Gui, Submit, NoHide
-IniWrite, %BindComDev11%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText11
-IniWrite, %BindCommand11%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand11
+IniWrite, %BindComDev11%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText11
+IniWrite, %BindCommand11%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand11
 Gui, 96: Add, CheckBox, x22 y6 w137 h37 vCheck74 Checked%Check74%, Учитывать в счетчике
 Gui, 96: Add, GroupBox, x11 y-3 w161 h53
 Gui, 96: Show, w185 h78, Admin-Tools by Notoriuz
@@ -2061,8 +2061,8 @@ return
 
 3Tab32:
 Gui, Submit, NoHide
-IniWrite, %BindComDev12%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText12
-IniWrite, %BindCommand12%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand12
+IniWrite, %BindComDev12%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText12
+IniWrite, %BindCommand12%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand12
 Gui, 97: Add, CheckBox, x22 y6 w137 h37 vCheck75 Checked%Check75%, Учитывать в счетчике
 Gui, 97: Add, GroupBox, x11 y-3 w161 h53
 Gui, 97: Show, w185 h78, Admin-Tools by Notoriuz
@@ -2075,8 +2075,8 @@ return
 
 3Tab33:
 Gui, Submit, NoHide
-IniWrite, %BindComDev13%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText13
-IniWrite, %BindCommand13%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand13
+IniWrite, %BindComDev13%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText13
+IniWrite, %BindCommand13%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand13
 Gui, 98: Add, CheckBox, x22 y6 w137 h37 vCheck76 Checked%Check76%, Учитывать в счетчике
 Gui, 98: Add, GroupBox, x11 y-3 w161 h53
 Gui, 98: Show, w185 h78, Admin-Tools by Notoriuz
@@ -2089,8 +2089,8 @@ return
 
 3Tab34:
 Gui, Submit, NoHide
-IniWrite, %BindComDev14%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText14
-IniWrite, %BindCommand14%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand14
+IniWrite, %BindComDev14%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText14
+IniWrite, %BindCommand14%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand14
 Gui, 99: Add, CheckBox, x22 y6 w137 h37 vCheck77 Checked%Check77%, Учитывать в счетчике
 Gui, 99: Add, GroupBox, x11 y-3 w161 h53
 Gui, 99: Show, w185 h78, Admin-Tools by Notoriuz
@@ -2103,8 +2103,8 @@ return
 
 3Tab35:
 Gui, Submit, NoHide
-IniWrite, %BindComDev15%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText15
-IniWrite, %BindCommand15%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand15
+IniWrite, %BindComDev15%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText15
+IniWrite, %BindCommand15%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand15
 Gui, 1a: Add, CheckBox, x22 y6 w137 h37 vCheck78 Checked%Check78%, Учитывать в счетчике
 Gui, 1a: Add, GroupBox, x11 y-3 w161 h53
 Gui, 1a: Show, w185 h78, Admin-Tools by Notoriuz
@@ -2117,8 +2117,8 @@ return
 
 3Tab36:
 Gui, Submit, NoHide
-IniWrite, %BindComDev16%, %A_WorkingDir%\setting_3tab.ini, Setup, BindText16
-IniWrite, %BindCommand16%, %A_WorkingDir%\setting_3tab.ini, Setup, BindComand16
+IniWrite, %BindComDev16%, %A_ScriptDir%\setting_3tab.ini, Setup, BindText16
+IniWrite, %BindCommand16%, %A_ScriptDir%\setting_3tab.ini, Setup, BindComand16
 Gui, 2a: Add, CheckBox, x22 y6 w137 h37 vCheck79 Checked%Check79%, Учитывать в счетчике
 Gui, 2a: Add, GroupBox, x11 y-3 w161 h53
 Gui, 2a: Show, w185 h78, Admin-Tools by Notoriuz
@@ -2133,13 +2133,13 @@ return
 
 SaveSet1:
 Gui, Submit, NoHide
-IniWrite, %MyEdit1%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit1
-IniWrite, %MyEdit2%, %A_WorkingDir%\setting_edit.ini., Setup, MyEdit2
-IniWrite, %MyEdit3%, %A_WorkingDir%\setting_edit.ini., Setup, MyEdit3
-IniWrite, %MyEdit4%, %A_WorkingDir%\setting_edit.ini., Setup, MyEdit4
-IniWrite, %MyEdit5%, %A_WorkingDir%\setting_edit.ini., Setup, MyEdit5
-IniWrite, %Check%, %A_WorkingDir%\setting_check.ini, Setup, Check
-IniWrite, %Check31%, %A_WorkingDir%\setting_check.ini, Setup, Check31
+IniWrite, %MyEdit1%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit1
+IniWrite, %MyEdit2%, %A_ScriptDir%\setting_edit.ini., Setup, MyEdit2
+IniWrite, %MyEdit3%, %A_ScriptDir%\setting_edit.ini., Setup, MyEdit3
+IniWrite, %MyEdit4%, %A_ScriptDir%\setting_edit.ini., Setup, MyEdit4
+IniWrite, %MyEdit5%, %A_ScriptDir%\setting_edit.ini., Setup, MyEdit5
+IniWrite, %Check%, %A_ScriptDir%\setting_check.ini, Setup, Check
+IniWrite, %Check31%, %A_ScriptDir%\setting_check.ini, Setup, Check31
 Gosub, Prok1
 Gosub, Galka1
 Gosub, StartFullGui
@@ -2148,13 +2148,13 @@ Gui Destroy
 
 SaveSet2:
 Gui, Submit, NoHide
-IniWrite, %MyEdit11%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit11
-IniWrite, %MyEdit12%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit12
-IniWrite, %MyEdit13%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit13
-IniWrite, %MyEdit14%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit14
-IniWrite, %MyEdit15%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit15
-IniWrite, %Check2%, %A_WorkingDir%\setting_check.ini, Setup, Check2
-IniWrite, %Check32%, %A_WorkingDir%\setting_check.ini, Setup, Check32
+IniWrite, %MyEdit11%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit11
+IniWrite, %MyEdit12%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit12
+IniWrite, %MyEdit13%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit13
+IniWrite, %MyEdit14%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit14
+IniWrite, %MyEdit15%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit15
+IniWrite, %Check2%, %A_ScriptDir%\setting_check.ini, Setup, Check2
+IniWrite, %Check32%, %A_ScriptDir%\setting_check.ini, Setup, Check32
 Gosub, Prok2
 Gosub, Galka2
 Gosub, StartFullGui
@@ -2163,13 +2163,13 @@ Gosub, StartFullGui
 
 SaveSet3:
 Gui, Submit, NoHide
-IniWrite, %MyEdit21%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit21
-IniWrite, %MyEdit22%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit22
-IniWrite, %MyEdit23%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit23
-IniWrite, %MyEdit24%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit24
-IniWrite, %MyEdit25%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit25
-IniWrite, %Check3%, %A_WorkingDir%\setting_check.ini, Setup, Check3
-IniWrite, %Check33%, %A_WorkingDir%\setting_check.ini, Setup, Check33
+IniWrite, %MyEdit21%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit21
+IniWrite, %MyEdit22%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit22
+IniWrite, %MyEdit23%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit23
+IniWrite, %MyEdit24%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit24
+IniWrite, %MyEdit25%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit25
+IniWrite, %Check3%, %A_ScriptDir%\setting_check.ini, Setup, Check3
+IniWrite, %Check33%, %A_ScriptDir%\setting_check.ini, Setup, Check33
 Gosub, Prok3
 Gosub, Galka3
 Gosub, StartFullGui
@@ -2178,13 +2178,13 @@ Gosub, StartFullGui
 
 SaveSet4:
 Gui, Submit, NoHide
-IniWrite, %MyEdit31%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit31
-IniWrite, %MyEdit32%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit32
-IniWrite, %MyEdit33%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit33
-IniWrite, %MyEdit34%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit34
-IniWrite, %MyEdit35%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit35
-IniWrite, %Check4%, %A_WorkingDir%\setting_check.ini, Setup, Check4
-IniWrite, %Check34%, %A_WorkingDir%\setting_check.ini, Setup, Check34
+IniWrite, %MyEdit31%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit31
+IniWrite, %MyEdit32%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit32
+IniWrite, %MyEdit33%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit33
+IniWrite, %MyEdit34%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit34
+IniWrite, %MyEdit35%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit35
+IniWrite, %Check4%, %A_ScriptDir%\setting_check.ini, Setup, Check4
+IniWrite, %Check34%, %A_ScriptDir%\setting_check.ini, Setup, Check34
 Gosub, Prok4
 Gosub, Galka4
 Gosub, StartFullGui
@@ -2193,13 +2193,13 @@ Gosub, StartFullGui
 
 SaveSet5:
 Gui, Submit, NoHide
-IniWrite, %MyEdit41%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit41
-IniWrite, %MyEdit42%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit42
-IniWrite, %MyEdit43%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit43
-IniWrite, %MyEdit44%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit44
-IniWrite, %MyEdit45%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit45
-IniWrite, %Check5%, %A_WorkingDir%\setting_check.ini, Setup, Check5
-IniWrite, %Check35%, %A_WorkingDir%\setting_check.ini, Setup, Check35
+IniWrite, %MyEdit41%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit41
+IniWrite, %MyEdit42%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit42
+IniWrite, %MyEdit43%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit43
+IniWrite, %MyEdit44%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit44
+IniWrite, %MyEdit45%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit45
+IniWrite, %Check5%, %A_ScriptDir%\setting_check.ini, Setup, Check5
+IniWrite, %Check35%, %A_ScriptDir%\setting_check.ini, Setup, Check35
 Gosub, Prok5
 Gosub, Galka5
 Gosub, StartFullGui
@@ -2208,13 +2208,13 @@ Gosub, StartFullGui
 
 SaveSet6:
 Gui, Submit, NoHide
-IniWrite, %MyEdit51%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit51
-IniWrite, %MyEdit52%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit52
-IniWrite, %MyEdit53%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit53
-IniWrite, %MyEdit54%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit54
-IniWrite, %MyEdit55%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit55
-IniWrite, %Check6%, %A_WorkingDir%\setting_check.ini, Setup, Check6
-IniWrite, %Check36%, %A_WorkingDir%\setting_check.ini, Setup, Check36
+IniWrite, %MyEdit51%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit51
+IniWrite, %MyEdit52%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit52
+IniWrite, %MyEdit53%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit53
+IniWrite, %MyEdit54%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit54
+IniWrite, %MyEdit55%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit55
+IniWrite, %Check6%, %A_ScriptDir%\setting_check.ini, Setup, Check6
+IniWrite, %Check36%, %A_ScriptDir%\setting_check.ini, Setup, Check36
 Gosub, Prok6
 Gosub, Galka6
 Gosub, StartFullGui
@@ -2223,13 +2223,13 @@ Gosub, StartFullGui
 
 SaveSet7:
 Gui, Submit, NoHide
-IniWrite, %MyEdit61%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit61
-IniWrite, %MyEdit62%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit62
-IniWrite, %MyEdit63%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit63
-IniWrite, %MyEdit64%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit64
-IniWrite, %MyEdit65%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit65
-IniWrite, %Check7%, %A_WorkingDir%\setting_check.ini, Setup, Check7
-IniWrite, %Check37%, %A_WorkingDir%\setting_check.ini, Setup, Check37
+IniWrite, %MyEdit61%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit61
+IniWrite, %MyEdit62%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit62
+IniWrite, %MyEdit63%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit63
+IniWrite, %MyEdit64%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit64
+IniWrite, %MyEdit65%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit65
+IniWrite, %Check7%, %A_ScriptDir%\setting_check.ini, Setup, Check7
+IniWrite, %Check37%, %A_ScriptDir%\setting_check.ini, Setup, Check37
 Gosub, Prok7
 Gosub, Galka7
 Gosub, StartFullGui
@@ -2238,13 +2238,13 @@ Gosub, StartFullGui
 
 SaveSet8:
 Gui, Submit, NoHide
-IniWrite, %MyEdit71%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit71
-IniWrite, %MyEdit72%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit72
-IniWrite, %MyEdit73%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit73
-IniWrite, %MyEdit74%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit74
-IniWrite, %MyEdit75%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit75
-IniWrite, %Check8%, %A_WorkingDir%\setting_check.ini, Setup, Check8
-IniWrite, %Check38%, %A_WorkingDir%\setting_check.ini, Setup, Check38
+IniWrite, %MyEdit71%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit71
+IniWrite, %MyEdit72%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit72
+IniWrite, %MyEdit73%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit73
+IniWrite, %MyEdit74%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit74
+IniWrite, %MyEdit75%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit75
+IniWrite, %Check8%, %A_ScriptDir%\setting_check.ini, Setup, Check8
+IniWrite, %Check38%, %A_ScriptDir%\setting_check.ini, Setup, Check38
 Gosub, Prok8
 Gosub, Galka8
 Gosub, StartFullGui
@@ -2253,13 +2253,13 @@ Gosub, StartFullGui
 
 SaveSet9:
 Gui, Submit, NoHide
-IniWrite, %MyEdit81%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit81
-IniWrite, %MyEdit82%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit82
-IniWrite, %MyEdit83%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit83
-IniWrite, %MyEdit84%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit84
-IniWrite, %MyEdit85%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit85
-IniWrite, %Check9%, %A_WorkingDir%\setting_check.ini, Setup, Check9
-IniWrite, %Check39%, %A_WorkingDir%\setting_check.ini, Setup, Check39
+IniWrite, %MyEdit81%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit81
+IniWrite, %MyEdit82%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit82
+IniWrite, %MyEdit83%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit83
+IniWrite, %MyEdit84%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit84
+IniWrite, %MyEdit85%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit85
+IniWrite, %Check9%, %A_ScriptDir%\setting_check.ini, Setup, Check9
+IniWrite, %Check39%, %A_ScriptDir%\setting_check.ini, Setup, Check39
 Gosub, Prok9
 Gosub, Galka9
 Gosub, StartFullGui
@@ -2268,13 +2268,13 @@ Gui Destroy
 
 SaveSet10:
 Gui, Submit, NoHide
-IniWrite, %MyEdit91%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit91
-IniWrite, %MyEdit92%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit92
-IniWrite, %MyEdit93%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit93
-IniWrite, %MyEdit94%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit94
-IniWrite, %MyEdit95%, %A_WorkingDir%\setting_edit.ini, Setup, MyEdit95
-IniWrite, %Check10%, %A_WorkingDir%\setting_check.ini, Setup, Check10
-IniWrite, %Check40%, %A_WorkingDir%\setting_check.ini, Setup, Check40
+IniWrite, %MyEdit91%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit91
+IniWrite, %MyEdit92%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit92
+IniWrite, %MyEdit93%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit93
+IniWrite, %MyEdit94%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit94
+IniWrite, %MyEdit95%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit95
+IniWrite, %Check10%, %A_ScriptDir%\setting_check.ini, Setup, Check10
+IniWrite, %Check40%, %A_ScriptDir%\setting_check.ini, Setup, Check40
 Gosub, Prok10
 Gosub, Galka10
 Gosub, StartFullGui
@@ -2301,8 +2301,8 @@ Gui Destroy
         {
         WinGetPos, xbop2, ybop2, , , Shift + Ё - Если не закрылось
         Gui, b123: Destroy
-            IniWrite, %xbop2%, %A_WorkingDir%\setting_console.ini, Setup, xbop2
-            IniWrite, %ybop2%, %A_WorkingDir%\setting_console.ini, Setup, ybop2
+            IniWrite, %xbop2%, %A_ScriptDir%\setting_console.ini, Setup, xbop2
+            IniWrite, %ybop2%, %A_ScriptDir%\setting_console.ini, Setup, ybop2
         openrub = 1
         }
     }
@@ -2315,8 +2315,8 @@ If WinActive("ahk_exe GTA5.exe")
         {
             WinGetPos, xbop2, ybop2, , , Shift + Ё - Если не закрылось
             Gui, b123: Destroy
-                IniWrite, %xbop2%, %A_WorkingDir%\setting_console.ini, Setup, xbop2
-                IniWrite, %ybop2%, %A_WorkingDir%\setting_console.ini, Setup, ybop2
+                IniWrite, %xbop2%, %A_ScriptDir%\setting_console.ini, Setup, xbop2
+                IniWrite, %ybop2%, %A_ScriptDir%\setting_console.ini, Setup, ybop2
             openrub = 1
         }
     }
@@ -2325,8 +2325,8 @@ If WinActive("ahk_exe GTA5.exe")
             Return
 
 sBindriText:
-    IniRead, xbop2, %A_WorkingDir%\setting_console.ini , Setup, xbop2, 759
-    IniRead, ybop2, %A_WorkingDir%\setting_console.ini , Setup, ybop2, 462
+    IniRead, xbop2, %A_ScriptDir%\setting_console.ini , Setup, xbop2, 759
+    IniRead, ybop2, %A_ScriptDir%\setting_console.ini , Setup, ybop2, 462
 
     if xbop2 is not number
         {
@@ -2514,8 +2514,8 @@ Else
     {
         WinGetPos, xbop2, ybop2, , , Shift + Ё - Если не закрылось
         Gui, b123: Destroy
-            IniWrite, %xbop2%, %A_WorkingDir%\setting_console.ini, Setup, xbop2
-            IniWrite, %ybop2%, %A_WorkingDir%\setting_console.ini, Setup, ybop2
+            IniWrite, %xbop2%, %A_ScriptDir%\setting_console.ini, Setup, xbop2
+            IniWrite, %ybop2%, %A_ScriptDir%\setting_console.ini, Setup, ybop2
         openrub = 1
     }
 Return
@@ -2530,8 +2530,8 @@ Else
     {
         WinGetPos, xbop2, ybop2, , , Shift + Ё - Если не закрылось
         Gui, b123: Destroy
-            IniWrite, %xbop2%, %A_WorkingDir%\setting_console.ini, Setup, xbop2
-            IniWrite, %ybop2%, %A_WorkingDir%\setting_console.ini, Setup, ybop2
+            IniWrite, %xbop2%, %A_ScriptDir%\setting_console.ini, Setup, xbop2
+            IniWrite, %ybop2%, %A_ScriptDir%\setting_console.ini, Setup, ybop2
         openrub = 1
     }
 Return
@@ -2562,9 +2562,9 @@ HUDSave:
 Gui, Submit, NoHide
 Loop, 12
     {
-    IniWrite, % BindText%A_Index%, %A_WorkingDir%\setting_console.ini, Setup, BindText%A_Index%
-    IniWrite, % PressN%A_Index%, %A_WorkingDir%\setting_console.ini, Setup, PressN%A_Index%
-    IniWrite, % PressK%A_Index%, %A_WorkingDir%\setting_console.ini, Setup, PressK%A_Index%
+    IniWrite, % BindText%A_Index%, %A_ScriptDir%\setting_console.ini, Setup, BindText%A_Index%
+    IniWrite, % PressN%A_Index%, %A_ScriptDir%\setting_console.ini, Setup, PressN%A_Index%
+    IniWrite, % PressK%A_Index%, %A_ScriptDir%\setting_console.ini, Setup, PressK%A_Index%
     }
 Gui, sett: Destroy
 Return

@@ -421,7 +421,7 @@ Gui, Submit, NoHide
 BindText1 = %MyText1%
 PressN1 := 1
 PressK1 := 1
-IniWrite, %PressN1%, %A_WorkingDir%\setting_console.ini, Setup, PressN123
+IniWrite, %PressN1%, %A_ScriptDir%\setting_console.ini, Setup, PressN123
 Gui, hudsett1: Destroy
 Gosub, sett
 Return

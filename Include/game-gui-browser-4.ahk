@@ -465,7 +465,7 @@ if Vibor = Дополнительно
 			Gui, Browser: Add, DropDownList, x0 y0 w623 h420 vVibor gVibor1, Общие правила|Правила гос.организаций|Правила крим.организаций|Дополнительно||
 			Gui, Browser: Add, Tab3, x-1 y21 w623 h420, Карта особняков|TP Особы|Для заметок
 			Gui, Browser: Tab, 1
-			Gui, Browser: Add, Picture, x-1 y21 w623 h374, %A_WorkingDir%\app\gui\browser-osob-%buildverbrow%.png
+			Gui, Browser: Add, Picture, x-1 y21 w623 h374, %A_ScriptDir%\app\gui\browser-osob-%buildverbrow%.png
 			Gui, Browser: Tab, 2
 			Gui, Browser: Add, GroupBox, x6 y45 w88 h68 +Center, Особа №1
 			Gui, Browser: Add, GroupBox, x96 y45 w88 h68 +Center, Особа №2
@@ -1409,9 +1409,16 @@ if (Counter3 > 0)
 				Gosub, hudinfo1
 }
         }
+		else
+		{
+	Counter3 := 0
+	Gui, 3bb: Destroy
+Break
+		}
 			}
 		else
 		{
+	Counter3 := 0
 	Gui, 3bb: Destroy
 Break
 		}
