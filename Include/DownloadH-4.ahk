@@ -205,7 +205,8 @@ Loop, 10
     IniRead, My3Slider%A_Index%, %A_ScriptDir%\setting.ini, Position, My3Slider%A_Index%, 187
     IniRead, My3SliderVid%A_Index%, %A_ScriptDir%\setting.ini, Position, My3SliderVid%A_Index%, 75
     }
-  
+    IniRead, FonSett2, %A_ScriptDir%\setting.ini, Position, FonSett2, 8B0000
+    IniRead, FonSett1, %A_ScriptDir%\setting.ini, Position, FonSett1, 8B0000
   Loop, 20
     {
     IniRead, ComDev%A_index%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand%A_index%, %A_Space%
@@ -227,7 +228,7 @@ Loop, 10
     IniRead, MyEdit%A_index%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit%A_index%, %A_Space%
     }
   
-  Loop, 83
+  Loop, 84
     {
     IniRead, Check%A_index%, %A_ScriptDir%\setting_check.ini, Setup, Check%A_index%, 0
     }

@@ -437,7 +437,6 @@ if labsett = 1
   if hudih1 = 100
     {
     Gui, 3a: +LastFound +AlwaysOnTop -Caption +ToolWindow +E0x20 ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
-    Gui, 3a: Color, cWhite
     Gui, 3a: Font, Intro
     Gui, 3a: Font,, %MySliderFont1%
     Gui, 3a: Font, s%MySlider2% ; Set a large font size (32-point).
@@ -445,8 +444,17 @@ if labsett = 1
     Gui, 3a: Font, w%MySlider3%
     Gui, 3a: Add, Text, xm ym c%Set1Color%, REPS: %Counter%
     Gui, 3a: Add, Text, xm ym+15 c%Set2Color%, SESSION: %Counter2%
-    Gui, 3a: Show, x%xpos% y%ypos% NoActivate
+    If Check85 > 0
+      {
+        Gui, 3a: Color, cWhite
     WinSet, TransColor, %CustomColor% %MySlider1%
+      }
+    else
+      {
+        Gui, 3a: Color, %FonSett1%
+        WinSet, TransColor, %FonSett1% %MySlider1%
+      }
+      Gui, 3a: Show, x%xpos% y%ypos% NoActivate
 labsett := 0
   }
 }
@@ -468,17 +476,25 @@ if repsett = 1
 if hudih2 = 100
   {
   Gui, 3b: +LastFound +AlwaysOnTop -Caption +ToolWindow  +E0x20 ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
-  Gui, 3b: Color, cWhite
   Gui, 3b: Font, Intro
   Gui, 3b: Font,, %MySliderFont2%
   Gui, 3b: Font, s%My2Slider2% ; Set a large font size (32-point).
   Gui, 3b: Font, q1
   Gui, 3b: Font, w%My2Slider3%
-
   Gui, 3b: Add, Text, xm ym c%2Set1Color%, %HelpText%
 
-  Gui, 3b: Show, x%xpos1% y%ypos1% NoActivate
+  If Check84 > 0
+    {
+      Gui, 3b: Color, cWhite
   WinSet, TransColor, %CustomColor% %My2Slider1%
+    }
+  else
+    {
+      Gui, 3b: Color, %FonSett2%
+      WinSet, TransColor, %FonSett2% %My2Slider1%
+    }
+
+    Gui, 3b: Show, x%xpos1% y%ypos1% NoActivate
 repsett := 0
   }
 }
@@ -518,6 +534,7 @@ Gui, HUD1: Add, GroupBox, x5 y110 w191 h55
 
 Gui, HUD1: Add, Button, x304 y144 w80 h25 gSetPeremove1, Положение
 Gui, HUD1: Add, Button, x392 y144 w80 h25 gSaveSetHUD1, Применить
+Gui, HUD1: Add, Checkbox, x210 y144 vCheck85 Checked%Check85% +Center, Отображать`nфон
 
 Gui, HUD1: Add, Text, x232 y16 w120 h23 +0x200 +Center, Размер шрифта
 Gui, HUD1: Add, Slider, gPereSet1 x208 y40 w181 h24 +0x40 +NoTicks vMySlider2 +Tooltip, %MySliderVid2%
@@ -550,7 +567,7 @@ Gui, HUD2: Add, ListBox, gPereSet2 x72 y53 w120 h30 vMySliderFont2, Arial|MS san
 Gui, HUD2: Add, GroupBox, x5 y45 w191 h42
 
 Gui, HUD2: Add, Text, x40 y90 w120 h23 +0x200 +Center, Прозрачность
-Gui, HUD2: Add, Slider, gPereSet2 x10 y110 w181 h24 +NoTicks +0x40 vMy2Slider1 +Tooltip, %My2SliderVid1%
+Gui, HUD2: Add, Slider, gPereSet2 x10 y110 w181 h22 +NoTicks +0x40 vMy2Slider1 +Tooltip, %My2SliderVid1%
 Gui, HUD2: Add, GroupBox, x5 y84 w191 h50
 
 Gui, HUD2: Add, Button, x304 y144 w80 h25 gSetPeremove2, Положение
@@ -563,11 +580,12 @@ Gui, HUD2: Add, GroupBox, x200 y8 w191 h62
 Gui, HUD2: Add, GroupBox, x200 y72 w191 h62
 Gui, HUD2: Add, Slider, gPereSet2 x208 y104 w181 h24 +0x40 +NoTicks vMy2Slider3 +Tooltip, %My2SliderVid3%
 Gui, HUD2: Add, Text, x224 y80 w145 h23 +0x200 +Center, Насыщенность(жирность)
-
+Gui, HUD2: Add, Checkbox, x90 y144 vCheck84 Checked%Check84% +Center, Отображать`nфон
 Gui, HUD2: Show, , Настройка HUD Подсказок
 return
 HUD2GuiEscape:
 HUD2GuiClose:
+    Gui, 3b: Destroy
     Gui, HUD2: Destroy
     Gosub, StartFullGui
 return
@@ -604,6 +622,7 @@ Return
 HUD4GuiEscape:
 HUD4GuiClose:
 Gosub, StartFullGui
+  Gui, 3bb: Destroy
     Gui, HUD4: Destroy
 return
 
@@ -762,18 +781,20 @@ Gui, AdMBind: Add, Edit, x112 y240 w297 h21 vComAdmText10, %ComAdmText10%
 Gui, AdMBind: Add, Edit, x112 y264 w297 h21 vComAdmText11, %ComAdmText11%
 Gui, AdMBind: Add, Edit, x112 y288 w297 h21 vComAdmText12, %ComAdmText12%
 
-Gui, AdMBind: Font, s9
-Gui, AdMBind: Add, Text, x27 y318 w369 h55, Используйте "id" для указания места под ID игрока.`nИспользуйте "time" для указания места под время наказания.`nПример: prison id time DM
-Gui, AdMBind: Font
+Gui, AdMBind: Add, Button, x120 y315 w140 h23 gHelpMSG, Положение подсказки
+Gui, AdMBind: Add, Button, x262 y315 w80 h23 gHelpMSG, Help
+Gui, AdMBind: Add, Button, x345 y315 w80 h23 gSaveCAdmd, Сохранить
 
-Gui, AdMBind: Add, Button, x345 y347 w80 h23 gSaveCAdmd, Сохранить
-
-Gui, AdMBind: Show, w430 h374, Настройка меню с выдачей наказаний
+Gui, AdMBind: Show, w430 h345, Настройка меню с выдачей наказаний
 Return
 AdMBindGuiEscape:
 AdMBindGuiClose:
   Gui, AdMBind: Destroy
   Gosub, StartFullGui
+Return
+
+HelpMSG:
+MsgBox,, Подсказка, Используйте "id" для указания ID игрока, "time" для времени наказания.`nПример: prison id time DM. Команда:dm`nИспользование: Вводим dm указываем id и время, Пример: dm 1 15
 Return
 
 SaveCAdmd:

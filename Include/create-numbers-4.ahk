@@ -226,7 +226,7 @@ return
 
 ;------------------ 1 - 5 --------------------------------------------------------------------
 1:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 2: Show, w425 h90, Admin-Tools by Notoriuz
 Gui, 2: Add, Edit, x29 y18 w366 h21 vMyEdit1, %MyEdit1%
 Gui, 2: Add, GroupBox, x16 y0 w391 h54
@@ -234,16 +234,15 @@ Gui, 2: Add, Button, x328 y58 w80 h23 gSaveSet1, Сохранить
 Gui, 2: Add, CheckBox, x185 y59 w130 h20 vCheck Checked%Check%, Учитывать в счетчике
 Gui, 2: Add, CheckBox, x50 y59 w130 h20 vCheck31 Checked%Check31%, Использовать Enter
 Gui, 2: Add, GroupBox, x45 y50 w370 h34
-gui, 2:+owner
 return
 2GuiEscape:
 2GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+   Gui, Own: Show
 return
 
 2:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 3: Show, w425 h137, Admin-Tools by Notoriuz
 Gui, 3: Add, Edit, x30 y18 w366 h21 vMyEdit1, %MyEdit1%
 Gui, 3: Add, GroupBox, x16 y0 w391 h54
@@ -257,11 +256,11 @@ return
 3GuiEscape:
 3GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 4: Show, w425 h190, Admin-Tools by Notoriuz
 Gui, 4: Add, Edit, x29 y18 w366 h21 vMyEdit1, %MyEdit1%
 Gui, 4: Add, GroupBox, x16 y0 w391 h54
@@ -277,11 +276,11 @@ return
 4GuiEscape:
 4GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 4:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 5: Show, w425 h248, Admin-Tools by Notoriuz
 Gui, 5: Add, Edit, x30 y18 w366 h21 vMyEdit1, %MyEdit1%
 Gui, 5: Add, GroupBox, x16 y0 w391 h54
@@ -299,11 +298,11 @@ return
 5GuiEscape:
 5GuiClose:
 Gui Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 5:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 6: Show, w425 h295, Admin-Tools by Notoriuz
 Gui, 6: Add, Edit, x30 y18 w366 h21 vMyEdit1, %MyEdit1%
 Gui, 6: Add, GroupBox, x16 y0 w391 h54
@@ -323,13 +322,13 @@ return
 6GuiEscape:
 6GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 ;-----------------------6 - 10 -------------------------------------------------
 
 6:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 7: Show, w425 h90, Admin-Tools by Notoriuz
 Gui, 7: Add, Edit, x29 y18 w366 h21 vMyEdit11, %MyEdit11%
 Gui, 7: Add, GroupBox, x16 y0 w391 h54
@@ -341,11 +340,11 @@ return
 7GuiEscape:
 7GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 7:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 8: Show, w425 h137, Admin-Tools by Notoriuz
 Gui, 8: Add, Edit, x30 y18 w366 h21 vMyEdit11, %MyEdit11%
 Gui, 8: Add, GroupBox, x16 y0 w391 h54
@@ -359,11 +358,11 @@ return
 8GuiEscape:
 8GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 8:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 9: Show, w425 h190, Admin-Tools by Notoriuz
 Gui, 9: Add, Edit, x29 y18 w366 h21 vMyEdit11, %MyEdit11%
 Gui, 9: Add, GroupBox, x16 y0 w391 h54
@@ -379,11 +378,11 @@ return
 9GuiEscape:
 9GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 9:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 10: Show, w425 h248, Admin-Tools by Notoriuz
 Gui, 10: Add, Edit, x30 y18 w366 h21 vMyEdit11, %MyEdit11%
 Gui, 10: Add, GroupBox, x16 y0 w391 h54
@@ -401,11 +400,11 @@ return
 10GuiEscape:
 10GuiClose:
 Gui Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 10:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 11: Show, w425 h295, Admin-Tools by Notoriuz
 Gui, 11: Add, Edit, x30 y18 w366 h21 vMyEdit11, %MyEdit11%
 Gui, 11: Add, GroupBox, x16 y0 w391 h54
@@ -425,13 +424,13 @@ return
 11GuiEscape:
 11GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 ;----------------------------11 - 15--------------------------------------------
 
 11:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 12: Show, w425 h90, Admin-Tools by Notoriuz
 Gui, 12: Add, Edit, x29 y18 w366 h21 vMyEdit21, %MyEdit21%
 Gui, 12: Add, GroupBox, x16 y0 w391 h54
@@ -443,11 +442,11 @@ return
 12GuiEscape:
 12GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 12:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 13: Show, w425 h137, Admin-Tools by Notoriuz
 Gui, 13: Add, Edit, x30 y18 w366 h21 vMyEdit21, %MyEdit21%
 Gui, 13: Add, GroupBox, x16 y0 w391 h54
@@ -461,11 +460,11 @@ return
 13GuiEscape:
 13GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 13:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 14: Show, w425 h190, Admin-Tools by Notoriuz
 Gui, 14: Add, Edit, x29 y18 w366 h21 vMyEdit21, %MyEdit21%
 Gui, 14: Add, GroupBox, x16 y0 w391 h54
@@ -481,11 +480,11 @@ return
 14GuiEscape:
 14GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 14:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 15: Show, w425 h248, Admin-Tools by Notoriuz
 Gui, 15: Add, Edit, x30 y18 w366 h21 vMyEdit21, %MyEdit21%
 Gui, 15: Add, GroupBox, x16 y0 w391 h54
@@ -503,11 +502,11 @@ return
 15GuiEscape:
 15GuiClose:
 Gui Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 15:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 16: Show, w425 h295, Admin-Tools by Notoriuz
 Gui, 16: Add, Edit, x30 y18 w366 h21 vMyEdit21, %MyEdit21%
 Gui, 16: Add, GroupBox, x16 y0 w391 h54
@@ -527,13 +526,13 @@ return
 16GuiEscape:
 16GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 ;---------------------------- 16 - 20--------------------------------------------
 
 16:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 18: Show, w425 h90, Admin-Tools by Notoriuz
 Gui, 18: Add, Edit, x29 y18 w366 h21 vMyEdit31, %MyEdit31%
 Gui, 18: Add, GroupBox, x16 y0 w391 h54
@@ -545,11 +544,11 @@ return
 18GuiEscape:
 18GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 17:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 19: Show, w425 h137, Admin-Tools by Notoriuz
 Gui, 19: Add, Edit, x30 y18 w366 h21 vMyEdit31, %MyEdit31%
 Gui, 19: Add, GroupBox, x16 y0 w391 h54
@@ -563,11 +562,11 @@ return
 19GuiEscape:
 19GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 18:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 20: Show, w425 h190, Admin-Tools by Notoriuz
 Gui, 20: Add, Edit, x29 y18 w366 h21 vMyEdit31, %MyEdit31%
 Gui, 20: Add, GroupBox, x16 y0 w391 h54
@@ -583,11 +582,11 @@ return
 20GuiEscape:
 20GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 19:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 21: Show, w425 h248, Admin-Tools by Notoriuz
 Gui, 21: Add, Edit, x30 y18 w366 h21 vMyEdit31, %MyEdit31%
 Gui, 21: Add, GroupBox, x16 y0 w391 h54
@@ -605,11 +604,11 @@ return
 21GuiEscape:
 21GuiClose:
 Gui Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 20:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 22: Show, w425 h295, Admin-Tools by Notoriuz
 Gui, 22: Add, Edit, x30 y18 w366 h21 vMyEdit31, %MyEdit31%
 Gui, 22: Add, GroupBox, x16 y0 w391 h54
@@ -629,13 +628,13 @@ return
 22GuiEscape:
 22GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 ;---------------------------- 21 - 25--------------------------------------------
 
 21:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 23: Show, w425 h90, Admin-Tools by Notoriuz
 Gui, 23: Add, Edit, x29 y18 w366 h21 vMyEdit41, %MyEdit41%
 Gui, 23: Add, GroupBox, x16 y0 w391 h54
@@ -647,11 +646,11 @@ return
 23GuiEscape:
 23GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 22:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 24: Show, w425 h137, Admin-Tools by Notoriuz
 Gui, 24: Add, Edit, x30 y18 w366 h21 vMyEdit41, %MyEdit41%
 Gui, 24: Add, GroupBox, x16 y0 w391 h54
@@ -665,12 +664,12 @@ return
 24GuiEscape:
 24GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 23:
-Gui, Own: Destroy
-Gui, Own: Destroy
+Gui, Own: Hide
+Gui, Own: Hide
 Gui, 25: Show, w425 h190, Admin-Tools by Notoriuz
 Gui, 25: Add, Edit, x29 y18 w366 h21 vMyEdit41, %MyEdit41%
 Gui, 25: Add, GroupBox, x16 y0 w391 h54
@@ -686,11 +685,11 @@ return
 25GuiEscape:
 25GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 24:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 26: Show, w425 h248, Admin-Tools by Notoriuz
 Gui, 26: Add, Edit, x30 y18 w366 h21 vMyEdit41, %MyEdit41%
 Gui, 26: Add, GroupBox, x16 y0 w391 h54
@@ -708,11 +707,11 @@ return
 26GuiEscape:
 26GuiClose:
 Gui Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 25:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 27: Show, w425 h295, Admin-Tools by Notoriuz
 Gui, 27: Add, Edit, x30 y18 w366 h21 vMyEdit41, %MyEdit41%
 Gui, 27: Add, GroupBox, x16 y0 w391 h54
@@ -732,13 +731,13 @@ return
 27GuiEscape:
 27GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 ;---------------------------- 26 - 30 --------------------------------------------
 
 26:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 28: Show, w425 h90, Admin-Tools by Notoriuz
 Gui, 28: Add, Edit, x29 y18 w366 h21 vMyEdit51, %MyEdit51%
 Gui, 28: Add, GroupBox, x16 y0 w391 h54
@@ -750,11 +749,11 @@ return
 28GuiEscape:
 28GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 27:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 29: Show, w425 h137, Admin-Tools by Notoriuz
 Gui, 29: Add, Edit, x30 y18 w366 h21 vMyEdit51, %MyEdit51%
 Gui, 29: Add, GroupBox, x16 y0 w391 h54
@@ -768,11 +767,11 @@ return
 29GuiEscape:
 29GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 28:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 30: Show, w425 h190, Admin-Tools by Notoriuz
 Gui, 30: Add, Edit, x29 y18 w366 h21 vMyEdit51, %MyEdit51%
 Gui, 30: Add, GroupBox, x16 y0 w391 h54
@@ -788,11 +787,11 @@ return
 30GuiEscape:
 30GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 29:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 31: Show, w425 h248, Admin-Tools by Notoriuz
 Gui, 31: Add, Edit, x30 y18 w366 h21 vMyEdit51, %MyEdit51%
 Gui, 31: Add, GroupBox, x16 y0 w391 h54
@@ -810,11 +809,11 @@ return
 31GuiEscape:
 31GuiClose:
 Gui Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 30:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 32: Show, w425 h295, Admin-Tools by Notoriuz
 Gui, 32: Add, Edit, x30 y18 w366 h21 vMyEdit51, %MyEdit51%
 Gui, 32: Add, GroupBox, x16 y0 w391 h54
@@ -834,13 +833,13 @@ return
 32GuiEscape:
 32GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 ;---------------------------- 31 - 35 --------------------------------------------
 
 31:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 33: Show, w425 h90, Admin-Tools by Notoriuz
 Gui, 33: Add, Edit, x29 y18 w366 h21 vMyEdit61, %MyEdit61%
 Gui, 33: Add, GroupBox, x16 y0 w391 h54
@@ -852,11 +851,11 @@ return
 33GuiEscape:
 33GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 32:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 34: Show, w425 h137, Admin-Tools by Notoriuz
 Gui, 34: Add, Edit, x30 y18 w366 h21 vMyEdit61, %MyEdit61%
 Gui, 34: Add, GroupBox, x16 y0 w391 h54
@@ -870,11 +869,11 @@ return
 34GuiEscape:
 34GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 33:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 35: Show, w425 h190, Admin-Tools by Notoriuz
 Gui, 35: Add, Edit, x29 y18 w366 h21 vMyEdit61, %MyEdit61%
 Gui, 35: Add, GroupBox, x16 y0 w391 h54
@@ -890,11 +889,11 @@ return
 35GuiEscape:
 35GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 34:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 36: Show, w425 h248, Admin-Tools by Notoriuz
 Gui, 36: Add, Edit, x30 y18 w366 h21 vMyEdit61, %MyEdit61%
 Gui, 36: Add, GroupBox, x16 y0 w391 h54
@@ -912,11 +911,11 @@ return
 36GuiEscape:
 36GuiClose:
 Gui Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 35:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 37: Show, w425 h295, Admin-Tools by Notoriuz
 Gui, 37: Add, Edit, x30 y18 w366 h21 vMyEdit61, %MyEdit61%
 Gui, 37: Add, GroupBox, x16 y0 w391 h54
@@ -936,13 +935,13 @@ return
 37GuiEscape:
 37GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 ;---------------------------- 36 - 40 --------------------------------------------
 
 36:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 38: Show, w425 h90, Admin-Tools by Notoriuz
 Gui, 38: Add, Edit, x29 y18 w366 h21 vMyEdit71, %MyEdit71%
 Gui, 38: Add, GroupBox, x16 y0 w391 h54
@@ -954,11 +953,11 @@ return
 38GuiEscape:
 38GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 37:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 39: Show, w425 h137, Admin-Tools by Notoriuz
 Gui, 39: Add, Edit, x30 y18 w366 h21 vMyEdit71, %MyEdit71%
 Gui, 39: Add, GroupBox, x16 y0 w391 h54
@@ -972,11 +971,11 @@ return
 39GuiEscape:
 39GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 38:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 40: Show, w425 h190, Admin-Tools by Notoriuz
 Gui, 40: Add, Edit, x29 y18 w366 h21 vMyEdit71, %MyEdit71%
 Gui, 40: Add, GroupBox, x16 y0 w391 h54
@@ -992,11 +991,11 @@ return
 40GuiEscape:
 40GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 39:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 41: Show, w425 h248, Admin-Tools by Notoriuz
 Gui, 41: Add, Edit, x30 y18 w366 h21 vMyEdit71, %MyEdit71%
 Gui, 41: Add, GroupBox, x16 y0 w391 h54
@@ -1014,11 +1013,11 @@ return
 41GuiEscape:
 41GuiClose:
 Gui Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 40:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 42: Show, w425 h295, Admin-Tools by Notoriuz
 Gui, 42: Add, Edit, x30 y18 w366 h21 vMyEdit71, %MyEdit71%
 Gui, 42: Add, GroupBox, x16 y0 w391 h54
@@ -1038,13 +1037,13 @@ return
 42GuiEscape:
 42GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 ;---------------------------- 41 - 45 --------------------------------------------
 
 41:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 43: Show, w425 h90, Admin-Tools by Notoriuz
 Gui, 43: Add, Edit, x29 y18 w366 h21 vMyEdit81, %MyEdit81%
 Gui, 43: Add, GroupBox, x16 y0 w391 h54
@@ -1056,11 +1055,11 @@ return
 43GuiEscape:
 43GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 42:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 44: Show, w425 h137, Admin-Tools by Notoriuz
 Gui, 44: Add, Edit, x30 y18 w366 h21 vMyEdit81, %MyEdit81%
 Gui, 44: Add, GroupBox, x16 y0 w391 h54
@@ -1074,11 +1073,11 @@ return
 44GuiEscape:
 44GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 43:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 45: Show, w425 h190, Admin-Tools by Notoriuz
 Gui, 45: Add, Edit, x29 y18 w366 h21 vMyEdit81, %MyEdit81%
 Gui, 45: Add, GroupBox, x16 y0 w391 h54
@@ -1094,11 +1093,11 @@ return
 45GuiEscape:
 45GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 44:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 46: Show, w425 h248, Admin-Tools by Notoriuz
 Gui, 46: Add, Edit, x30 y18 w366 h21 vMyEdit81, %MyEdit81%
 Gui, 46: Add, GroupBox, x16 y0 w391 h54
@@ -1116,11 +1115,11 @@ return
 46GuiEscape:
 46GuiClose:
 Gui Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 45:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 47: Show, w425 h295, Admin-Tools by Notoriuz
 Gui, 47: Add, Edit, x30 y18 w366 h21 vMyEdit81, %MyEdi81%
 Gui, 47: Add, GroupBox, x16 y0 w391 h54
@@ -1140,13 +1139,13 @@ return
 47GuiEscape:
 47GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 ;---------------------------- 46 - 50 --------------------------------------------
 
 46:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 48: Show, w425 h90, Admin-Tools by Notoriuz
 Gui, 48: Add, Edit, x29 y18 w366 h21 vMyEdit91, %MyEdit91%
 Gui, 48: Add, GroupBox, x16 y0 w391 h54
@@ -1158,11 +1157,11 @@ return
 48GuiEscape:
 48GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 47:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 49: Show, w425 h137, Admin-Tools by Notoriuz
 Gui, 49: Add, Edit, x30 y18 w366 h21 vMyEdit91, %MyEdit91%
 Gui, 49: Add, GroupBox, x16 y0 w391 h54
@@ -1176,11 +1175,11 @@ return
 49GuiEscape:
 49GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 48:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 50: Show, w425 h190, Admin-Tools by Notoriuz
 Gui, 50: Add, Edit, x29 y18 w366 h21 vMyEdit91, %MyEdit91%
 Gui, 50: Add, GroupBox, x16 y0 w391 h54
@@ -1196,11 +1195,11 @@ return
 50GuiEscape:
 50GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 49:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 51: Show, w425 h248, Admin-Tools by Notoriuz
 Gui, 51: Add, Edit, x30 y18 w366 h21 vMyEdit91, %MyEdit91%
 Gui, 51: Add, GroupBox, x16 y0 w391 h54
@@ -1218,11 +1217,11 @@ return
 51GuiEscape:
 51GuiClose:
 Gui Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 50:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 52: Show, w425 h295, Admin-Tools by Notoriuz
 Gui, 52: Add, Edit, x30 y18 w366 h21 vMyEdit91, %MyEdi91%
 Gui, 52: Add, GroupBox, x16 y0 w391 h54
@@ -1242,11 +1241,11 @@ return
 52GuiEscape:
 52GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 ;--------------------------------------------------------------------------
 2Tab1:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 53: Add, CheckBox, x8 y9 w169 h28 vCheck11 Checked%Check11%, Учитывать в счетчике
 Gui, 53: Add, CheckBox, x8 y41 w169 h28 vCheck41 Checked%Check41%, Использовать Enter
 Gui, 53: Add, GroupBox, x6 y2 w172 h37
@@ -1260,11 +1259,11 @@ return
 53GuiEscape:
 53GuiClose:
 Gui, 53: Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 2Tab2:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 54: Add, CheckBox, x8 y9 w169 h28 vCheck12 Checked%Check12%, Учитывать в счетчике
 Gui, 54: Add, CheckBox, x8 y41 w169 h28 vCheck42 Checked%Check42%, Использовать Enter
 Gui, 54: Add, GroupBox, x6 y2 w172 h37
@@ -1278,11 +1277,11 @@ return
 54GuiEscape:
 54GuiClose:
 Gui, 54: Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 2Tab3:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 55: Add, CheckBox, x8 y9 w169 h28 vCheck13 Checked%Check13%, Учитывать в счетчике
 Gui, 55: Add, CheckBox, x8 y41 w169 h28 vCheck43 Checked%Check43%, Использовать Enter
 Gui, 55: Add, GroupBox, x6 y2 w172 h37
@@ -1296,11 +1295,11 @@ return
 55GuiEscape:
 55GuiClose:
 Gui, 55: Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 2Tab4:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 56: Add, CheckBox, x8 y9 w169 h28 vCheck14 Checked%Check14%, Учитывать в счетчике
 Gui, 56: Add, CheckBox, x8 y41 w169 h28 vCheck44 Checked%Check44%, Использовать Enter
 Gui, 56: Add, GroupBox, x6 y2 w172 h37
@@ -1314,11 +1313,11 @@ return
 56GuiEscape:
 56GuiClose:
 Gui, 56: Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 2Tab5:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 57: Add, CheckBox, x8 y9 w169 h28 vCheck15 Checked%Check15%, Учитывать в счетчике
 Gui, 57: Add, CheckBox, x8 y41 w169 h28 vCheck45 Checked%Check45%, Использовать Enter
 Gui, 57: Add, GroupBox, x6 y2 w172 h37
@@ -1332,11 +1331,11 @@ return
 57GuiEscape:
 57GuiClose:
 Gui, 57: Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 2Tab6:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 58: Add, CheckBox, x8 y9 w169 h28 vCheck16 Checked%Check16%, Учитывать в счетчике
 Gui, 58: Add, CheckBox, x8 y41 w169 h28 vCheck46 Checked%Check46%, Использовать Enter
 Gui, 58: Add, GroupBox, x6 y2 w172 h37
@@ -1350,11 +1349,11 @@ return
 58GuiEscape:
 58GuiClose:
 Gui, 58: Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 2Tab7:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 59: Add, CheckBox, x8 y9 w169 h28 vCheck17 Checked%Check17%, Учитывать в счетчике
 Gui, 59: Add, CheckBox, x8 y41 w169 h28 vCheck47 Checked%Check47%, Использовать Enter
 Gui, 59: Add, GroupBox, x6 y2 w172 h37
@@ -1368,11 +1367,11 @@ return
 59GuiEscape:
 59GuiClose:
 Gui, 59: Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 2Tab8:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 60: Add, CheckBox, x8 y9 w169 h28 vCheck18 Checked%Check18%, Учитывать в счетчике
 Gui, 60: Add, CheckBox, x8 y41 w169 h28 vCheck48 Checked%Check48%, Использовать Enter
 Gui, 60: Add, GroupBox, x6 y2 w172 h37
@@ -1386,11 +1385,11 @@ return
 60GuiEscape:
 60GuiClose:
 Gui, 60: Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 2Tab9:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 61: Add, CheckBox, x8 y9 w169 h28 vCheck19 Checked%Check19%, Учитывать в счетчике
 Gui, 61: Add, CheckBox, x8 y41 w169 h28 vCheck49 Checked%Check49%, Использовать Enter
 Gui, 61: Add, GroupBox, x6 y2 w172 h37
@@ -1404,11 +1403,11 @@ return
 61GuiEscape:
 61GuiClose:
 Gui, 61: Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 2Tab10:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 62: Add, CheckBox, x8 y9 w169 h28 vCheck20 Checked%Check20%, Учитывать в счетчике
 Gui, 62: Add, CheckBox, x8 y41 w169 h28 vCheck50 Checked%Check50%, Использовать Enter
 Gui, 62: Add, GroupBox, x6 y2 w172 h37
@@ -1422,7 +1421,7 @@ return
 62GuiEscape:
 62GuiClose:
 Gui, 62: Destroy
-Gosub, StartFullGui
+Gui, Own: Show
 return
 
 
@@ -1479,10 +1478,7 @@ Return
 ;---------------------------3GUI CHECKUP------------------------------
 
 3Tab1:
-Gui, Submit, NoHide
-IniWrite, %ComDev1%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand1
-IniWrite, %Command1%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand1
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 63: Add, CheckBox, x22 y6 w137 h37 vCheck21 Checked%Check21%, Учитывать в счетчике
 Gui, 63: Add, GroupBox, x11 y-3 w161 h53
 Gui, 63: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1491,14 +1487,11 @@ return
 63GuiEscape:
 63GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab2:
-Gui, Submit, NoHide
-IniWrite, %ComDev2%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand2
-IniWrite, %Command2%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand2
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 64: Add, CheckBox, x22 y6 w137 h37 vCheck22 Checked%Check22%, Учитывать в счетчике
 Gui, 64: Add, GroupBox, x11 y-3 w161 h53
 Gui, 64: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1508,14 +1501,11 @@ return
 64GuiEscape:
 64GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab3:
-Gui, Submit, NoHide
-IniWrite, %ComDev3%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand3
-IniWrite, %Command3%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand3
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 65: Add, CheckBox, x22 y6 w137 h37 vCheck23 Checked%Check23%, Учитывать в счетчике
 Gui, 65: Add, GroupBox, x11 y-3 w161 h53
 Gui, 65: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1525,14 +1515,11 @@ return
 65GuiEscape:
 65GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab4:
-Gui, Submit, NoHide
-IniWrite, %ComDev4%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand4
-IniWrite, %Command4%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand4
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 66: Add, CheckBox, x22 y6 w137 h37 vCheck24 Checked%Check24%, Учитывать в счетчике
 Gui, 66: Add, GroupBox, x11 y-3 w161 h53
 Gui, 66: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1542,14 +1529,11 @@ return
 66GuiEscape:
 66GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab5:
-Gui, Submit, NoHide
-IniWrite, %ComDev5%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand5
-IniWrite, %Command5%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand5
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 67: Add, CheckBox, x22 y6 w137 h37 vCheck25 Checked%Check25%, Учитывать в счетчике
 Gui, 67: Add, GroupBox, x11 y-3 w161 h53
 Gui, 67: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1558,14 +1542,11 @@ return
 67GuiEscape:
 67GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab6:
-Gui, Submit, NoHide
-IniWrite, %ComDev5%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand5
-IniWrite, %Command5%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand5
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 68: Add, CheckBox, x22 y6 w137 h37 vCheck26 Checked%Check26%, Учитывать в счетчике
 Gui, 68: Add, GroupBox, x11 y-3 w161 h53
 Gui, 68: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1574,14 +1555,11 @@ return
 68GuiEscape:
 68GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab7:
-Gui, Submit, NoHide
-IniWrite, %ComDev7%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand7
-IniWrite, %Command7%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand7
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 69: Add, CheckBox, x22 y6 w137 h37 vCheck27 Checked%Check27%, Учитывать в счетчике
 Gui, 69: Add, GroupBox, x11 y-3 w161 h53
 Gui, 69: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1590,14 +1568,11 @@ return
 69GuiEscape:
 69GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab8:
-Gui, Submit, NoHide
-IniWrite, %ComDev8%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand8
-IniWrite, %Command8%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand8
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 70: Add, CheckBox, x22 y6 w137 h37 vCheck28 Checked%Check28%, Учитывать в счетчике
 Gui, 70: Add, GroupBox, x11 y-3 w161 h53
 Gui, 70: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1606,14 +1581,11 @@ return
 70GuiEscape:
 70GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab9:
-Gui, Submit, NoHide
-IniWrite, %ComDev9%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand9
-IniWrite, %Command9%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand9
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 71: Add, CheckBox, x22 y6 w137 h37 vCheck29 Checked%Check29%, Учитывать в счетчике
 Gui, 71: Add, GroupBox, x11 y-3 w161 h53
 Gui, 71: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1622,14 +1594,11 @@ return
 71GuiEscape:
 71GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab10:
-Gui, Submit, NoHide
-IniWrite, %ComDev10%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand10
-IniWrite, %Command10%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand10
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 72: Add, CheckBox, x22 y6 w137 h37 vCheck30 Checked%Check30%, Учитывать в счетчике
 Gui, 72: Add, GroupBox, x11 y-3 w161 h53
 Gui, 72: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1638,7 +1607,7 @@ return
 72GuiEscape:
 72GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3TabSet1:
@@ -1744,10 +1713,7 @@ Return
 ;---------------------------4GUI CHECKUP------------------------------
 
 3Tab11:
-Gui, Submit, NoHide
-IniWrite, %ComDev11%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand11
-IniWrite, %Command11%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand11
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 73: Add, CheckBox, x22 y6 w137 h37 vCheck54 Checked%Check54%, Учитывать в счетчике
 Gui, 73: Add, GroupBox, x11 y-3 w161 h53
 Gui, 73: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1756,14 +1722,11 @@ return
 73GuiEscape:
 73GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab12:
-Gui, Submit, NoHide
-IniWrite, %ComDev12%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand12
-IniWrite, %Command12%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand12
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 74: Add, CheckBox, x22 y6 w137 h37 vCheck55 Checked%Check55%, Учитывать в счетчике
 Gui, 74: Add, GroupBox, x11 y-3 w161 h53
 Gui, 74: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1772,14 +1735,11 @@ return
 74GuiEscape:
 74GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab13:
-Gui, Submit, NoHide
-IniWrite, %ComDev13%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand13
-IniWrite, %Command13%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand13
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 75: Add, CheckBox, x22 y6 w137 h37 vCheck56 Checked%Check56%, Учитывать в счетчике
 Gui, 75: Add, GroupBox, x11 y-3 w161 h53
 Gui, 75: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1788,14 +1748,11 @@ return
 75GuiEscape:
 75GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab14:
-Gui, Submit, NoHide
-IniWrite, %ComDev14%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand14
-IniWrite, %Command14%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand14
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 76: Add, CheckBox, x22 y6 w137 h37 vCheck57 Checked%Check57%, Учитывать в счетчике
 Gui, 76: Add, GroupBox, x11 y-3 w161 h53
 Gui, 76: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1804,14 +1761,11 @@ return
 76GuiEscape:
 76GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab15:
-Gui, Submit, NoHide
-IniWrite, %ComDev15%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand15
-IniWrite, %Command15%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand15
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 77: Add, CheckBox, x22 y6 w137 h37 vCheck58 Checked%Check58%, Учитывать в счетчике
 Gui, 77: Add, GroupBox, x11 y-3 w161 h53
 Gui, 77: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1820,14 +1774,11 @@ return
 77GuiEscape:
 77GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab16:
-Gui, Submit, NoHide
-IniWrite, %ComDev16%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand16
-IniWrite, %Command16%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand16
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 78: Add, CheckBox, x22 y6 w137 h37 vCheck59 Checked%Check59%, Учитывать в счетчике
 Gui, 78: Add, GroupBox, x11 y-3 w161 h53
 Gui, 78: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1836,14 +1787,11 @@ return
 78GuiEscape:
 78GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab17:
-Gui, Submit, NoHide
-IniWrite, %ComDev17%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand17
-IniWrite, %Command17%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand17
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 79: Add, CheckBox, x22 y6 w137 h37 vCheck60 Checked%Check60%, Учитывать в счетчике
 Gui, 79: Add, GroupBox, x11 y-3 w161 h53
 Gui, 79: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1852,14 +1800,11 @@ return
 79GuiEscape:
 79GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab18:
-Gui, Submit, NoHide
-IniWrite, %ComDev18%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand18
-IniWrite, %Command18%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand18
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 80: Add, CheckBox, x22 y6 w137 h37 vCheck61 Checked%Check61%, Учитывать в счетчике
 Gui, 80: Add, GroupBox, x11 y-3 w161 h53
 Gui, 80: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1868,14 +1813,11 @@ return
 80GuiEscape:
 80GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab19:
-Gui, Submit, NoHide
-IniWrite, %ComDev19%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand19
-IniWrite, %Command19%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand19
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 81: Add, CheckBox, x22 y6 w137 h37 vCheck62 Checked%Check62%, Учитывать в счетчике
 Gui, 81: Add, GroupBox, x11 y-3 w161 h53
 Gui, 81: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1884,14 +1826,11 @@ return
 81GuiEscape:
 81GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 3Tab20:
-Gui, Submit, NoHide
-IniWrite, %ComDev20%, %A_ScriptDir%\setting_3tab.ini, Setup, 3Comand20
-IniWrite, %Command20%, %A_ScriptDir%\setting_3tab.ini, Setup, 3BindComand20
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, 82: Add, CheckBox, x22 y6 w137 h37 vCheck63 Checked%Check63%, Учитывать в счетчике
 Gui, 82: Add, GroupBox, x11 y-3 w161 h53
 Gui, 82: Show, w185 h78, Admin-Tools by Notoriuz
@@ -1900,7 +1839,7 @@ return
 82GuiEscape:
 82GuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 ;---------------------------4GUI CHECKUP DOP------------------------------
@@ -2309,9 +2248,7 @@ Gui Destroy
 return
 
 +sc29::
-If WinActive("ahk_exe GTA5.exe")
-    {
-    if Check83 > 0
+     if openrub = 0
         {
             WinGetPos, xbop2, ybop2, , , Shift + Ё - Если не закрылось
             Gui, b123: Destroy
@@ -2319,7 +2256,6 @@ If WinActive("ahk_exe GTA5.exe")
                 IniWrite, %ybop2%, %A_ScriptDir%\setting_console.ini, Setup, ybop2
             openrub = 1
         }
-    }
     Else
         Send +{sc29}    
             Return
