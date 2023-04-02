@@ -429,6 +429,11 @@ repsett := 1
 SetTimer, hudrep, 4000
 Return
 
+hudhelpstart:
+Helpsett := 1
+SetTimer, HelpCoord, 4000
+Return
+
 hudlub: ; Счетчик репорта HUD
 If WinActive("ahk_exe GTA5.exe")
   {
@@ -513,9 +518,7 @@ return
 ;-----------------------------------------------------------------------
 
 Peremove1: ; Настройки HUD счетчика репорта
-Gui, Submit, NoHide
-IniWrite, %Check80%, %A_ScriptDir%\setting_check.ini, Setup, Check80
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, HUD1: +AlwaysOnTop
 Gui, HUD1: Add, Text, x13 y9 w54 h23 +0x200, Цвет №1
 Gui, HUD1: Add, Text, x13 y45 w54 h23 +0x200, Цвет №2
@@ -549,14 +552,12 @@ HUD1GuiEscape:
 HUD1GuiClose:
     Gui, 3a: Destroy
     Gui, HUD1: Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 
 Peremove2: ; Настройка HUD подсказок
-Gui, Submit, NoHide
-IniWrite, %Check1%, %A_ScriptDir%\setting_check.ini, Setup, Check1
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, HUD2: +AlwaysOnTop
 Gui, HUD2: Add, Text, x13 y20 w54 h23 +0x200, Цвет №1
 Gui, HUD2: Add, ListBox, gPereSet2 x72 y17 w120 h30 vRep2Color1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
@@ -587,11 +588,11 @@ HUD2GuiEscape:
 HUD2GuiClose:
     Gui, 3b: Destroy
     Gui, HUD2: Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 Peremove3: ; Настройка OVERLAY Уведомления при нажатии ENTER
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, HUD4: +AlwaysOnTop
 Gui, HUD4: Add, Text, x13 y20 w54 h23 +0x200, Цвет №1
 Gui, HUD4: Add, ListBox, gPereSet3 x72 y17 w120 h30 vRep3Color1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
@@ -607,8 +608,9 @@ Gui, HUD4: Add, GroupBox, x5 y84 w191 h50
 
 Gui, HUD4: Add, Button, x304 y144 w80 h25 gSetPeremove3, Положение
 Gui, HUD4: Add, Button, x392 y144 w80 h25 gSaveSetHUD3, Применить
+Gui, HUD4: Add, Checkbox, x80 y144 vCheck86 Checked%Check86% +Center, Отображать`nфон
 
-Gui, HUD4: Add, CheckBox, x170 y144 w120 h26 +Center vCheck81 Checked%Check81%, Использовать overlay-yведомление
+Gui, HUD4: Add, CheckBox, x170 y144 +Center vCheck81 Checked%Check81%, Использовать`noverlay-yведомление
 
 Gui, HUD4: Add, Text, x232 y16 w120 h23 +0x200 +Center, Размер шрифта
 Gui, HUD4: Add, Slider, gPereSet3 x208 y40 w181 h24 +0x40 +NoTicks vMy3Slider2 +Tooltip, %My3SliderVid2%
@@ -621,9 +623,9 @@ Gui, HUD4: Show, , Настройка функции отправки
 Return
 HUD4GuiEscape:
 HUD4GuiClose:
-Gosub, StartFullGui
   Gui, 3bb: Destroy
     Gui, HUD4: Destroy
+    Gui, Own: Show
 return
 
 HelpButt: ; Настройка самого текста подсказок
@@ -646,7 +648,7 @@ return
 ;-----------------------------------------------------------------------
 
 bitiyfail: ; Проверка файлов
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui 1s: Add, Text, x18 y6 w246 h64 +Center, В случае если найдены отсутствующие/неактуальные файлы выберите Ваш сервер и нажмите "GO".
 Gui 1s: Add, ListBox, x56 y58 w165 h54 vChoice, Del Perro|Richman|Strawberry|Rockford
 Gui 1s: Add, Button, x223 y57 w50 h44 gAction, GO
@@ -655,7 +657,7 @@ Return
 1sGuiEscape:
 1sGuiClose:
     Gui Destroy
-    Gosub, StartFullGui
+    Gui, Own: Show
 return
 
 
@@ -753,7 +755,7 @@ Return
 ;--------------------Меню наказаний-------------------------------------
 ;---------------------------------------------------------------------------------------------------------------
 SubSettVidacha:
-Gui, Own: Destroy
+Gui, Own: Hide
 Gui, AdMBind: Add, GroupBox, x16 y3 w83 h311 +Center, Команда
 Gui, AdMBind: Add, Edit, x24 y24 w64 h21 vComAdm1, %ComAdm1%
 Gui, AdMBind: Add, Edit, x24 y48 w64 h21 vComAdm2, %ComAdm2%
@@ -781,21 +783,104 @@ Gui, AdMBind: Add, Edit, x112 y240 w297 h21 vComAdmText10, %ComAdmText10%
 Gui, AdMBind: Add, Edit, x112 y264 w297 h21 vComAdmText11, %ComAdmText11%
 Gui, AdMBind: Add, Edit, x112 y288 w297 h21 vComAdmText12, %ComAdmText12%
 
-Gui, AdMBind: Add, Button, x120 y315 w140 h23 gHelpMSG, Положение подсказки
-Gui, AdMBind: Add, Button, x262 y315 w80 h23 gHelpMSG, Help
+Gui, AdMBind: Add, Button, x120 y315 w140 h23 gPeremove5, Настройки подсказки
+Gui, AdMBind: Add, Button, x263 y315 w80 h23 gHelpMSG, Help
 Gui, AdMBind: Add, Button, x345 y315 w80 h23 gSaveCAdmd, Сохранить
-
 Gui, AdMBind: Show, w430 h345, Настройка меню с выдачей наказаний
 Return
 AdMBindGuiEscape:
 AdMBindGuiClose:
   Gui, AdMBind: Destroy
-  Gosub, StartFullGui
+  Gui, Own: Show
 Return
 
 HelpMSG:
 MsgBox,, Подсказка, Используйте "id" для указания ID игрока, "time" для времени наказания.`nПример: prison id time DM. Команда:dm`nИспользование: Вводим dm указываем id и время, Пример: dm 1 15
 Return
+
+HelpCoord:
+My44GIniRead(VidachaText, "settings_abind.ini", "TextPodskazki", "Key", "MyError")
+My44GIniRead(ByRef VidachaText, Filename, Section, Key, ByRef Default)
+{
+   loop
+   {
+      IniRead, Value, %Filename%, %Section%, %A_Index%|%Key%, %Default%
+     If (Value = Default)
+         break
+      If A_Index = 1
+        VidachaText := value 
+      else
+        VidachaText .= "`n" value
+    }
+}
+
+If WinActive("ahk_exe GTA5.exe")
+  {
+if Helpsett = 1
+{
+      Gui, 3aa: +LastFound +AlwaysOnTop -Caption +ToolWindow +E0x20 ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
+      Gui, 3aa: Font, Intro
+      Gui, 3aa: Font,, %MySliderFont5%
+      Gui, 3aa: Font, s%My5Slider2% ; Set a large font size (32-point).
+      Gui, 3aa: Font, q1
+      Gui, 3aa: Font, w%My5Slider3%
+      Gui, 3aa: Add, Text, xm ym c%5Set1Color%, %VidachaText%
+      If Check87 > 0
+        {
+          Gui, 3aa: Color, cWhite
+      WinSet, TransColor, %CustomColor% %My5Slider1%
+        }
+      else
+        {
+          Gui, 3aa: Color, %FonSett5%
+          WinSet, TransColor, %FonSett5% %My5Slider1%
+        }
+        Gui, 3aa: Show, x%xpos3% y%ypos3% NoActivate
+      Helpsett := 0
+  }
+}
+Else 
+  {
+    Helpsett := 1
+  Gui, 3aa: Destroy
+  }
+Return
+
+
+Peremove5: ; Настройка HUD подсказок
+Gui, AdMBind: Destroy
+Gui, HUD4a: +AlwaysOnTop
+Gui, HUD4a: Add, Text, x13 y20 w54 h23 +0x200, Цвет №1
+Gui, HUD4a: Add, ListBox, gPereSet5 x72 y17 w120 h30 vRep5Color1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
+Gui, HUD4a: Add, GroupBox, x5 y8 w191 h42
+
+Gui, HUD4a: Add, Text, x18 y55 w54 h23 +0x200, Шрифт
+Gui, HUD4a: Add, ListBox, gPereSet5 x72 y53 w120 h30 vMySliderFont5, Arial|MS sans serif|Verdana|Arimo-Bold|Courier New|Impact|Tahoma|Times New Roman
+Gui, HUD4a: Add, GroupBox, x5 y45 w191 h42
+
+Gui, HUD4a: Add, Text, x40 y90 w120 h23 +0x200 +Center, Прозрачность
+Gui, HUD4a: Add, Slider, gPereSet5 x10 y110 w181 h22 +NoTicks +0x40 vMy5Slider1 +Tooltip, %My5SliderVid1%
+Gui, HUD4a: Add, GroupBox, x5 y84 w191 h50
+
+Gui, HUD4a: Add, Button, x304 y144 w80 h25 gSetPeremove5, Положение
+Gui, HUD4a: Add, Button, x392 y144 w80 h25 gSaveSetHUD5, Применить
+
+Gui, HUD4a: Add, Text, x232 y16 w120 h23 +0x200 +Center, Размер шрифта
+Gui, HUD4a: Add, Slider, gPereSet5 x208 y40 w181 h24 +0x40 +NoTicks vMy5Slider2 +Tooltip, %My5SliderVid2%
+Gui, HUD4a: Add, GroupBox, x200 y8 w191 h62
+Gui, HUD4a: Add, GroupBox, x200 y72 w191 h62
+Gui, HUD4a: Add, Slider, gPereSet5 x208 y104 w181 h24 +0x40 +NoTicks vMy5Slider3 +Tooltip, %My5SliderVid3%
+Gui, HUD4a: Add, Text, x224 y80 w145 h23 +0x200 +Center, Насыщенность(жирность)
+Gui, HUD4a: Add, Checkbox, x90 y144 vCheck87 Checked%Check87% +Center, Отображать`nфон
+Gui, HUD4a: Add, Checkbox, x190 y144 vCheck88 Checked%Check88% +Center, Использовать`nподсказки
+Gui, HUD4a: Show, , Настройка HUD Подсказок
+return
+HUD4aGuiEscape:
+HUD4aGuiClose:
+    Gui, 3aa: Destroy
+    Gui, HUD4a: Destroy
+    Gosub, SubSettVidacha
+return
 
 SaveCAdmd:
 Gui, Submit, NoHide
@@ -804,8 +889,32 @@ Loop, 12
   IniWrite, % ComAdm%A_Index%, %A_ScriptDir%\settings_abind.ini, Setup, ComAdm%A_Index%
   IniWrite, % ComAdmText%A_Index%, %A_ScriptDir%\settings_abind.ini, Setup, ComAdmText%A_Index%
   }
+
+  Loop, 12
+    {
+        if (ComAdm%A_index%)
+        {
+            if ComAdm%A_index% != %A_Space%)
+              VidachaText1 := ComAdm%A_index%
+        }
+
+        if (ComAdmText%A_index%)
+          {
+              if ComAdmText%A_index% not contains id time
+                {
+              VidachaText := VidachaText1 " id"
+              IniWrite, %VidachaText%, %A_ScriptDir%\settings_abind.ini, TextPodskazki, %A_index%|Key
+                }
+                else 
+                  {
+                    VidachaText := VidachaText1 " id time"
+                    IniWrite, %VidachaText%, %A_ScriptDir%\settings_abind.ini, TextPodskazki, %A_index%|Key
+                  }
+          }
+    }
+
   Gui, AdMBind: Destroy
-  Gosub, StartFullGui
+  Gui, Own: Show
 Return
 
 ComSell0:

@@ -177,6 +177,9 @@ Loop, 10
   IniRead, xpos2, %A_ScriptDir%\setting.ini , Position, xpos2, 1750
   IniRead, ypos2, %A_ScriptDir%\setting.ini , Position, ypos2, 250
 
+  IniRead, xpos3, %A_ScriptDir%\setting.ini , Position, xpos3, 1750
+  IniRead, ypos3, %A_ScriptDir%\setting.ini , Position, ypos3, 250
+
   IniRead, MySliderFont1, %A_ScriptDir%\setting.ini , Position, MySliderFont1, Arial
   IniRead, MySliderFont2, %A_ScriptDir%\setting.ini , Position, MySliderFont2, Arial
   IniRead, MySliderFont3, %A_ScriptDir%\setting.ini , Position, MySliderFont3, Arial
@@ -204,7 +207,13 @@ Loop, 10
     IniRead, 3Set%A_Index%Color, %A_ScriptDir%\setting.ini, Position, 3Set%A_Index%Color, Red
     IniRead, My3Slider%A_Index%, %A_ScriptDir%\setting.ini, Position, My3Slider%A_Index%, 187
     IniRead, My3SliderVid%A_Index%, %A_ScriptDir%\setting.ini, Position, My3SliderVid%A_Index%, 75
+
+    IniRead, 5Set%A_Index%Color, %A_ScriptDir%\setting.ini, Position, 5Set%A_Index%Color, Red
+    IniRead, My5Slider%A_Index%, %A_ScriptDir%\setting.ini, Position, My5Slider%A_Index%, 187
+    IniRead, My5SliderVid%A_Index%, %A_ScriptDir%\setting.ini, Position, My5SliderVid%A_Index%, 75
     }
+    IniRead, FonSett5, %A_ScriptDir%\setting.ini, Position, FonSett5, 8B0000
+    IniRead, FonSett3, %A_ScriptDir%\setting.ini, Position, FonSett3, 8B0000
     IniRead, FonSett2, %A_ScriptDir%\setting.ini, Position, FonSett2, 8B0000
     IniRead, FonSett1, %A_ScriptDir%\setting.ini, Position, FonSett1, 8B0000
   Loop, 20
@@ -228,7 +237,7 @@ Loop, 10
     IniRead, MyEdit%A_index%, %A_ScriptDir%\setting_edit.ini, Setup, MyEdit%A_index%, %A_Space%
     }
   
-  Loop, 84
+  Loop, 88
     {
     IniRead, Check%A_index%, %A_ScriptDir%\setting_check.ini, Setup, Check%A_index%, 0
     }
