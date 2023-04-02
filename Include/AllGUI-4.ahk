@@ -838,6 +838,11 @@ if Helpsett = 1
         Gui, 3aa: Show, x%xpos3% y%ypos3% NoActivate
       Helpsett := 0
   }
+  Else
+  {
+    Helpsett := 0
+  Gui, 3aa: Destroy
+  }
 }
 Else 
   {
@@ -848,7 +853,7 @@ Return
 
 
 Peremove5: ; Настройка HUD подсказок
-Gui, AdMBind: Destroy
+Gui, AdMBind: Hide
 Gui, HUD4a: +AlwaysOnTop
 Gui, HUD4a: Add, Text, x13 y20 w54 h23 +0x200, Цвет №1
 Gui, HUD4a: Add, ListBox, gPereSet5 x72 y17 w120 h30 vRep5Color1, Красный|Зеленый|Синий|Жёлтый|Фиолетовый|Голубой|Черный|Белый
@@ -879,18 +884,11 @@ HUD4aGuiEscape:
 HUD4aGuiClose:
     Gui, 3aa: Destroy
     Gui, HUD4a: Destroy
-    Gosub, SubSettVidacha
+    Gui, AdMBind: Show
 return
 
 SaveCAdmd:
-Gui, Submit, NoHide
-Loop, 12
-  {
-  IniWrite, % ComAdm%A_Index%, %A_ScriptDir%\settings_abind.ini, Setup, ComAdm%A_Index%
-  IniWrite, % ComAdmText%A_Index%, %A_ScriptDir%\settings_abind.ini, Setup, ComAdmText%A_Index%
-  }
-
-  Loop, 12
+ Loop, 12
     {
         if (ComAdm%A_index%)
         {
@@ -911,6 +909,8 @@ Loop, 12
                     IniWrite, %VidachaText%, %A_ScriptDir%\settings_abind.ini, TextPodskazki, %A_index%|Key
                   }
           }
+          IniWrite, % ComAdm%A_Index%, %A_ScriptDir%\settings_abind.ini, Setup, ComAdm%A_Index%
+          IniWrite, % ComAdmText%A_Index%, %A_ScriptDir%\settings_abind.ini, Setup, ComAdmText%A_Index%
     }
 
   Gui, AdMBind: Destroy
