@@ -839,8 +839,8 @@ if Helpsett = 1
   }
   Else
   {
-    Helpsett := 0
-  Gui, 3aa: Destroy
+    Helpsett := 1
+  ;Gui, 3aa: Destroy
   }
 }
 Else 
