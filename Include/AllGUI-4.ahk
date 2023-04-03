@@ -888,6 +888,7 @@ HUD4aGuiClose:
 return
 
 SaveCAdmd:
+Gui, Submit, NoHide
  Loop, 12
     {
         if (ComAdm%A_index%)
