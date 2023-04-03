@@ -887,6 +887,7 @@ HUD4aGuiClose:
 return
 
 SaveCAdmd:
+FileDelete, %A_ScriptDir%\settings_abind.ini
 Gui, Submit, NoHide
  Loop, 12
     {
