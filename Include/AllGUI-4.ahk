@@ -836,7 +836,6 @@ if Helpsett = 1
           WinSet, TransColor, %FonSett5% %My5Slider1%
         }
         Gui, 3aa: Show, x%xpos3% y%ypos3% NoActivate
-      Helpsett := 0
   }
   Else
   {
